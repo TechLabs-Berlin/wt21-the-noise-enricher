@@ -1,3 +1,4 @@
+import os.path
 import sys
 import numpy as np
 import json
@@ -6,7 +7,9 @@ import torchaudio
 import matplotlib.pyplot as plt
 
 
-def plot_spectrograms(audio_input_file: str = 'piano_16000_mono.wav'):
+def plot_spectrograms(path_to_save: str, audio_input_file: str = 'piano_16000_mono.wav'):
+    os.makedirs(path_to_save, exist_ok=True)
+
     # for creating a inverse spectrogram, the spectrogram must contain complex numbers
     # complex numbers cannot be displayed in a graph, they must be transformed in real numbers later
     trans_spec = torchaudio.transforms.Spectrogram(n_fft=800, power=None,
@@ -26,7 +29,7 @@ def plot_spectrograms(audio_input_file: str = 'piano_16000_mono.wav'):
 
     # save to audio file
     wf_noise = trans_spec_inv(spec_)
-    torchaudio.save('output.wav', wf_noise, sr_input)
+    torchaudio.save(os.path.join(path_to_save, 'output.wav'), wf_noise, sr_input)
 
     # OUTPUTS
     # write file specs in json file
@@ -38,7 +41,7 @@ def plot_spectrograms(audio_input_file: str = 'piano_16000_mono.wav'):
         'bits_per_sample': input_audio_info_.bits_per_sample,
         'encoding': input_audio_info_.encoding}
 
-    with open('input_audio_info.txt', 'w') as outfile_input_info:
+    with open(os.path.join(path_to_save, 'input_audio_info.txt'), 'w') as outfile_input_info:
         json.dump(input_audio_info, outfile_input_info)
 
     # plotting waveform of input file
@@ -46,24 +49,28 @@ def plot_spectrograms(audio_input_file: str = 'piano_16000_mono.wav'):
     time_axis = torch.arange(0, input_audio_info_.num_frames) / sr_input
     plt.figure(figsize=(10, 6))
     plt.plot(time_axis, waveform[0][:])
-    plt.savefig('input_waveform.jpg', **kwargs)
+    plt.savefig(os.path.join(path_to_save, 'input_waveform.jpg'), **kwargs)
+    plt.close()
 
     # plotting spectrogram of input file
     plt.figure(figsize=(10, 6))
     plt.imshow(spec.log2().real[0, :, :].numpy(), aspect='auto')
     plt.axis('off')
-    plt.savefig('input_spectrogram.jpg', **kwargs)
+    plt.savefig(os.path.join(path_to_save, 'input_spectrogram.jpg'), **kwargs)
+    plt.close()
 
     # plotting spectrogram of output file
     plt.figure(figsize=(10, 6))
     plt.imshow(spec_.log2().real[0, :, :].numpy(), aspect='auto')
     plt.axis('off')
-    plt.savefig('output_spectrogram.jpg', **kwargs)
+    plt.savefig(os.path.join(path_to_save, 'output_spectrogram.jpg'), **kwargs)
+    plt.close()
 
     # plotting waveform of input file
     plt.figure(figsize=(10, 6))
     plt.plot(wf_noise[0][:])
-    plt.savefig('output_waveform.jpg', **kwargs)
+    plt.savefig(os.path.join(path_to_save, 'output_waveform.jpg'), **kwargs)
+    plt.close()
 
 
 if __name__ == '__main__':
