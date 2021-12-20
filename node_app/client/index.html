@@ -30,21 +30,30 @@
 
     </div>
     <div id="form">
-        <form action="/">
+        <form action="">
             <legend>Upload your track</legend>
-            <input type="text"><button>Upload</button> <br>
-
+            <div id="formUpload">
+                <input type="text" placeholder="Drag or go to file..."><button>Upload</button>
+            </div> <br>
             <p>Choose a style</p>
-            Rock:<input type="range">
-            Trance:<input type="range"> <br>
+            <div id="formStyle">
+                Rock:<input type="range">
+                Trance:<input type="range">
+                Classic:<input type="range"> <br>
+            </div>
+            <div id="formNoises">
+                <p>Add some noises</p>
+                <button>Sea</button>
+                <button>Birds</button>
+                <button>Street</button>
+                <button>Thunderstorm</button>
+                <button>Street</button> <br>
+            </div>
 
-            <p>Add some noises</p>
-            <button>Sea</button>
-            <button>Bubbles</button>
-            <button>Street</button> <br>
-
-            <p> <a href="/altro">Generate with advance settings</a></p>
-            <button>Generate new track</button>
+            <p id="formPro"> <a href="">Generate with advance settings</a></p>
+            <div id="formGenerate">
+                <button>Generate new track</button>
+            </div>
         </form>
     </div>
 
