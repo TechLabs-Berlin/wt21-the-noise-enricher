@@ -28,7 +28,7 @@ h4 {
     align-items: center;
 }
 
-h1 {
+h2 {
 
     margin-top: 3em;
 }
@@ -36,47 +36,62 @@ h1 {
 #pcallToAction {
     width: 40%;
     margin-top: 2em;
-}
-
-#form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+
 form {
-    background-color: cornflowerblue;
     width: 50%;
     margin: 5em 0em;
     padding-left: 1em;
     padding-top: 1em;
+
+}
+
+#formbBlocks {
+    display: flex;
+    justify-content: space-between;
 }
 
 
 #formUpload input {
     width: 80%;
+    
+}
+
+#form4, #form2, #form3 {
+    background-color: darkgray;
+    height:  15em;
+    width: 32%;
+
 }
 
 #formStyle {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+
 }
 
 #formNoises {
-    margin-top: 1em;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
 }
 
-#formPro {
-    margin-top: 1em;
 
+#formPro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ 
 }
 
 #formGenerate {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
-    
 }
