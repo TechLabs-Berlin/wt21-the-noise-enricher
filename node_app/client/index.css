@@ -1,7 +1,21 @@
+/* General */
 body {
-    background-color: white
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.canvas{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 65%;
+}
+
+
+/* ------------------------------- */
+/* menu */
 header {
     display: flex;
     justify-content: space-between;
@@ -13,70 +27,107 @@ header {
 }
 
 h4 {
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }
 
-#generateButton {
-    margin-top: 1em;
+#menu {
+    display: flex;
 }
 
 
+/* ------------------------------- */
+/* Call to action */
 #callToAction {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
-h1 {
+h2 {
 
     margin-top: 3em;
 }
 
-#pcallToAction {
-    width: 40%;
-    margin-top: 2em;
-}
-
-#form {
+/* ------------------------------- */
+/* Form module */
+#form1 {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    margin: 2em 0em;
 }
 
-form {
-    background-color: cornflowerblue;
+#formUpload {
+    display: flex;
     width: 50%;
-    margin: 5em 0em;
-    padding-left: 1em;
-    padding-top: 1em;
-}
 
+}
 
 #formUpload input {
-    width: 80%;
+    
+width: 100%;
 }
 
-#formStyle {
+
+#formBlocks {
     display: flex;
     justify-content: space-between;
 }
 
-#formNoises {
-    margin-top: 1em;
+
+#form4, #form2, #form3 {
+    background-color: darkgray;
+    height: 15em;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1em;
 
 }
+
+#formStyle {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+
+}
+
+#formNoises {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+}
+
 
 #formPro {
-    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
 
 }
+
+
+/* ------------------------------- */
+/*  generate button */
 
 #formGenerate {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 2em 0em;
+}
 
 
-    
+/* ------------------------------- */
+/*  explanation text */
+
+#esplanation {
+    margin: 2em, 0em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

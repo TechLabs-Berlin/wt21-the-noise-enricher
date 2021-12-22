@@ -12,50 +12,85 @@
 </head>
 
 <body>
+
+
     <header>
         <h4 id="logo">The Noise Enricher</h4>
-        <h4 id="logIn">Log in</h4>
+        <div id="menu">
+            <h4 id="About">About</h4>
+            <h4 id="logIn">Log in</h4>
+        </div>
     </header>
-    <div id="callToAction">
-        <h1>Generate your own track</h1>
-        <button id="generateButton"> Generate </button>
-        <p id="pcallToAction">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque nostrum libero quibusdam similique maxime
-            optio suscipit sapiente? Eius ea eum, saepe, accusantium recusandae dolore optio repudiandae ad est aperiam
-            quas? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque nostrum libero quibusdam similique
-            maxime
-            optio suscipit sapiente? Eius ea eum, saepe, accusantium recusandae dolore optio repudiandae ad est aperiam
-            quas?
-        </p>
 
-    </div>
-    <div id="form">
-        <form action="">
-            <legend>Upload your track</legend>
+    <div class="canvas">
+        <!-- Call to action -->
+
+        <div id="callToAction">
+            <h2>Generate your own track with neutral network</h2>
+            <p id="pSubtitle"> Noise Enricher generate the track for your inspiration. You can use that in your project.
+            </p>
+
+
+        </div>
+
+        <!-- Form module -->
+        <form action="" id="form1">
+            <h5>Upload your track</h5>
             <div id="formUpload">
-                <input type="text" placeholder="Drag or go to file..."><button>Upload</button>
+                <input type="text" placeholder="Drag or go to file...">
+                <button>Upload</button>
             </div> <br>
-            <p>Choose a style</p>
-            <div id="formStyle">
-                Rock:<input type="range">
-                Trance:<input type="range">
-                Classic:<input type="range"> <br>
-            </div>
-            <div id="formNoises">
-                <p>Add some noises</p>
-                <button>Sea</button>
-                <button>Birds</button>
-                <button>Street</button>
-                <button>Thunderstorm</button>
-                <button>Street</button> <br>
-            </div>
-
-            <p id="formPro"> <a href="">Generate with advance settings</a></p>
-            <div id="formGenerate">
-                <button>Generate new track</button>
-            </div>
         </form>
+
+        <!-- 3 gray blocks -->
+        <div id="formBlocks">
+            <form action="" id="form2">
+                <div id="formStyle">
+                    <p>Choose a style</p>
+                    Rock:<input type="range">
+                    Trance:<input type="range">
+                    Classic:<input type="range">
+                </div>
+            </form>
+            <form action="" id="form3">
+                <div id="formNoises">
+                    <p>Add some noises</p>
+                    <button>Sea</button>
+                    <button>Birds</button>
+                    <button>Street</button>
+                    <button>Thunderstorm</button>
+                    <button>Street</button>
+                </div>
+            </form>
+            <form action="" id="form4">
+                <p id="formPro">
+                    <a href="">Generate with advance settings</a><br>
+                    generate with advance settings
+                </p>
+            </form>
+        </div>
+
+        <!-- generate button -->
+        <div id="formGenerate">
+            <button>Generate new track</button>
+        </div>
+
+        <!-- explanation text -->
+        <div id="esplanation">
+            <p id="pEsplanation">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque nostrum libero quibusdam similique
+                maxime
+                optio suscipit sapiente? Eius ea eum, saepe, accusantium recusandae dolore optio repudiandae ad est
+                aperiam
+                quas? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque nostrum libero quibusdam similique
+                maxime
+                optio suscipit sapiente? Eius ea eum, saepe, accusantium recusandae dolore optio repudiandae ad est
+                aperiam
+                quas?
+            </p>
+        </div>
     </div>
+
 
     <footer>
 
