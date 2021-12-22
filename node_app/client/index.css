@@ -1,3 +1,5 @@
+@import "bootstrap/scss/variables";
+
 /* General */
 body {
     background-color: white;
@@ -6,7 +8,7 @@ body {
     align-items: center;
 }
 
-.canvas{
+.canvas {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -16,7 +18,14 @@ body {
 a {
     text-decoration: none;
     color: black;
-  }
+}
+
+button.btn {
+    color: white;
+    background-color: #8c41ec;
+    border: #8c41ec;
+}
+
 
 
 /* ------------------------------- */
@@ -70,8 +79,8 @@ h2 {
 }
 
 #formUpload input {
-    
-width: 100%;
+
+    width: 100%;
 }
 
 
@@ -148,8 +157,8 @@ width: 100%;
 /* ------------------------------ */
 /* samples */
 
-.interTitle{
-    margin:1em 0em;
+.interTitle {
+    margin: 1em 0em;
 }
 
 #waveform {
@@ -162,7 +171,7 @@ width: 100%;
     align-items: center;
 }
 
-.threeBlocks{
+.threeBlocks {
     display: flex;
     justify-content: space-between;
     align-items: center;
