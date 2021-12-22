@@ -13,6 +13,11 @@ body {
     width: 50%;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+  }
+
 
 /* ------------------------------- */
 /* menu */
@@ -77,7 +82,7 @@ width: 100%;
 
 
 #form4, #form2, #form3 {
-    background-color: darkgray;
+    background-color: rgb(214, 214, 214);
     height: 15em;
     width: 30%;
     display: flex;
@@ -110,6 +115,12 @@ width: 100%;
     width: 80%;
 
 }
+
+#formPro a {
+    color: rgb(34, 67, 255);
+}
+
+
 
 
 /* ------------------------------- */
