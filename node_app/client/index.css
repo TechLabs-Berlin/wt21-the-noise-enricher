@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 65%;
+    width: 50%;
 }
 
 
@@ -84,6 +84,7 @@ width: 100%;
     justify-content: center;
     align-items: flex-start;
     padding: 1em;
+    margin: 2em 0em;
 
 }
 
@@ -125,9 +126,44 @@ width: 100%;
 /* ------------------------------- */
 /*  explanation text */
 
-#esplanation {
-    margin: 2em, 0em;
+.esplanation {
+    margin: 2em 0em;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+/* ------------------------------ */
+/* samples */
+
+.interTitle{
+    margin:1em 0em;
+}
+
+#waveform {
+    margin: 2em 0em;
+}
+
+#Samples {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.threeBlocks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 2em 0em;
+}
+
+.threeBlocks img {
+    width: 20%;
+}
+
+.threeBlocks .icons {
+    width: 70%;
+    margin-top: 0%;
 }
