@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Roboto";
 }
 
 .canvas {
@@ -28,6 +29,7 @@ button.btn {
 
 
 
+
 /* ------------------------------- */
 /* menu */
 header {
@@ -43,6 +45,7 @@ header {
 h4 {
     margin-left: 0.5em;
     margin-right: 0.5em;
+    margin-top: 0.2em;
 }
 
 #menu {
@@ -55,13 +58,16 @@ h4 {
 #callToAction {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    margin-bottom: 2em;
 }
 
 h2 {
 
-    margin-top: 3em;
+    margin-top: 2em;
+
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 3.5em;
 }
 
 /* ------------------------------- */
@@ -74,12 +80,14 @@ h2 {
 
 #formUpload {
     display: flex;
-    width: 50%;
+    width: 70%;
 
 }
 
 #formUpload input {
-
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: solid 1px gray;
     width: 100%;
 }
 
@@ -90,43 +98,67 @@ h2 {
 }
 
 
-#form4, #form2, #form3 {
+#form2, #form3, #form4 {
     background-color: rgb(214, 214, 214);
     height: 15em;
-    width: 30%;
+    width: 32%;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     padding: 1em;
-    margin: 2em 0em;
+    margin: 1em 0em;
+    border-radius: 10px;
 
 }
 
 #formStyle {
+    font-size: 0.75em;
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: 80%;
-
+    height: 65%;
 }
+
+
+
+.form-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #8c41ec;
+    cursor: pointer;
+  }
 
 #formNoises {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 80%;
-    height: 80%;
+    height: 50%;
+}
+
+
+
+span.badge{
+    color: #8c41ec;
+    border: solid 1px #8c41ec;
+    margin: 0.25em 0em;
+    width: 60%;
 }
 
 
 #formPro {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 80%;
 
 }
 
 #formPro a {
-    color: rgb(34, 67, 255);
+    color: #8c41ec;
+    font-weight: 200;
+    font-size: 1.25em;
+
 }
 
 
@@ -179,11 +211,12 @@ h2 {
     margin: 2em 0em;
 }
 
-.threeBlocks img {
-    width: 20%;
-}
 
 .threeBlocks .icons {
     width: 70%;
     margin-top: 0%;
+}
+
+svg{
+    color: #8c41ec;
 }
