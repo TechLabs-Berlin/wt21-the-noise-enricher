@@ -7,6 +7,12 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: "Roboto";
+    background-image: url("content/animatedWaves.gif");
+    background-repeat: no-repeat;
+    background-size: 115%;
+    background-position-y: -5%;
+    background-position-x: center;
+    background-origin:initial;
 }
 
 .canvas {
@@ -14,6 +20,8 @@ body {
     flex-direction: column;
     align-content: center;
     width: 50%;
+
+
 }
 
 a {
@@ -43,9 +51,7 @@ header {
 }
 
 h4 {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    margin-top: 0.2em;
+    margin: 0 0.5em;
 }
 
 #menu {
@@ -58,12 +64,12 @@ h4 {
 #callToAction {
     display: flex;
     flex-direction: column;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 h2 {
 
-    margin-top: 2em;
+    margin-top: 2.5em;
 
     font-family: "Roboto";
     font-weight: 300;
@@ -106,7 +112,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     padding: 1em;
-    margin: 1em 0em;
+    margin: 2em 0em;
     border-radius: 10px;
 
 }
@@ -133,16 +139,21 @@ h2 {
     flex-direction: column;
     align-items: center;
     width: 80%;
-    height: 50%;
+    height: 40%;
 }
 
 
 
-span.badge{
+#formNoises button.btn{
     color: #8c41ec;
-    border: solid 1px #8c41ec;
-    margin: 0.25em 0em;
+    background-color: rgb(255, 255, 255);
+    border: solid 1.5px #8c41ec;
+    border-radius: 25px;
+    margin: 0.15em 0em;
     width: 60%;
+    height: 30%;
+    line-height: 10px;
+    font-size: 80%;
 }
 
 
@@ -179,7 +190,7 @@ span.badge{
 /*  explanation text */
 
 .esplanation {
-    margin: 2em 0em;
+    margin-top: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
