@@ -7,12 +7,6 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: "Roboto";
-    background-image: url("content/animatedWaves.gif");
-    background-repeat: no-repeat;
-    background-size: 115%;
-    background-position-y: -5%;
-    background-position-x: center;
-    background-origin:initial;
 }
 
 .canvas {
@@ -20,8 +14,7 @@ body {
     flex-direction: column;
     align-content: center;
     width: 50%;
-
-
+    position: relative; z-index:2;
 }
 
 a {
@@ -35,7 +28,17 @@ button.btn {
     border: #8c41ec;
 }
 
+/* ------------------------------- */
+/*Background */
+#background {
+    width: max-content;
+    background-position-y: 0;
+    position: absolute; z-index:1;
+    top: -35%;
+    left:0;
+    width: 100%
 
+}
 
 
 /* ------------------------------- */
@@ -43,7 +46,7 @@ button.btn {
 header {
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    position: fixed; z-index:3;
     margin: 0em;
     width: 100%;
     border-bottom: 1px solid black;
@@ -68,9 +71,7 @@ h4 {
 }
 
 h2 {
-
-    margin-top: 2.5em;
-
+    margin-top: 2em;
     font-family: "Roboto";
     font-weight: 300;
     font-size: 3.5em;
@@ -132,7 +133,7 @@ h2 {
     appearance: none;
     background: #8c41ec;
     cursor: pointer;
-  }
+}
 
 #formNoises {
     display: flex;
@@ -144,7 +145,7 @@ h2 {
 
 
 
-#formNoises button.btn{
+#formNoises button.btn {
     color: #8c41ec;
     background-color: rgb(255, 255, 255);
     border: solid 1.5px #8c41ec;
@@ -228,6 +229,6 @@ h2 {
     margin-top: 0%;
 }
 
-svg{
+svg {
     color: #8c41ec;
 }
