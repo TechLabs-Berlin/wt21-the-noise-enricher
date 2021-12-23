@@ -1,16 +1,43 @@
+@import "bootstrap/scss/variables";
+
 /* General */
 body {
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Roboto";
 }
 
-.canvas{
+.canvas {
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 65%;
+    width: 50%;
+    position: relative; z-index:2;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button.btn {
+    color: white;
+    background-color: #8c41ec;
+    border: #8c41ec;
+}
+
+/* ------------------------------- */
+/*Background */
+#background {
+    width: max-content;
+    background-position-y: 0;
+    position: absolute; z-index:1;
+    top: -35%;
+    left:0;
+    width: 100%
+
 }
 
 
@@ -19,7 +46,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    position: fixed;
+    position: fixed; z-index:3;
     margin: 0em;
     width: 100%;
     border-bottom: 1px solid black;
@@ -27,8 +54,7 @@ header {
 }
 
 h4 {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
+    margin: 0 0.5em;
 }
 
 #menu {
@@ -41,13 +67,14 @@ h4 {
 #callToAction {
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    margin-bottom: 3em;
 }
 
 h2 {
-
-    margin-top: 3em;
+    margin-top: 2em;
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 3.5em;
 }
 
 /* ------------------------------- */
@@ -60,13 +87,15 @@ h2 {
 
 #formUpload {
     display: flex;
-    width: 50%;
+    width: 70%;
 
 }
 
 #formUpload input {
-    
-width: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: solid 1px gray;
+    width: 100%;
 }
 
 
@@ -76,39 +105,75 @@ width: 100%;
 }
 
 
-#form4, #form2, #form3 {
-    background-color: darkgray;
+#form2, #form3, #form4 {
+    background-color: rgb(214, 214, 214);
     height: 15em;
-    width: 30%;
+    width: 32%;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     padding: 1em;
+    margin: 2em 0em;
+    border-radius: 10px;
 
 }
 
 #formStyle {
+    font-size: 0.75em;
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: 80%;
+    height: 65%;
+}
 
+
+
+.form-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #8c41ec;
+    cursor: pointer;
 }
 
 #formNoises {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 80%;
-    height: 80%;
+    height: 40%;
+}
+
+
+
+#formNoises button.btn {
+    color: #8c41ec;
+    background-color: rgb(255, 255, 255);
+    border: solid 1.5px #8c41ec;
+    border-radius: 25px;
+    margin: 0.15em 0em;
+    width: 60%;
+    height: 30%;
+    line-height: 10px;
+    font-size: 80%;
 }
 
 
 #formPro {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 80%;
 
 }
+
+#formPro a {
+    color: #8c41ec;
+    font-weight: 200;
+    font-size: 1.25em;
+
+}
+
+
 
 
 /* ------------------------------- */
@@ -125,9 +190,45 @@ width: 100%;
 /* ------------------------------- */
 /*  explanation text */
 
-#esplanation {
-    margin: 2em, 0em;
+.esplanation {
+    margin-top: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+/* ------------------------------ */
+/* samples */
+
+.interTitle {
+    margin: 1em 0em;
+}
+
+#waveform {
+    margin: 2em 0em;
+}
+
+#Samples {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.threeBlocks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 2em 0em;
+}
+
+
+.threeBlocks .icons {
+    width: 70%;
+    margin-top: 0%;
+}
+
+svg {
+    color: #8c41ec;
 }
