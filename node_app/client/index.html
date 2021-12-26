@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
@@ -17,39 +17,41 @@
 <body>
 
 
-    <header>
-        <h4 id="logo"><a href="">The Noise Enricher</a></h4>
-        <div id="menu">
-            <h4 id="About"><a href="">About</a></h4>
-            <h4 id="logIn"><a href="">Log in</a></h4>
-        </div>
-    </header>
+<header>
+    <h4 id="logo"><a href="">The Noise Enricher</a></h4>
+    <div id="menu">
+        <h4 id="About"><a href="">About</a></h4>
+        <h4 id="logIn"><a href="">Log in</a></h4>
+    </div>
+</header>
 
-    <div >
-        <img id="background" src="content/animatedWaves.gif" alt="">
+<div>
+    <img id="background" src="content/animatedWaves.gif" alt="">
+</div>
+
+<div class="canvas">
+    <!-- Call to action -->
+
+    <div id="callToAction">
+        <h2>Generate your own track with neutral network.</h2>
     </div>
 
-    <div class="canvas">
-        <!-- Call to action -->
-
-        <div id="callToAction">
-            <h2>Generate your own track with neutral network.</h2>
-        </div>
-
-        <!-- Form module -->
-        <form action="" id="form1">
+    <!-- Form module -->
+    <form action="" id="generate">
+        <div id="uploadTrack">
             <h5>Upload your track</h5>
-            <div id="formUpload">
+            <div id="uploadFileInput">
                 <input type="file" class="form-control">
-            </div> <br>
-        </form>
+            </div>
+            <br>
+        </div>
 
 
         <!-- 3 gray blocks -->
-        <div id="formBlocks">
-            <form action="" id="form2">
+        <div id="allParams">
+            <section id="styleSection">
                 <p>Choose a style</p>
-                <div id="formStyle">
+                <div id="styleSelection">
                     <label for="rockRange" class="form-label">Rock</label>
                     <input type="range" class="form-range" min="0" max="6" id="rockRange">
                     <label for="tranceRange" class="form-label">Trance</label>
@@ -58,19 +60,19 @@
                     <input type="range" class="form-range" min="0" max="6" id="classicRange">
 
                 </div>
-            </form>
-            <form action="" id="form3">
+            </section>
+            <section id="noiseSection">
                 <p>Add some noises</p>
-                <div id="formNoises">
+                <div id="noiseBtns">
                     <button type="button" class="btn btn-outline-info">Sea</button>
                     <button type="button" class="btn btn-outline-info">Birds</button>
                     <button type="button" class="btn btn-outline-info">Street</button>
                     <button type="button" class="btn btn-outline-info">Storm</button>
                     <button type="button" class="btn btn-outline-info">Street</button>
                 </div>
-            </form>
-            <form action="" id="form4">
-                <p id="formPro">
+            </section>
+            <section id="goProSection">
+                <p id="proText">
                     Go advance
                     <br>
                     <br>
@@ -78,12 +80,96 @@
                     <br>
                     <a href="">Use Pro version</a>
                 </p>
-            </form>
+            </section>
         </div>
-
         <!-- generate button -->
         <div id="formGenerate">
             <button class="btn btn-info btn-lg">Generate new track</button>
+        </div>
+    </form>
+
+    <!-- explanation text -->
+    <div class="esplanation">
+        <p class="pEsplanation">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque nostrum libero quibusdam similique
+            maxime
+            optio suscipit sapiente? Eius ea eum, saepe, accusantium recusandae dolore optio repudiandae ad est
+            aperiam
+            quas? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque nostrum libero quibusdam similique
+            maxime
+            optio suscipit sapiente? Eius ea eum, saepe, accusantium recusandae dolore optio repudiandae ad est
+            aperiam
+            quas?
+        </p>
+    </div>
+
+    <!-- Samples -->
+    <div id="Samples">
+
+        <h4 class="interTitle">Play Samples</h4>
+
+        <img src="content/waveform.png" alt="GAN generated waveform" id="waveform">
+
+        <div class="threeBlocks">
+            <p><a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                     class="bi bi-play-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path
+                            d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                </svg>
+            </a> First Track
+            </p>
+            <p><a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                     class="bi bi-play-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path
+                            d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                </svg>
+            </a> Second Track
+            </p>
+            <p><a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                     class="bi bi-play-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path
+                            d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+                </svg>
+            </a> Third Track
+            </p>
+
+        </div>
+        <!--------------------------------->
+        <h4 class="interTitle">Where you can use it</h4>
+
+        <div class="threeBlocks">
+            <div>
+                <p> Public Event</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor"
+                     class="bi bi-people" viewBox="0 0 16 16">
+                    <path stroke="white" stroke-width="0.5px"
+                          d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
+                </svg>
+            </div>
+            <div>
+                <p> Media Project</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor"
+                     class="bi bi-play-btn" viewBox="0 0 16 16">
+                    <path stroke="white" stroke-width="0.5px"
+                          d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"/>
+                    <path stroke="white" stroke-width="0.5px"
+                          d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                </svg>
+            </div>
+            <div>
+                <p> Personal Reasons</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor"
+                     class="bi bi-person" viewBox="0 0 16 16">
+                    <path stroke="white" stroke-width="0.5px"
+                          d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                </svg>
+            </div>
         </div>
 
         <!-- explanation text -->
@@ -93,104 +179,29 @@
                 maxime
                 optio suscipit sapiente? Eius ea eum, saepe, accusantium recusandae dolore optio repudiandae ad est
                 aperiam
-                quas? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque nostrum libero quibusdam similique
+                quas? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque nostrum libero quibusdam
+                similique
                 maxime
                 optio suscipit sapiente? Eius ea eum, saepe, accusantium recusandae dolore optio repudiandae ad est
                 aperiam
                 quas?
             </p>
         </div>
-
-        <!-- Samples -->
-        <div id="Samples">
-
-            <h4 class="interTitle">Play Samples</h4>
-
-            <img src="content/waveform.png" alt="GAN generated waveform" id="waveform">
-
-            <div class="threeBlocks">
-                <p> <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
-                            class="bi bi-play-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                            <path
-                                d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
-                        </svg> </a> First Track</p>
-                <p> <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
-                            class="bi bi-play-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                            <path
-                                d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
-                        </svg> </a> Second Track</p>
-                <p> <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
-                            class="bi bi-play-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                            <path
-                                d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
-                        </svg> </a> Third Track</p>
-
-            </div>
-            <!--------------------------------->
-            <h4 class="interTitle">Where you can use it</h4>
-
-            <div class="threeBlocks">
-                <div>
-                    <p> Public Event</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor"
-                        class="bi bi-people" viewBox="0 0 16 16">
-                        <path stroke="white" stroke-width="0.5px"
-                            d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
-                    </svg>
-                </div>
-                <div>
-                    <p> Media Project</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor"
-                        class="bi bi-play-btn" viewBox="0 0 16 16">
-                        <path stroke="white" stroke-width="0.5px"
-                            d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
-                        <path stroke="white" stroke-width="0.5px"
-                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
-                    </svg>
-                </div>
-                <div>
-                    <p> Personal Reasons</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor"
-                        class="bi bi-person" viewBox="0 0 16 16">
-                        <path stroke="white" stroke-width="0.5px"
-                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-                    </svg>
-                </div>
-            </div>
-
-            <!-- explanation text -->
-            <div class="esplanation">
-                <p class="pEsplanation">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque nostrum libero quibusdam similique
-                    maxime
-                    optio suscipit sapiente? Eius ea eum, saepe, accusantium recusandae dolore optio repudiandae ad est
-                    aperiam
-                    quas? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque nostrum libero quibusdam
-                    similique
-                    maxime
-                    optio suscipit sapiente? Eius ea eum, saepe, accusantium recusandae dolore optio repudiandae ad est
-                    aperiam
-                    quas?
-                </p>
-            </div>
-        </div>
-
-        <!-- generate button -->
-        <div id="formGenerate">
-            <button class="btn btn-info btn-lg">Generate new track</button>
-        </div>
-
     </div>
 
+    <!-- generate button -->
+    <!--<div id="formGenerate">-->
+    <!--    <button class="btn btn-info btn-lg">Generate new track</button>-->
+    <!--</div>-->
 
-    <footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+</div>
+
+
+<footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
-    </footer>
+</footer>
 
 </body>
 
