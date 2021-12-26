@@ -37,7 +37,8 @@
     </div>
 
     <!-- Form module -->
-    <form action="" id="generate">
+    <form id="generateTrack">
+
         <div id="uploadTrack">
             <h5>Upload your track</h5>
             <div id="uploadFileInput">
@@ -45,7 +46,6 @@
             </div>
             <br>
         </div>
-
 
         <!-- 3 gray blocks -->
         <div id="allParams">
@@ -84,8 +84,16 @@
         </div>
         <!-- generate button -->
         <div id="formGenerate">
-            <button class="btn btn-info btn-lg">Generate new track</button>
+            <button class="btn btn-info btn-lg" type="submit">Generate new track</button>
         </div>
+    </form>
+
+    <form>
+        <!-- save button -->
+        <div id="saveFile">
+            <button class="btn btn-info btn-lg">Download result</button>
+        </div>
+
     </form>
 
     <!-- explanation text -->
@@ -196,11 +204,12 @@
 
 </div>
 
-
+<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 <footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
+
 </footer>
 
 </body>
