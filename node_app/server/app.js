@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 })
 
 
-const port = process.enc.PORT || 3030;
+const port = process.env.PORT || 3030;
 
 app.listen(port, () => {
     console.log(`Serving on port ${port}`);
