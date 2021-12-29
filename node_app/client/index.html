@@ -37,12 +37,11 @@
     </div>
 
     <!-- Form module -->
-    <form id="generateTrack">
-
+    <form id="generateTrack" method="POST" enctype="multipart/form-data">
         <div id="uploadTrack">
             <h5>Upload your track</h5>
             <div id="uploadFileInput">
-                <input type="file" class="form-control">
+                <input type="file" name="audio" class="form-control">
             </div>
             <br>
         </div>
@@ -53,11 +52,11 @@
                 <p>Choose a style</p>
                 <div id="styleSelection">
                     <label for="rockRange" class="form-label">Rock</label>
-                    <input type="range" class="form-range" min="0" max="6" id="rockRange">
+                    <input name="rockRange" type="range" class="form-range" min="0" max="6" id="rockRange">
                     <label for="tranceRange" class="form-label">Trance</label>
-                    <input type="range" class="form-range" min="0" max="6" id="tranceRange">
+                    <input name="tranceRange" type="range" class="form-range" min="0" max="6" id="tranceRange">
                     <label for="classicRange" class="form-label">Classic</label>
-                    <input type="range" class="form-range" min="0" max="6" id="classicRange">
+                    <input name="classicRange" type="range" class="form-range" min="0" max="6" id="classicRange">
 
                 </div>
             </section>

@@ -1,7 +1,7 @@
 // Prevent reloading the page with submit form
 function logSubmit(event) {
     console.log(`Form Submitted! Time stamp: ${event.timeStamp}`);
-    event.preventDefault();
+    // event.preventDefault();
 }
 
 const form = document.getElementById('generateTrack');
