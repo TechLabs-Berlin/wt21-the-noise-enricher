@@ -1,4 +1,4 @@
-@import "bootstrap/scss/variables";
+/*@import "bootstrap/scss/variables";*/
 
 /* General */
 body {
@@ -79,19 +79,19 @@ h2 {
 
 /* ------------------------------- */
 /* Form module */
-#form1 {
+#uploadTrack {
     display: flex;
     justify-content: space-between;
     margin: 2em 0em;
 }
 
-#formUpload {
+#uploadFileInput {
     display: flex;
     width: 70%;
 
 }
 
-#formUpload input {
+#uploadFileInput input {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border: solid 1px gray;
@@ -99,13 +99,13 @@ h2 {
 }
 
 
-#formBlocks {
+#allParams {
     display: flex;
     justify-content: space-between;
 }
 
 
-#form2, #form3, #form4 {
+#styleSection, #noiseSection, #goProSection {
     background-color: rgb(214, 214, 214);
     height: 15em;
     width: 32%;
@@ -118,7 +118,7 @@ h2 {
 
 }
 
-#formStyle {
+#styleSelection {
     font-size: 0.75em;
     display: flex;
     flex-direction: column;
@@ -135,7 +135,7 @@ h2 {
     cursor: pointer;
 }
 
-#formNoises {
+#noiseBtns {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -145,7 +145,7 @@ h2 {
 
 
 
-#formNoises button.btn {
+#noiseBtns button.btn {
     color: #8c41ec;
     background-color: rgb(255, 255, 255);
     border: solid 1.5px #8c41ec;
@@ -158,7 +158,7 @@ h2 {
 }
 
 
-#formPro {
+#proText {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -166,7 +166,7 @@ h2 {
 
 }
 
-#formPro a {
+#proText a {
     color: #8c41ec;
     font-weight: 200;
     font-size: 1.25em;
@@ -180,6 +180,16 @@ h2 {
 /*  generate button */
 
 #formGenerate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 0em;
+}
+
+/* ------------------------------- */
+/*  save button */
+
+#saveFile {
     display: flex;
     flex-direction: column;
     align-items: center;
