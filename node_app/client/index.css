@@ -237,7 +237,7 @@ h2 {
     margin: 0em 2em;
 }
 
-.threeBlocks #usageSample div{
+.threeBlocks #usageSample div {
     margin: 0em 2em;
 }
 
@@ -254,15 +254,15 @@ svg {
 /* MediaQuery */
 
 @media (max-width: 1200px) {
-    .canvas{
-        width:70%;
+    .canvas {
+        width: 70%;
     }
 }
 
 @media (max-width: 900px) {
 
-    .canvas{
-    width: 80%;
+    .canvas {
+        width: 80%;
     }
 
     /* ------------------------------ */
@@ -291,8 +291,21 @@ svg {
         width: 100%;
         display: flex;
         margin: 1em 0em;
-
     }
+
+    #styleSelection div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 65%;
+        font-size: 1.2em;
+    }
+
+    .form-range{
+        width: 80%;
+    }
+
 
     #uploadTrack {
         flex-direction: column;
@@ -302,9 +315,11 @@ svg {
         width: 100%;
     }
 
-    #proText a{
+    #proText a {
         margin-top: -1em;
     }
+
+
 
 
     /* ------------------------------ */
@@ -315,7 +330,7 @@ svg {
         width: 97%;
     }
 
-    .threeBlocks{
+    .threeBlocks {
         width: 90%;
     }
 
@@ -331,10 +346,55 @@ svg {
     .threeBlocks #downloadTraks p {
         margin: 0em 1em;
     }
-    
-    .threeBlocks #usageSample div{
+
+    .threeBlocks #usageSample div {
         margin: 0em 1em;
     }
-    
 
+
+}
+
+
+@media (max-width: 700px) {
+    body {
+        font-size: 0.85em;
+    }
+
+    h4 {
+        font-size: 1.25em;
+    }
+
+
+    /* ------------------------------ */
+    /* Form module */
+
+
+    #styleSelection div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 65%;
+        font-size: 1.2em;
+    }
+
+    .form-range{
+        width: 70%;
+    }
+
+    #noiseBtns button.btn {
+        line-height: 5px;
+    }
+
+    /* ------------------------------ */
+    /*Samples */
+    .threeBlocks #downloadTraks svg {
+        width: 25px;
+        margin: -2em 0em;
+    }
+
+    .threeBlocks #usageSample svg {
+        margin: -2em 0em;
+        width: 75px;
+    }
 }
