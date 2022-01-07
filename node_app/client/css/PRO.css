@@ -1,0 +1,30 @@
+#styleSection, #noiseSection, #instrumentSection {
+    background-color: rgb(214, 214, 214);
+    height: 17em;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    margin: 2em 0em;
+    border-radius: 10px;
+}
+
+
+#styleSelection a {
+        color: #8c41ec;
+        font-weight: 200;
+        font-size: 15px;
+        align-self: center;
+        margin-top: 0.5em;
+}
+
+#noiseSection #noiseBtns a{
+    color: #8c41ec;
+        font-weight: 200;
+        font-size: 15px;
+        align-self:center;
+        margin-top: 1.85em;
+}
+
+
