@@ -1,0 +1,11 @@
+#about {
+    display: flex;
+    flex-direction: column;
+}
+#about h2 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-family: "Roboto";
+    font-weight: 300;
+    font-size: 3em;
+}
