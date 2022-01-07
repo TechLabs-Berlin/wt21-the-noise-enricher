@@ -1,4 +1,4 @@
-#pro{
+#pro {
     margin-top: 5em;
 }
 
@@ -7,12 +7,13 @@
     justify-content: space-between;
     margin: -2em 0em;
 }
-#allParams1{
+
+#allParams1 {
     margin-top: 2em;
 }
 
 #styleSelection a:hover, #noiseSection #noiseBtns a:hover {
-    color:#89C6FF;
+    color: #89C6FF;
 }
 
 #styleSection, #noiseSection, #instrumentSection {
@@ -44,7 +45,7 @@
     margin-top: 1.85em;
 }
 
-.collectionInst{
+.collectionInst {
     display: flex;
 }
 
@@ -54,6 +55,41 @@
     filter: invert(30%) sepia(72%) saturate(4288%) hue-rotate(255deg) brightness(97%) contrast(91%);
 }
 
-.iconInstrument:hover{
+.iconInstrument:hover {
     filter: invert(75%) sepia(63%) saturate(1341%) hue-rotate(181deg) brightness(100%) contrast(109%);
+}
+
+@media (max-width: 900px) {
+
+
+    /* ------------------------------ */
+    /* Form module */
+    #allParams1, #allParams2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #allParams2 {
+        margin-top: 2em;
+    }
+
+    #styleSection, #noiseSection, #instrumentSection {
+
+        height: 12em;
+        width: 100%;
+        display: flex;
+        margin: 1em 0em;
+    }
+
+    #instrumentSection div{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .iconInstrument {
+        width: 60%;
+    }
+
+
 }
