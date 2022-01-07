@@ -14,7 +14,8 @@ body {
     flex-direction: column;
     align-content: center;
     width: 50%;
-    position: relative; z-index:2;
+    position: relative;
+    z-index: 2;
 }
 
 a {
@@ -33,11 +34,11 @@ button.btn {
 #background {
     width: max-content;
     background-position-y: 0;
-    position: absolute; z-index:1;
+    position: absolute;
+    z-index: 1;
     top: -35%;
-    left:0;
+    left: 0;
     width: 100%
-
 }
 
 
@@ -46,7 +47,8 @@ button.btn {
 header {
     display: flex;
     justify-content: space-between;
-    position: fixed; z-index:3;
+    position: fixed;
+    z-index: 3;
     margin: 0em;
     width: 100%;
     border-bottom: 1px solid black;
@@ -88,7 +90,6 @@ h2 {
 #uploadFileInput {
     display: flex;
     width: 70%;
-
 }
 
 #uploadFileInput input {
@@ -115,7 +116,6 @@ h2 {
     padding: 1em;
     margin: 2em 0em;
     border-radius: 10px;
-
 }
 
 #styleSelection {
@@ -225,20 +225,176 @@ h2 {
     align-items: center;
 }
 
-.threeBlocks {
+.threeBlocks #usageSample, .threeBlocks #downloadTraks {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 100%;
     margin: 2em 0em;
 }
 
-
-.threeBlocks .icons {
-    width: 70%;
-    margin-top: 0%;
+.threeBlocks #downloadTraks p {
+    margin: 0em 2em;
 }
+
+.threeBlocks #usageSample div {
+    margin: 0em 2em;
+}
+
+
+
 
 svg {
     color: #8c41ec;
+}
+
+
+
+/* ------------------------------ */
+/* MediaQuery */
+
+@media (max-width: 1200px) {
+    .canvas {
+        width: 70%;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .canvas {
+        width: 80%;
+    }
+
+    /* ------------------------------ */
+    /*Background */
+    #background {
+        width: max-content;
+        background-position-y: 0;
+        position: absolute;
+        z-index: 1;
+        top: -10%;
+        left: 0;
+        width: 100%
+    }
+
+    /* ------------------------------ */
+    /* Form module */
+    #allParams {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #styleSection, #noiseSection, #goProSection {
+
+        height: 12em;
+        width: 100%;
+        display: flex;
+        margin: 1em 0em;
+    }
+
+    #styleSelection div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 65%;
+        font-size: 1.2em;
+    }
+
+    .form-range{
+        width: 80%;
+    }
+
+
+    #uploadTrack {
+        flex-direction: column;
+    }
+
+    #uploadFileInput {
+        width: 100%;
+    }
+
+    #proText a {
+        margin-top: -1em;
+    }
+
+
+
+
+    /* ------------------------------ */
+    /* samples */
+
+    #waveform {
+        margin: 2em;
+        width: 97%;
+    }
+
+    .threeBlocks {
+        width: 90%;
+    }
+
+    .threeBlocks #downloadTraks svg {
+        width: 35px;
+    }
+
+    .threeBlocks #usageSample svg {
+        margin-top: -2em;
+        width: 95px;
+    }
+
+    .threeBlocks #downloadTraks p {
+        margin: 0em 1em;
+    }
+
+    .threeBlocks #usageSample div {
+        margin: 0em 1em;
+    }
+
+
+}
+
+
+@media (max-width: 700px) {
+    body {
+        font-size: 0.85em;
+    }
+
+    h4 {
+        font-size: 1.25em;
+    }
+
+
+    /* ------------------------------ */
+    /* Form module */
+
+
+    #styleSelection div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 65%;
+        font-size: 1.2em;
+    }
+
+    .form-range{
+        width: 70%;
+    }
+
+    #noiseBtns button.btn {
+        line-height: 5px;
+    }
+
+    /* ------------------------------ */
+    /*Samples */
+    .threeBlocks #downloadTraks svg {
+        width: 25px;
+        margin: -2em 0em;
+    }
+
+    .threeBlocks #usageSample svg {
+        margin: -2em 0em;
+        width: 75px;
+    }
 }
