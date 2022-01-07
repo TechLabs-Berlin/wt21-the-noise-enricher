@@ -1,3 +1,20 @@
+#pro{
+    margin-top: 5em;
+}
+
+#allParams1, #allParams2 {
+    display: flex;
+    justify-content: space-between;
+    margin: -2em 0em;
+}
+#allParams1{
+    margin-top: 2em;
+}
+
+#styleSelection a:hover, #noiseSection #noiseBtns a:hover {
+    color:#89C6FF;
+}
+
 #styleSection, #noiseSection, #instrumentSection {
     background-color: rgb(214, 214, 214);
     height: 17em;
@@ -12,19 +29,31 @@
 
 
 #styleSelection a {
-        color: #8c41ec;
-        font-weight: 200;
-        font-size: 15px;
-        align-self: center;
-        margin-top: 0.5em;
-}
-
-#noiseSection #noiseBtns a{
     color: #8c41ec;
-        font-weight: 200;
-        font-size: 15px;
-        align-self:center;
-        margin-top: 1.85em;
+    font-weight: 200;
+    font-size: 15px;
+    align-self: center;
+    margin-top: 0.5em;
+}
+
+#noiseSection #noiseBtns a {
+    color: #8c41ec;
+    font-weight: 200;
+    font-size: 15px;
+    align-self: center;
+    margin-top: 1.85em;
+}
+
+.collectionInst{
+    display: flex;
 }
 
 
+.iconInstrument {
+    width: 100%;
+    filter: invert(30%) sepia(72%) saturate(4288%) hue-rotate(255deg) brightness(97%) contrast(91%);
+}
+
+.iconInstrument:hover{
+    filter: invert(75%) sepia(63%) saturate(1341%) hue-rotate(181deg) brightness(100%) contrast(109%);
+}

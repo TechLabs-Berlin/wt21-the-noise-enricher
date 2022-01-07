@@ -23,10 +23,20 @@ a {
     color: black;
 }
 
+a:hover {
+    color: #89C6FF;
+}
+
 button.btn {
     color: white;
     background-color: #8c41ec;
-    border: #8c41ec;
+    border: solid #8c41ec;
+}
+
+button.btn:hover {
+    color: white;
+    background-color: #89C6FF;
+    border: solid #89C6FF;
 }
 
 /* ------------------------------- */
@@ -157,6 +167,13 @@ h2 {
     font-size: 80%;
 }
 
+#noiseBtns button.btn:hover {
+    color: #89C6FF;
+    border: solid 2px #89C6FF;
+}
+
+
+
 
 #proText {
     display: flex;
@@ -170,7 +187,10 @@ h2 {
     color: #8c41ec;
     font-weight: 200;
     font-size: 1.25em;
+}
 
+#proText a:hover {
+    color: #89C6FF;
 }
 
 
@@ -248,6 +268,10 @@ svg {
     color: #8c41ec;
 }
 
+#downloadTraks svg:hover {
+    color: #89C6FF;
+}
+
 
 
 /* ------------------------------ */
@@ -302,7 +326,7 @@ svg {
         font-size: 1.2em;
     }
 
-    .form-range{
+    .form-range {
         width: 80%;
     }
 
@@ -378,7 +402,7 @@ svg {
         font-size: 1.2em;
     }
 
-    .form-range{
+    .form-range {
         width: 70%;
     }
 
