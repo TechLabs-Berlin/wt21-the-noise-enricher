@@ -37,12 +37,12 @@
     margin-top: 0.5em;
 }
 
-#noiseSection #noiseBtns a {
+#noiseSection a {
     color: #8c41ec;
     font-weight: 200;
     font-size: 15px;
     align-self: center;
-    margin-top: 1.85em;
+    margin-top: 5.1em;
 }
 
 .collectionInst {
@@ -83,9 +83,15 @@
     }
 
     #instrumentSection div{
+        margin-top: 0.5em;
         display: flex;
         flex-direction: row;
     }
+
+    #noiseSection a {
+        margin-top: 0.85em;
+    }
+
 
     .iconInstrument {
         width: 60%;

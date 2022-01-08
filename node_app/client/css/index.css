@@ -343,6 +343,19 @@ svg {
         margin-top: -1em;
     }
 
+    #noiseBtns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1em;
+    }
+
+    #noiseBtns button.btn{
+        height: 50px;
+        margin: 0px 3px;
+    }
+
+
 
 
 
@@ -409,6 +422,12 @@ svg {
     #noiseBtns button.btn {
         line-height: 5px;
     }
+
+    #noiseBtns button.btn{
+        height: 30px;
+        margin: 0px 3px;
+    }
+
 
     /* ------------------------------ */
     /*Samples */
