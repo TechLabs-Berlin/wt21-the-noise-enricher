@@ -13,6 +13,11 @@
     margin-bottom: -1em;
 }
 
+#sections {
+        display: flex;
+        flex-direction: column;
+}
+
 #allParams1, #allParams2 {
     display: flex;
     justify-content: space-between;
@@ -23,11 +28,13 @@
     margin-top: 2em;
 }
 
+
+
 #styleSelection a:hover, #noiseSection #noiseBtns a:hover {
     color: #89C6FF;
 }
 
-#styleSection, #noiseSection, #instrumentSection {
+#styleSection, #noiseSection,Section, #randomSection, #addSection, #placeholderSection {
     background-color: rgb(214, 214, 214);
     height: 17em;
     width: 32%;
@@ -38,6 +45,20 @@
     margin: 3em 0em;
     border-radius: 10px;
 }
+
+#addSection {
+    background-color: white;
+    border: dotted 4px #8c41ec;
+    color: #8c41ec;
+}
+
+#addText p, #randomText p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 
 
 #styleSelection a {
@@ -74,19 +95,34 @@
     filter: invert(75%) sepia(63%) saturate(1341%) hue-rotate(181deg) brightness(100%) contrast(109%);
 }
 
+svg:hover {
+    fill:#89C6FF;
+}
+
+#randomText, #addText, #placeholderText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+#placeholderSection{
+    background-color: transparent;
+}
+
 @media (max-width: 900px) {
 
 
     /* ------------------------------ */
     /* Form module */
-    #allParams1, #allParams2 {
+    #allParams1 {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
     #allParams2 {
-        margin-top: 2em;
+        margin-top: 0.1em;
     }
 
     #styleSection, #noiseSection, #instrumentSection {
@@ -107,9 +143,11 @@
         margin-top: 0.85em;
     }
 
+   
+
 
     .iconInstrument {
-        width: 60%;
+        width: 70%;
     }
 
 
