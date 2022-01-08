@@ -2,6 +2,17 @@
     margin-top: 5em;
 }
 
+#generateTrack{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#uploadTrack{
+    width: 100%;
+    margin-bottom: -1em;
+}
+
 #allParams1, #allParams2 {
     display: flex;
     justify-content: space-between;
@@ -24,7 +35,7 @@
     flex-direction: column;
     align-items: center;
     padding: 1em;
-    margin: 2em 0em;
+    margin: 3em 0em;
     border-radius: 10px;
 }
 
@@ -43,6 +54,10 @@
     font-size: 15px;
     align-self: center;
     margin-top: 5.1em;
+}
+
+#instrumentSection div{
+    margin-top: 0.5em;
 }
 
 .collectionInst {
