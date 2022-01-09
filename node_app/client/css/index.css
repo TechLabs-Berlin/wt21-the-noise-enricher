@@ -198,7 +198,7 @@ h2 {
 /* ------------------------------- */
 /*  generate button */
 
-#formGenerate {
+.formGenerate {
     display: flex;
     flex-direction: column;
     align-items: center;
