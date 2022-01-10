@@ -23,10 +23,20 @@ a {
     color: black;
 }
 
+a:hover {
+    color: #89C6FF;
+}
+
 button.btn {
     color: white;
     background-color: #8c41ec;
-    border: #8c41ec;
+    border: solid #8c41ec;
+}
+
+button.btn:hover {
+    color: white;
+    background-color: #89C6FF;
+    border: solid #89C6FF;
 }
 
 /* ------------------------------- */
@@ -123,7 +133,7 @@ h2 {
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: 65%;
+    height: 40%;
 }
 
 
@@ -157,12 +167,18 @@ h2 {
     font-size: 80%;
 }
 
+#noiseBtns button.btn:hover {
+    color: #89C6FF;
+    border: solid 2px #89C6FF;
+}
+
+
+
 
 #proText {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
 
 }
 
@@ -170,7 +186,10 @@ h2 {
     color: #8c41ec;
     font-weight: 200;
     font-size: 1.25em;
+}
 
+#proText a:hover {
+    color: #89C6FF;
 }
 
 
@@ -179,7 +198,7 @@ h2 {
 /* ------------------------------- */
 /*  generate button */
 
-#formGenerate {
+.formGenerate {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -248,6 +267,10 @@ svg {
     color: #8c41ec;
 }
 
+#downloadTraks svg:hover {
+    color: #89C6FF;
+}
+
 
 
 /* ------------------------------ */
@@ -302,7 +325,7 @@ svg {
         font-size: 1.2em;
     }
 
-    .form-range{
+    .form-range {
         width: 80%;
     }
 
@@ -318,6 +341,19 @@ svg {
     #proText a {
         margin-top: -1em;
     }
+
+    #noiseBtns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1em;
+    }
+
+    #noiseBtns button.btn{
+        height: 50px;
+        margin: 0px 3px;
+    }
+
 
 
 
@@ -378,13 +414,19 @@ svg {
         font-size: 1.2em;
     }
 
-    .form-range{
+    .form-range {
         width: 70%;
     }
 
     #noiseBtns button.btn {
         line-height: 5px;
     }
+
+    #noiseBtns button.btn{
+        height: 30px;
+        margin: 0px 3px;
+    }
+
 
     /* ------------------------------ */
     /*Samples */
