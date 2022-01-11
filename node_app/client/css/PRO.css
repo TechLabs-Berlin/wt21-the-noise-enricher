@@ -2,6 +2,14 @@
     margin-top: 5em;
 }
 
+#logo a {
+    color: rgb(184, 184, 184);
+}
+
+#gP a {
+    color:black;
+}
+
 #generateTrack{
     display: flex;
     flex-direction: column;

@@ -13,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 50%;
+    width: 40%;
     position: relative;
     z-index: 2;
 }
@@ -61,12 +61,26 @@ header {
     z-index: 3;
     margin: 0em;
     width: 100%;
-    border-bottom: 1px solid black;
-    background-color: white
+    border-bottom: 1px solid white;
+    background-color: white;
+    box-shadow: 0px 2px 20px rgb(231, 231, 231);
+}
+
+#about , #logIn, #gP {
+    font-size: 1.25em;
+    margin-top: 0.15em;
 }
 
 h4 {
     margin: 0 0.5em;
+}
+
+#about a,  #logIn a, #gP a {
+    color: rgb(184, 184, 184);
+}
+
+#about a:hover,  #logIn a:hover, #logo a:hover, #gP a:hover {
+    color: black;
 }
 
 #menu {
@@ -83,10 +97,13 @@ h4 {
 }
 
 h2 {
-    margin-top: 2em;
+    margin-top: 3em;
+    margin-bottom: 1em;
     font-family: "Roboto";
     font-weight: 300;
     font-size: 3.5em;
+    width: max-content;
+    align-self: center;
 }
 
 /* ------------------------------- */
@@ -279,6 +296,9 @@ svg {
 @media (max-width: 1200px) {
     .canvas {
         width: 70%;
+    }
+    h2 {
+        width: 100%;
     }
 }
 

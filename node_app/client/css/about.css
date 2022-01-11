@@ -8,4 +8,14 @@
     font-family: "Roboto";
     font-weight: 300;
     font-size: 3em;
+    width: 100%;
+}
+
+
+#logo a {
+    color: rgb(184, 184, 184);
+}
+
+#about a {
+    color:black;
 }
