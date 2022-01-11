@@ -222,7 +222,7 @@ var MusicEqualizerBar = (function () {
     /*==============================================*/
 
     function loadSettings() {
-        color = "rgb(231, 231, 231)";
+        color = "white";
         size = 5;
         speed = 20;
         space = 2;

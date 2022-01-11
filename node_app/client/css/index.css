@@ -2,7 +2,7 @@
 
 /* General */
 body {
-    background-color: white;
+    background-color: #eee4e4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,8 +29,8 @@ a:hover {
 
 button.btn {
     color: white;
-    background-color: #8c41ec;
-    border: solid #8c41ec;
+    background-color: #7444f8;;
+    border: solid #7444f8;;
 }
 
 button.btn:hover {
@@ -63,7 +63,7 @@ header {
     width: 100%;
     border-bottom: 1px solid white;
     background-color: white;
-    box-shadow: 0px 2px 20px rgb(231, 231, 231);
+
 }
 
 #about , #logIn, #gP {
@@ -160,7 +160,7 @@ h2 {
 .form-range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    background: #8c41ec;
+    background: #7444f8;;
     cursor: pointer;
 }
 
@@ -175,9 +175,9 @@ h2 {
 
 
 #noiseBtns button.btn {
-    color: #8c41ec;
+    color: #7444f8;;
     background-color: rgb(255, 255, 255);
-    border: solid 1.5px #8c41ec;
+    border: solid 1.5px #7444f8;
     border-radius: 25px;
     margin: 0.15em 0em;
     width: 60%;
@@ -202,7 +202,7 @@ h2 {
 }
 
 #proText a {
-    color: #8c41ec;
+    color: #7444f8;;
     font-weight: 200;
     font-size: 1.25em;
 }
@@ -283,7 +283,7 @@ h2 {
 
 
 svg {
-    color: #8c41ec;
+    color: #7444f8;;
 }
 
 #downloadTraks svg:hover {
@@ -295,7 +295,7 @@ svg {
 /* ------------------------------ */
 /* MediaQuery */
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .canvas {
         width: 70%;
     }
