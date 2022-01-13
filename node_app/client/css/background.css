@@ -1,0 +1,26 @@
+
+
+*,*:before,*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    
+    padding: 0;
+    margin: 0;
+  }
+  .widget-container {
+    width: 120%;
+    height: 60%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    font-size: 0;
+  }
+  
+  canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: rotate(180deg);
+  }
+  
