@@ -2,11 +2,12 @@
 
 /* General */
 body {
-    background-color: #eee4e4;
+    background-color: #352754;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Roboto";
+    font-family: "Homenaje";
+    color: white;
 }
 
 .canvas {
@@ -20,7 +21,7 @@ body {
 
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 a:hover {
@@ -29,9 +30,9 @@ a:hover {
 
 button.btn {
     color: white;
-    background-color: #7444f8;
+    background-color: #e7a50c;
     ;
-    border: solid #7444f8;
+    border: solid #e7a50c;
     ;
 }
 
@@ -63,30 +64,28 @@ header {
     z-index: 3;
     margin: 0em;
     width: 100%;
-    border-bottom: 1px solid white;
-    background-color: white;
-
+    background-color: #111435;
+    height: 3em;
 }
 
-#about, #logIn, #gP {
-    font-size: 1.25em;
-    margin-top: 0.15em;
-}
 
 h4 {
-    margin: 0 0.5em;
+    margin: 0 1em;
 }
 
-#about a, #logIn a, #gP a {
-    color: rgb(184, 184, 184);
+#about a, #logIn a, #gP a, #logo {
+    color: rgb(255, 255, 255);
+    margin-top: 1em;
+    font-size: medium;
 }
 
 #about a:hover, #logIn a:hover, #logo a:hover, #gP a:hover {
-    color: black;
+    color: #89C6FF;
 }
 
 #menu {
     display: flex;
+    margin-top: 0.53em;
 }
 
 
@@ -94,40 +93,54 @@ h4 {
 /* Call to action */
 #callToAction {
     display: flex;
-    flex-direction: column;
     margin-bottom: 3em;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15em;
+    margin-bottom: 1em;
 }
 
-h2 {
-    margin-top: 3em;
-    margin-bottom: 1em;
-    font-family: "Roboto";
-    font-weight: 300;
-    font-size: 3.5em;
-    width: max-content;
-    align-self: center;
+h1 {
+    font-size: 3em;
 }
 
 /* ------------------------------- */
 /* Form module */
 #uploadTrack {
     display: flex;
-    justify-content: space-between;
-    margin: 2em 0em;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin: 2em;
 }
 
 #uploadFileInput {
+    margin-top: 1em;
     display: flex;
     width: 70%;
+    border: none;
 }
 
-#uploadFileInput input {
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border: none;
-    width: 100%;
-    box-shadow: 0px 1px 5px rgb(218, 218, 218);
+#inputGroup-sizing-default{
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    width: 25%;
+    background-color:#e7a50c;
+    color: black;
+    border: solid 1px #e7a50c;
 }
+
+#uploadFileInput .form-control{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border: solid 1px white;
+}
+
 
 
 #allParams {
@@ -137,7 +150,8 @@ h2 {
 
 
 #styleSection, #noiseSection, #goProSection {
-    background-color: rgb(255, 255, 255);
+    background-color: #111435;
+    color: white;
     height: 15em;
     width: 32%;
     display: flex;
@@ -146,7 +160,6 @@ h2 {
     padding: 1em;
     margin: 2em 0em;
     border-radius: 10px;
-    box-shadow: 0px 2px 10px rgb(218, 218, 218);
 }
 
 #styleSelection {
@@ -162,7 +175,7 @@ h2 {
 .form-range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    background: #7444f8;
+    background: #e7a50c;
     ;
     cursor: pointer;
 }
@@ -178,10 +191,10 @@ h2 {
 
 
 #noiseBtns button.btn {
-    color: #7444f8;
+    color: #e7a50c;
     ;
     background-color: rgb(255, 255, 255);
-    border: solid 1.5px #7444f8;
+    border: solid 1.5px #e7a50c;
     border-radius: 25px;
     margin: 0.15em 0em;
     width: 60%;
@@ -206,7 +219,7 @@ h2 {
 }
 
 #proText a {
-    color: #7444f8;
+    color: #e7a50c;
     ;
     font-weight: 200;
     font-size: 1.25em;
@@ -288,7 +301,7 @@ h2 {
 
 
 svg {
-    color: #7444f8;
+    color: #e7a50c;
     ;
 }
 
