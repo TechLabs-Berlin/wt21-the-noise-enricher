@@ -1,11 +1,10 @@
 <% layout('layouts/boilerplate.ejs') %>
 
-<div id="widgetContainer" class="widget-container">
-    <canvas id="widgetCanvas"></canvas>
-</div>
-<div class="canvas">
-    <!-- Call to action -->
+<%- include("partials/background_animation.ejs") %>
 
+<div class="canvas">
+
+    <!-- Call to action -->
     <div id="callToAction">
         <h2>Generate your own track with Neutral Networks</h2>
     </div>

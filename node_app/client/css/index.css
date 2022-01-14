@@ -3,16 +3,12 @@
 /* General */
 body {
     background-color: #eee4e4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-family: "Roboto";
 }
 
 .canvas {
     display: flex;
     flex-direction: column;
-    align-content: center;
     width: 40%;
     position: relative;
     z-index: 2;
@@ -48,7 +44,6 @@ button.btn:hover {
     z-index: 1;
     top: -35%;
     left: 0;
-    width: 100%
 }
 
 
@@ -66,7 +61,7 @@ header {
 
 }
 
-#about , #logIn, #gP {
+#about, #logIn, #gP {
     font-size: 1.25em;
     margin-top: 0.15em;
 }
@@ -75,26 +70,17 @@ h4 {
     margin: 0 0.5em;
 }
 
-#about a,  #logIn a, #gP a {
+#about a, #logIn a, #gP a {
     color: rgb(184, 184, 184);
 }
 
-#about a:hover,  #logIn a:hover, #logo a:hover, #gP a:hover {
+#about a:hover, #logIn a:hover, #logo a:hover, #gP a:hover {
     color: black;
-}
-
-#menu {
-    display: flex;
 }
 
 
 /* ------------------------------- */
-/* Call to action */
-#callToAction {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3em;
-}
+
 
 h2 {
     margin-top: 3em;
@@ -156,7 +142,6 @@ h2 {
 }
 
 
-
 .form-range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -171,7 +156,6 @@ h2 {
     width: 80%;
     height: 40%;
 }
-
 
 
 #noiseBtns button.btn {
@@ -192,8 +176,6 @@ h2 {
 }
 
 
-
-
 #proText {
     display: flex;
     flex-direction: column;
@@ -210,8 +192,6 @@ h2 {
 #proText a:hover {
     color: #89C6FF;
 }
-
-
 
 
 /* ------------------------------- */
@@ -280,8 +260,6 @@ h2 {
 }
 
 
-
-
 svg {
     color: #7444f8;;
 }
@@ -291,7 +269,6 @@ svg {
 }
 
 
-
 /* ------------------------------ */
 /* MediaQuery */
 
@@ -299,6 +276,7 @@ svg {
     .canvas {
         width: 70%;
     }
+
     h2 {
         width: 100%;
     }
@@ -319,7 +297,6 @@ svg {
         z-index: 1;
         top: -10%;
         left: 0;
-        width: 100%
     }
 
     /* ------------------------------ */
@@ -335,7 +312,7 @@ svg {
         height: 12em;
         width: 100%;
         display: flex;
-        margin: 1em 0em;
+        margin: 1em 0;
     }
 
     #styleSelection div {
@@ -371,18 +348,14 @@ svg {
         margin: 1em;
     }
 
-    #noiseBtns button.btn{
+    #noiseBtns button.btn {
         height: 50px;
         margin: 0px 3px;
     }
 
 
-
-
-
     /* ------------------------------ */
     /* samples */
-
     #waveform {
         margin: 2em;
         width: 97%;
@@ -425,8 +398,6 @@ svg {
 
     /* ------------------------------ */
     /* Form module */
-
-
     #styleSelection div {
         display: flex;
         flex-direction: row;
@@ -444,7 +415,7 @@ svg {
         line-height: 5px;
     }
 
-    #noiseBtns button.btn{
+    #noiseBtns button.btn {
         height: 30px;
         margin: 0px 3px;
     }
