@@ -8,6 +8,7 @@ body {
     align-items: center;
     font-family: "Homenaje";
     color: white;
+    width: 100%;
 }
 
 .canvas {
@@ -51,7 +52,7 @@ button.btn:hover {
     z-index: 1;
     top: -35%;
     left: 0;
-    width: 100%
+    width: max-content;
 }
 
 
@@ -68,6 +69,10 @@ header {
     height: 3em;
 }
 
+#pngLogo{
+    height: 1.25em;
+    margin-right: 0.5em;
+}
 
 h4 {
     margin: 0 1em;
