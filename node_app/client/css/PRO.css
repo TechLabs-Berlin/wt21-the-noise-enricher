@@ -2,13 +2,6 @@
     margin-top: 5em;
 }
 
-#logo a {
-    color: rgb(184, 184, 184);
-}
-
-#gP a {
-    color:black;
-}
 
 #generateTrack{
     display: flex;
@@ -19,6 +12,7 @@
 #uploadTrack{
     width: 100%;
     margin-bottom: -1em;
+    margin-top: 10em;
 }
 
 #sections {
@@ -47,7 +41,8 @@
 }
 
 #styleSection, #noiseSection,Section, #randomSection, #addSection, #placeholderSection {
-    background-color: rgb(255, 255, 255);
+    background-color: #111435;
+    color: white;
     height: 17em;
     width: 32%;
     display: flex;
@@ -56,7 +51,6 @@
     padding: 1em;
     margin: 3em 0em;
     border-radius: 10px;
-    box-shadow: 0px 2px 10px rgb(218, 218, 218);
 }
 
 #placeholderSection{
@@ -65,9 +59,9 @@
 }
 
 #addSection {
-    background-color: white;
-    border: dotted 4px #8c41ec;
-    color: #8c41ec;
+    background-color: #352754;
+    border: dotted 4px#e7a50c;
+    color:#e7a50c;
     box-shadow: none;
 }
 
@@ -81,7 +75,7 @@
 
 
 #styleSelection a {
-    color: #8c41ec;
+    color:#e7a50c;
     font-weight: 200;
     font-size: 15px;
     align-self: center;
@@ -89,7 +83,7 @@
 }
 
 #noiseSection a {
-    color: #8c41ec;
+    color:#e7a50c;
     font-weight: 200;
     font-size: 15px;
     align-self: center;
@@ -107,7 +101,7 @@
 
 .iconInstrument {
     width: 100%;
-    filter: invert(30%) sepia(72%) saturate(4288%) hue-rotate(255deg) brightness(97%) contrast(91%);
+    filter: invert(74%) sepia(68%) saturate(3150%) hue-rotate(4deg) brightness(99%) contrast(91%);
 }
 
 .iconInstrument:hover {

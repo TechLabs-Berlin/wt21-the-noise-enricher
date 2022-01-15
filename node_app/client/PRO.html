@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/PRO.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/background.css">
     <title>The Noise Enricher-PRO</title>
 </head>
@@ -18,11 +18,10 @@
 <body>
 
     <header>
-        <h4 id="logo"><a href="index.html">&#9926 The Noise Enricher</a></h4>
+        <h4 id="logo"><a href="index.html"><img id="pngLogo"src="content/favicon.png"> The Noise Enricher</a></h4>
         <div id="menu">
-            
             <h4 id="about"><a href="about.html">About</a></h4>
-            <h4 id="gP"><a href="PRO.html">Go PRO</a></h4>
+            <h4 id="gP"><a href="PRO.html">PRO</a></h4>
             <h4 id="logIn"><a href="">Log in</a></h4>
         </div>
     </header>
@@ -42,13 +41,12 @@
     <div class="canvas">
         <div id="pro">
             <form action="/" id="generateTrack" method="POST" enctype="multipart/form-data">
-                <div id="waveform2">
-                    <img src="content/waveform.png" alt="GAN generated waveform">
-                </div>
                 <div id="uploadTrack">
                     <h5>Upload your track</h5>
                     <div id="uploadFileInput">
-                        <input type="file" name="audio" class="form-control">
+                        <span class="input-group-text btn btn-primary" id="inputGroup-sizing-default">Choose a file</span>
+                        <input type="text" name="audio" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="No file choosen">
                     </div>
 
                 </div>
