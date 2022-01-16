@@ -7,3 +7,5 @@ function logSubmit(event) {
 const form = document.getElementById('generateTrack');
 
 form.addEventListener("submit", logSubmit);
+
+

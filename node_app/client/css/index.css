@@ -43,6 +43,23 @@ button.btn:hover {
     border: solid #89C6FF;
 }
 
+.arrowDown img{
+    color: #89C6FF;
+    width: 30px;
+}
+
+
+section {
+    height: 100vh;
+}
+
+
+#generateTrack{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* ------------------------------- */
 /*Background */
 #background {
@@ -69,7 +86,7 @@ header {
     height: 3em;
 }
 
-#pngLogo{
+#pngLogo {
     height: 1.25em;
     margin-right: 0.5em;
 }
@@ -95,50 +112,55 @@ h4 {
 
 
 /* ------------------------------- */
-/* Call to action */
+/* one */
 #callToAction {
     display: flex;
     margin-bottom: 3em;
     color: white;
     flex-direction: column;
     align-items: center;
-    margin-top: 15em;
+    margin-top: 35vh;
     margin-bottom: 1em;
+}
+
+#one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
     font-size: 3em;
 }
 
-/* ------------------------------- */
-/* Form module */
+
 #uploadTrack {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
-    margin: 2em;
+    margin: 2em 0em;
 }
 
 #uploadFileInput {
     margin-top: 1em;
     display: flex;
-    width: 70%;
+    width: 200%;
     border: none;
 }
 
-#inputGroup-sizing-default{
+#inputGroup-sizing-default {
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
     width: 25%;
-    background-color:#e7a50c;
+    background-color: #e7a50c;
     color: black;
     border: solid 1px #e7a50c;
 }
 
-#uploadFileInput .form-control{
+#uploadFileInput .form-control {
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     border-top-left-radius: 0px;
@@ -146,36 +168,35 @@ h1 {
     border: solid 1px white;
 }
 
-
-
-#allParams {
-    display: flex;
-    justify-content: space-between;
-}
-
-
+/* ------------------------------- */
+/* general sections style */
 #styleSection, #noiseSection, #goProSection {
     background-color: #111435;
     color: white;
-    height: 15em;
-    width: 32%;
+    height: 30vh;
+    width: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1em;
-    margin: 2em 0em;
     border-radius: 10px;
+}
+/* ------------------------------- */
+/* two */
+
+#two{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
 }
 
 #styleSelection {
-    font-size: 0.75em;
+    font-size: 1em;
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: 40%;
 }
-
-
 
 .form-range::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -184,6 +205,11 @@ h1 {
     ;
     cursor: pointer;
 }
+
+/* ------------------------------- */
+/* three */
+
+
 
 #noiseBtns {
     display: flex;
@@ -214,6 +240,8 @@ h1 {
 }
 
 
+/* ------------------------------- */
+/* three */
 
 
 #proText {
@@ -246,75 +274,6 @@ h1 {
     align-items: center;
     margin: 2em 0em;
 }
-
-/* ------------------------------- */
-/*  save button */
-
-#saveFile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2em 0em;
-}
-
-
-/* ------------------------------- */
-/*  explanation text */
-
-.esplanation {
-    margin-top: 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-/* ------------------------------ */
-/* samples */
-
-.interTitle {
-    margin: 1em 0em;
-}
-
-#waveform {
-    margin: 2em 0em;
-}
-
-#Samples {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.threeBlocks #usageSample, .threeBlocks #downloadTraks {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin: 2em 0em;
-}
-
-.threeBlocks #downloadTraks p {
-    margin: 0em 2em;
-}
-
-.threeBlocks #usageSample div {
-    margin: 0em 2em;
-}
-
-
-
-
-svg {
-    color: #e7a50c;
-    ;
-}
-
-#downloadTraks svg:hover {
-    color: #89C6FF;
-}
-
-
 
 /* ------------------------------ */
 /* MediaQuery */
@@ -401,40 +360,6 @@ svg {
         margin: 0px 3px;
     }
 
-
-
-
-
-    /* ------------------------------ */
-    /* samples */
-
-    #waveform {
-        margin: 2em;
-        width: 97%;
-    }
-
-    .threeBlocks {
-        width: 90%;
-    }
-
-    .threeBlocks #downloadTraks svg {
-        width: 35px;
-    }
-
-    .threeBlocks #usageSample svg {
-        margin-top: -2em;
-        width: 95px;
-    }
-
-    .threeBlocks #downloadTraks p {
-        margin: 0em 1em;
-    }
-
-    .threeBlocks #usageSample div {
-        margin: 0em 1em;
-    }
-
-
 }
 
 
@@ -475,17 +400,6 @@ svg {
     }
 
 
-    /* ------------------------------ */
-    /*Samples */
-    .threeBlocks #downloadTraks svg {
-        width: 25px;
-        margin: -2em 0em;
-    }
-
-    .threeBlocks #usageSample svg {
-        margin: -2em 0em;
-        width: 75px;
-    }
 }
 
 
