@@ -16,9 +16,9 @@ app.use(express.static(path.join(__dirname, '/../client')));
 app.use(morgan('dev'));
 
 
-// app.get('/', (req, res) => {
-//     res.render('home');
-// });
+app.get('/', (req, res) => {
+    res.render('home');
+});
 
 app.use('/generate', generateRoutes);
 

@@ -84,12 +84,11 @@ h4 {
 
 
 h2 {
-    margin-top: 3em;
-    margin-bottom: 1em;
+    margin: 3em 0 1em 0;
     font-family: "Roboto";
     font-weight: 300;
     font-size: 3.5em;
-    width: max-content;
+    /*width: max-content;*/
     align-self: center;
 }
 
