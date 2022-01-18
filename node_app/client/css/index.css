@@ -12,6 +12,7 @@ body {
     width: 40%;
     position: relative;
     z-index: 2;
+    margin: 0 auto;
 }
 
 a {
