@@ -8,6 +8,10 @@ router.get('/', (req, res) => {
     res.render('generate/index');
 });
 
+router.get('/pro', (req, res) => {
+    res.render('generate/generate_pro');
+});
+
 router.post('/', upload.single('audio'), (req, res) => {
     console.log(req.file, req.body);
     res.redirect(303, 'generate/spectrogram');
