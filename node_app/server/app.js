@@ -22,20 +22,6 @@ app.get('/', (req, res) => {
 
 app.use('/generate', generateRoutes);
 
-
-
-// router.route('/')
-//     .get((req, res) => {
-//         res.render('home');
-//     })
-//     .post(upload.single('audio'), (req, res) => {
-//         console.log(req.file, req.body);
-//         res.redirect(303, '/');
-//         // res.status(301)
-// })
-
-
-
 const port = process.env.PORT || 3030;
 
 app.listen(port, () => {
