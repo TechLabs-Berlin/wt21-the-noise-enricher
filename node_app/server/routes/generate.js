@@ -1,3 +1,4 @@
+const fs = require("fs");
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
@@ -5,7 +6,11 @@ const path = require("path");
 
 const audioFile = {};
 
-const upload = multer({ dest: path.join(__dirname, '../../client/public/uploads/')});
+// const limits = { fileSize: 1024 * 1024 * 1024 }
+const upload = multer({
+    dest: path.join(__dirname, '../../client/public/uploads/'),
+    // limits: limits
+});
 
 router.get('/', (req, res) => {
     res.render('generate/index');
@@ -35,6 +40,12 @@ router.get('/spectrogram', async (req, res) => {
 });
 
 router.get('/results', async (req, res) => {
+    if(audioFile.file) {
+        fs.unlink(path.join(__dirname, '../../client/public/uploads/' + audioFile.file.filename), (err) => {
+            if (err) throw err;
+        });
+    }
+
     await new Promise(resolve => setTimeout(resolve, 2000));
     generated_file = "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3"
     if (generated_file) {
