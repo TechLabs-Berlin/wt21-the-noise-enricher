@@ -19,6 +19,16 @@
         </p>
     </div>
 
+    <div id="waveform"></div>
+
+    <button class="btn btn-primary" onclick="wavesurfer.playPause()">
+        <i class="glyphicon glyphicon-play"></i>
+        Play
+        /
+        <i class="glyphicon glyphicon-pause"></i>
+        Pause
+    </button>
+
     <!-- Samples -->
     <div id="Samples">
 
@@ -114,6 +124,11 @@
 
 </div>
 
-<script src="../../public/js/draw_spectrogram.js"></script>
 
-<!--<script>displayBuffer( "<%= filepath %>" )</script>-->
+<script src="https://unpkg.com/wavesurfer.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.2.0/dist/plugin/wavesurfer.spectrogram.min.js"></script>
+<script src="../../public/js/draw_spectrogram.js"></script>
+<script>
+    const wavesurfer = drawSpectrogram("../../public/uploads/<%= filepath %>");
+</script>
+
