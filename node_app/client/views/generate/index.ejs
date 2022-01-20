@@ -1,0 +1,70 @@
+<% layout('layouts/boilerplate.ejs') %>
+
+<%- include("../partials/background_animation.ejs") %>
+
+<div class="canvas">
+
+    <!-- Call to action -->
+    <div id="callToAction">
+        <h2>Generate your own track with Neutral Networks</h2>
+    </div>
+
+    <!-- Form module -->
+    <form action="/generate" id="generateTrack" method="POST" enctype="multipart/form-data">
+        <div id="uploadTrack">
+            <h5>Upload your track</h5>
+            <div id="uploadFileInput">
+                <input type="file" name="audio" class="form-control">
+            </div>
+            <br>
+        </div>
+
+        <!-- 3 gray blocks -->
+        <div id="allParams">
+            <section id="styleSection">
+                <p>Choose a style</p>
+                <div id="styleSelection">
+                    <div>
+                        <label for="rockRange" class="form-label">Rock</label>
+                        <input name="rockRange" type="range" class="form-range" min="0" max="6" id="rockRange">
+                    </div>
+                    <div>
+                        <label for="tranceRange" class="form-label">Trance</label>
+                        <input name="tranceRange" type="range" class="form-range" min="0" max="6" id="tranceRange">
+                    </div>
+                    <div>
+                        <label for="classicRange" class="form-label">Classic</label>
+                        <input name="classicRange" type="range" class="form-range" min="0" max="6"
+                               id="classicRange">
+                    </div>
+
+                </div>
+            </section>
+            <section id="noiseSection">
+                <p>Add some noises</p>
+                <div id="noiseBtns">
+                    <button type="button" class="btn btn-outline-info">Sea</button>
+                    <button type="button" class="btn btn-outline-info">Birds</button>
+                    <button type="button" class="btn btn-outline-info">Street</button>
+                    <button type="button" class="btn btn-outline-info">Storm</button>
+                    <button type="button" class="btn btn-outline-info">Street</button>
+                </div>
+            </section>
+            <section id="goProSection">
+                <p id="proText">
+                    Go advance
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <a href="/generate/pro">Use Pro version</a>
+                </p>
+            </section>
+        </div>
+        <!-- generate button -->
+        <div class="formGenerate">
+            <button class="btn btn-info btn-lg" type="submit">Generate new track</button>
+        </div>
+    </form>
+
+</div>

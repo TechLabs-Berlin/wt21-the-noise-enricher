@@ -15,6 +15,8 @@
     "ejs": "^3.1.6",
     "ejs-mate": "^3.0.0",
     "express": "^4.17.1",
+    "express-handlebars": "^6.0.2",
+    "googleapis": "^92.0.0",
     "morgan": "^1.10.0",
     "multer": "^1.4.4"
   }

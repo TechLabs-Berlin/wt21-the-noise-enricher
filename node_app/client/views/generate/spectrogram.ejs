@@ -1,0 +1,35 @@
+<% layout('layouts/boilerplate.ejs') %>
+
+<%- include("../partials/background_animation.ejs") %>
+
+<div class="canvas">
+
+    <h2>Original track</h2>
+    <div id="waveform"></div>
+
+    <div id="Samples">
+        <p><a onclick="wavesurfer.playPause()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                 class="bi bi-play-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path
+                        d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+            </svg>
+        </a> Play uploaded track
+        </p>
+
+        <a class="nav-link" href="/generate/results">Download generated file</a>
+    </div>
+
+
+
+</div>
+
+
+<script src="https://unpkg.com/wavesurfer.js"></script>
+<script src="https://unpkg.com/wavesurfer.js@5.2.0/dist/plugin/wavesurfer.spectrogram.min.js"></script>
+<script src="../../public/js/draw_spectrogram.js"></script>
+<script>
+    const wavesurfer = drawSpectrogram("../../public/uploads/<%= filepath %>");
+</script>
+
