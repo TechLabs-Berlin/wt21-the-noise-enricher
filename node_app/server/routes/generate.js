@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const audio = require('../controllers/audio');
 const spectrogram = require('../controllers/spectrogram');
 const multer = require('multer');
 const path = require("path");
