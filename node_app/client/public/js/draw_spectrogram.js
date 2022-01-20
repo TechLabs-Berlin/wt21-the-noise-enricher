@@ -5,8 +5,7 @@ const drawSpectrogram = function (filePath){
         progressColor: 'purple',
         plugins: [
             WaveSurfer.spectrogram.create({
-                container: "#waveform",
-                labels: true
+                container: "#waveform"
             })
         ]
     });
