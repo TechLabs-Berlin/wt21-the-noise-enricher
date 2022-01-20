@@ -24,7 +24,9 @@
 
         <h4 class="interTitle">Play Samples</h4>
 
-        <img src="../../public/content/waveform.png" alt="GAN generated waveform" id="waveform">
+        <audio src="../../public/uploads/<%= filepath %>" controls loop></audio>
+
+        <canvas id="spectrogram-canvas" width="150" height="150"></canvas>
 
         <div class="threeBlocks">
             <div id="downloadTraks">
@@ -112,4 +114,6 @@
 
 </div>
 
-</div>
+<script src="../../public/js/draw_spectrogram.js"></script>
+
+<!--<script>displayBuffer( "<%= filepath %>" )</script>-->

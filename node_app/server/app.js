@@ -10,7 +10,7 @@ const path = require('path');
 
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '/../client/views'));
+app.set('views', path.join(__dirname, '/../client/views/'));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/../client')));
 app.use(morgan('dev'));
