@@ -188,7 +188,13 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 200px;
+    position: relative;
+    width: max-content;
+    height: 100vh;
+}
+
+#two h3{
+    margin-top: 30vh;
 }
 
 #styleSelection {
@@ -196,6 +202,7 @@ h1 {
     display: flex;
     flex-direction: column;
     width: 80%;
+    margin-top: 7%;
 }
 
 .form-range::-webkit-slider-thumb {
@@ -209,7 +216,18 @@ h1 {
 /* ------------------------------- */
 /* three */
 
+#three{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: max-content;
+    height: 100vh;
+}
 
+#three h3{
+    margin-top: 30vh;
+}
 
 #noiseBtns {
     display: flex;
