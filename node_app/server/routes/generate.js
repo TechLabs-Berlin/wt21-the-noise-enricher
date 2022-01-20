@@ -26,14 +26,18 @@ router.post('/', upload.single('audio'), async (req, res) => {
 
 router.get('/spectrogram', async (req, res) => {
     if (audioFile.file) {
-    res.render('generate/spectrogram', {filepath: audioFile.file.filename});
+        res.render('generate/spectrogram', {filepath: audioFile.file.filename});
     }
     else
         res.redirect(302, '/');
 });
 
 router.get('/results', (req, res) => {
-    res.render('generate/results');
+    if (audioFile.file) {
+    res.render('generate/results', {filepath: audioFile.file.filename});
+    }
+    else
+        res.redirect(302, '/');
 });
 
 module.exports = router;
