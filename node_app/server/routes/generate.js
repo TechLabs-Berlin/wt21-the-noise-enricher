@@ -27,16 +27,19 @@ router.post('/', upload.single('audio'), async (req, res) => {
 router.get('/spectrogram', async (req, res) => {
     if (audioFile.file) {
         res.render('generate/spectrogram', {filepath: audioFile.file.filename});
+        // TODO: make link to results active after results are generated
+        // await new Promise(resolve => setTimeout(resolve, 5000));
     }
     else
         res.redirect(302, '/');
 });
 
-router.get('/results', (req, res) => {
-    if (audioFile.file) {
-    res.render('generate/results', {filepath: audioFile.file.filename});
-    }
-    else
+router.get('/results', async (req, res) => {
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    generated_file = "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3"
+    if (generated_file) {
+        res.render('generate/results', {filepath: generated_file});
+    } else
         res.redirect(302, '/');
 });
 
