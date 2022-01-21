@@ -1,3 +1,4 @@
 matplotlib==3.5.0
 numpy==1.21.4
-torchaudio==0.10.0
+torchaudio==0.10.0+cpu
+torch==1.10.0+cpu
