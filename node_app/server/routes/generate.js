@@ -50,17 +50,20 @@ router.get('/results', async (req, res) => {
     }
 
     // await new Promise(resolve => setTimeout(resolve, 2000));
-    let dataToSend;
     let python_response_code = 2;
     const image_file = path.join(__dirname, '../../client/public/uploads/test.png');
 
     // spawn new child process to call the python script
-    const python = spawn('python', [path.join(__dirname,'../../../python_app/test_heroku.py'), image_file]);
+    const python = spawn('python3', [path.join(__dirname,'../../../python_app/test_heroku.py'), image_file]);
     // collect data from script
     python.stdout.on('data', function (data) {
-        console.log('Pipe data from python script ...');
-        dataToSend = data.toString();
+        console.log(`Pipe data from python script ...${data}`);
     });
+
+    python.stderr.on('data', function (data) {
+        console.log(`Pipe data from python script ...${data}`);
+    });
+
     // in close event we are sure that stream from child process is closed
     python.on('close', (code) => {
         console.log(`child process close all stdio with code ${code}`);
@@ -75,8 +78,8 @@ router.get('/results', async (req, res) => {
 
     if (generated_file ) { // && python_response_code === 0
         res.render('generate/results', {
-            filepath: generated_file,
-            image: image_file});
+            image: '../../public/uploads/test.png',
+            filepath: generated_file,});
     } else
         res.redirect(302, '/');
 });

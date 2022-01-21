@@ -1,4 +1,3 @@
-import os
 import sys
 import numpy as np
 import matplotlib.pyplot as plt
@@ -39,20 +38,18 @@ def koch_snowflake(order, scale=10):
     return x, y
 
 
-def plot_figure(path_to_save):
+def plot_figure(path):
     x, y = koch_snowflake(order=5)
     plt.figure(figsize=(8, 8))
     plt.axis('equal')
     plt.fill(x, y)
-    plt.savefig(os.path.join(path_to_save, 'output_waveform.jpg'))
+    plt.savefig(path)
     plt.close()
 
 
-if __name__ == '__main__':
-    if len(sys.argv) > 1:
-        path_to_save = sys.argv[1]
-    else:
-        path_to_save = 'test.png'
+print('Hello from python')
+print('First param:'+sys.argv[1])
 
-    plot_figure(path_to_save)
-    print('Done!')
+plot_figure(sys.argv[1])
+
+print('Done!')
