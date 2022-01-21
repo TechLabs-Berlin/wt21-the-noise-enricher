@@ -42,7 +42,7 @@ router.get('/spectrogram', async (req, res) => {
         res.redirect(302, '/');
 });
 
-router.get('/results', async (req, res) => {
+router.get('/results', (req, res) => {
     if(audioFile.file) {
         fs.unlink(path.join(__dirname, '../../client/public/uploads/' + audioFile.file.filename), (err) => {
             if (err) throw err;
@@ -72,7 +72,7 @@ router.get('/results', async (req, res) => {
         //res.send(dataToSend)
     });
 
-    await new Promise(resolve => setTimeout(resolve, 3000));
+    // await new Promise(resolve => setTimeout(resolve, 3000));
 
     const generated_file = "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3"
 
