@@ -4,6 +4,9 @@ const router = express.Router();
 const multer = require('multer');
 const path = require("path");
 
+// To run python script
+const {spawn} = require('child_process');
+
 const audioFile = {};
 
 // const limits = { fileSize: 1024 * 1024 * 1024 }
@@ -39,17 +42,44 @@ router.get('/spectrogram', async (req, res) => {
         res.redirect(302, '/');
 });
 
-router.get('/results', async (req, res) => {
+router.get('/results', (req, res) => {
     if(audioFile.file) {
         fs.unlink(path.join(__dirname, '../../client/public/uploads/' + audioFile.file.filename), (err) => {
             if (err) throw err;
         });
     }
 
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    generated_file = "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3"
-    if (generated_file) {
-        res.render('generate/results', {filepath: generated_file});
+    //
+    let python_response_code = 2;
+    const image_file = path.join(__dirname, '../../client/public/uploads/test.png');
+
+    // spawn new child process to call the python script
+    const python = spawn('python3', [path.join(__dirname,'../../../python_app/test_heroku.py'), image_file]);
+    // collect data from script
+    python.stdout.on('data', function (data) {
+        console.log(`Pipe data from python script ...${data}`);
+    });
+
+    python.stderr.on('data', function (data) {
+        console.log(`Pipe data from python script ...${data}`);
+    });
+
+    // in close event we are sure that stream from child process is closed
+    python.on('close', (code) => {
+        console.log(`child process close all stdio with code ${code}`);
+        python_response_code = code;
+        // send data to browser
+        //res.send(dataToSend)
+    });
+
+    // await new Promise(resolve => setTimeout(resolve, 3000));
+
+    const generated_file = "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3"
+
+    if (generated_file) { // && python_response_code === 0
+        res.render('generate/results', {
+            image: '../../public/uploads/test.png',
+            filepath: generated_file,});
     } else
         res.redirect(302, '/');
 });
