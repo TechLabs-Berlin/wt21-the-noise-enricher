@@ -1,3 +1,4 @@
+-f https://download.pytorch.org/whl/torch_stable.html
 matplotlib==3.5.0
 numpy==1.21.4
 torchaudio==0.10.0+cpu
