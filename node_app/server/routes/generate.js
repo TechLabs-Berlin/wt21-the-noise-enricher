@@ -49,7 +49,7 @@ router.get('/results', async (req, res) => {
         });
     }
 
-    // await new Promise(resolve => setTimeout(resolve, 2000));
+    //
     let python_response_code = 2;
     const image_file = path.join(__dirname, '../../client/public/uploads/test.png');
 
@@ -72,11 +72,11 @@ router.get('/results', async (req, res) => {
         //res.send(dataToSend)
     });
 
+    await new Promise(resolve => setTimeout(resolve, 3000));
 
     const generated_file = "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3"
 
-
-    if (generated_file ) { // && python_response_code === 0
+    if (generated_file) { // && python_response_code === 0
         res.render('generate/results', {
             image: '../../public/uploads/test.png',
             filepath: generated_file,});
