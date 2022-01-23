@@ -3,9 +3,6 @@
 /* General */
 body {
     background-color: #352754;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-family: "Homenaje";
     color: white;
     width: 100%;
@@ -18,6 +15,7 @@ body {
     width: 40%;
     position: relative;
     z-index: 2;
+    margin: 0 auto;
 }
 
 a {
@@ -31,10 +29,8 @@ a:hover {
 
 button.btn {
     color: white;
-    background-color: #e7a50c;
-    ;
-    border: solid #e7a50c;
-    ;
+    background-color: #e7a50c;;
+    border: solid #e7a50c;;
 }
 
 button.btn:hover {
@@ -168,8 +164,13 @@ h1 {
     border: solid 1px white;
 }
 
-/* ------------------------------- */
-/* general sections style */
+
+#allParams {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 #styleSection, #noiseSection, #goProSection {
     background-color: #111435;
     color: white;
@@ -197,19 +198,10 @@ h1 {
     margin-top: 30vh;
 }
 
-#styleSelection {
-    font-size: 1em;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin-top: 7%;
-}
-
 .form-range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    background: #e7a50c;
-    ;
+    background: #e7a50c;;
     cursor: pointer;
 }
 
@@ -238,10 +230,8 @@ h1 {
 }
 
 
-
 #noiseBtns button.btn {
-    color: #e7a50c;
-    ;
+    color: #e7a50c;;
     background-color: rgb(255, 255, 255);
     border: solid 1.5px #e7a50c;
     border-radius: 25px;
@@ -258,10 +248,6 @@ h1 {
 }
 
 
-/* ------------------------------- */
-/* three */
-
-
 #proText {
     display: flex;
     flex-direction: column;
@@ -270,8 +256,7 @@ h1 {
 }
 
 #proText a {
-    color: #e7a50c;
-    ;
+    color: #e7a50c;;
     font-weight: 200;
     font-size: 1.25em;
 }
@@ -279,8 +264,6 @@ h1 {
 #proText a:hover {
     color: #89C6FF;
 }
-
-
 
 
 /* ------------------------------- */
@@ -292,6 +275,71 @@ h1 {
     align-items: center;
     margin: 2em 0em;
 }
+
+/* ------------------------------- */
+/*  save button */
+
+#saveFile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 0em;
+}
+
+
+/* ------------------------------- */
+/*  explanation text */
+
+.esplanation {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ------------------------------ */
+/* samples */
+
+.interTitle {
+    margin: 1em 0em;
+}
+
+#waveform {
+    margin: 2em 0em;
+}
+
+#Samples {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.threeBlocks #usageSample, .threeBlocks #downloadTraks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 2em 0em;
+}
+
+.threeBlocks #downloadTraks p {
+    margin: 0em 2em;
+}
+
+.threeBlocks #usageSample div {
+    margin: 0em 2em;
+}
+
+
+svg {
+    color: #e7a50c;;
+}
+
+#downloadTraks svg:hover {
+    color: #89C6FF;
+}
+
 
 /* ------------------------------ */
 /* MediaQuery */
@@ -378,6 +426,36 @@ h1 {
         margin: 0px 3px;
     }
 
+
+    /* ------------------------------ */
+    /* samples */
+    #waveform {
+        margin: 2em;
+        width: 97%;
+    }
+
+    .threeBlocks {
+        width: 90%;
+    }
+
+    .threeBlocks #downloadTraks svg {
+        width: 35px;
+    }
+
+    .threeBlocks #usageSample svg {
+        margin-top: -2em;
+        width: 95px;
+    }
+
+    .threeBlocks #downloadTraks p {
+        margin: 0em 1em;
+    }
+
+    .threeBlocks #usageSample div {
+        margin: 0em 1em;
+    }
+
+
 }
 
 
@@ -393,8 +471,6 @@ h1 {
 
     /* ------------------------------ */
     /* Form module */
-
-
     #styleSelection div {
         display: flex;
         flex-direction: row;
@@ -421,12 +497,10 @@ h1 {
 }
 
 
-
 @media (max-width: 500px) {
     body {
         font-size: 0.8em;
     }
-
 
 
     h4 {
