@@ -6,15 +6,23 @@
 
     <!-- Call to action -->
     <div id="callToAction">
-        <h2>Generate your own track with Neutral Networks</h2>
+        <h1>Generate your own track with Neutral Networks</h1>
+        <h5>This is a Noise Enricher, a neural net that generates music, including rudimentary singing, as raw audio </h5>
     </div>
 
     <!-- Form module -->
     <form action="/generate" id="generateTrack" method="POST" enctype="multipart/form-data">
         <div id="uploadTrack">
             <h5>Upload your track</h5>
+            <!--
             <div id="uploadFileInput">
                 <input type="file" name="audio" class="form-control">
+            </div>
+            -->
+            <div id="uploadFileInput">
+                <span class="input-group-text btn btn-primary" id="inputGroup-sizing-default">Choose a file</span>
+                <input type="text" name="audio" class="form-control" aria-label="Sizing example input"
+                       aria-describedby="inputGroup-sizing-default" placeholder="No file choosen">
             </div>
             <br>
         </div>
@@ -37,7 +45,6 @@
                         <input name="classicRange" type="range" class="form-range" min="0" max="6"
                                id="classicRange">
                     </div>
-
                 </div>
             </section>
             <section id="noiseSection">
@@ -52,12 +59,8 @@
             </section>
             <section id="goProSection">
                 <p id="proText">
-                    Go advance
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <a href="/generate/pro">Use Pro version</a>
+                   
+                    <a href="/generate/pro"> <img class="logoSVG" src="../../public/content/" alt="logo">Use our Pro version with more settings</a>
                 </p>
             </section>
         </div>
