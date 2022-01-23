@@ -2,10 +2,10 @@
 
 /* General */
 body {
-    background-image: linear-gradient(#352754, #493294, #412E76, #432666);
+    background-image: linear-gradient(#352754, #493294, #432666);
+    background-size: contain;
     font-family: "Homenaje";
     color: white;
-    width: 100%;
 }
 
 .canvas {
@@ -14,7 +14,9 @@ body {
     align-items: center;
     width: 40%;
     z-index: 2;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 a {
@@ -34,13 +36,13 @@ button.btn:hover {
     border: solid #89C6FF;
 }
 
-.arrowDown img{
+.arrowDown img {
     color: #89C6FF;
     width: 30px;
 }
 
 
-#generateTrack{
+#generateTrack {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,7 +80,7 @@ header {
 }
 
 #logo h4 a {
-    color:#e7a50c;
+    color: #e7a50c;
 }
 
 h4 {
@@ -116,6 +118,10 @@ h4 {
 
 h1 {
     font-size: 3em;
+    text-align: center;
+}
+
+h5 {
     text-align: center;
 }
 
@@ -174,11 +180,11 @@ h1 {
     border-radius: 10px;
 }
 
-#styleSelection div {   
-    height: 33%;  
+#styleSelection div {
+    height: 33%;
 }
 
-#styleSelection div label {   
+#styleSelection div label {
     margin-bottom: 0.15em;
 }
 
@@ -186,7 +192,8 @@ h1 {
 .form-range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    background: #e7a50c;;
+    background: #e7a50c;
+    ;
     cursor: pointer;
 }
 
@@ -201,7 +208,8 @@ h1 {
 
 
 #noiseBtns button.btn {
-    color: #e7a50c;;
+    color: #e7a50c;
+    ;
     background-color: rgb(255, 255, 255);
     border: solid 1.5px #e7a50c;
     border-radius: 25px;
@@ -217,11 +225,11 @@ h1 {
     border: solid 2px #89C6FF;
 }
 
-.logoSVG{
-    width:50%;
+.logoSVG {
+    width: 50%;
 }
 
-#proText{
+#proText {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -229,7 +237,8 @@ h1 {
 }
 
 #proText a {
-    color: #e7a50c;;
+    color: #e7a50c;
+    ;
     font-weight: 200;
     font-size: 1.25em;
     text-align: center;
@@ -240,8 +249,8 @@ h1 {
 }
 
 
-#proText a span{
-    font-weight:bold;
+#proText a span {
+    font-weight: bold;
 }
 
 /* ------------------------------- */
@@ -261,7 +270,7 @@ h1 {
     border-radius: 10px;
 }
 
-.formGenerate button.btn{
+.formGenerate button.btn {
     width: 200%;
 }
 
@@ -323,7 +332,8 @@ h1 {
 
 
 svg {
-    color: #e7a50c;;
+    color: #e7a50c;
+    ;
 }
 
 #downloadTraks svg:hover {
@@ -359,6 +369,24 @@ svg {
     }
 
     /* ------------------------------ */
+    /* Intro */
+
+    #callToAction {
+        margin-top: 12em;
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 2em;
+
+    }
+
+    h5 {
+        font-size: 1.25em;
+    }
+
+
+    /* ------------------------------ */
     /* Form module */
     #allParams {
         display: flex;
@@ -379,12 +407,13 @@ svg {
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        height: 65%;
+        height: 40%;
         font-size: 1.2em;
     }
 
     .form-range {
         width: 80%;
+        margin-left: 2em;
     }
 
 
@@ -396,8 +425,8 @@ svg {
         width: 100%;
     }
 
-    #proText a {
-        margin-top: -1em;
+    #proText img{
+        width: 25%;
     }
 
     #noiseBtns {
@@ -408,7 +437,8 @@ svg {
     }
 
     #noiseBtns button.btn {
-        height: 50px;
+        width: 5em;
+        height: 3em;
         margin: 0px 3px;
     }
 
@@ -457,12 +487,8 @@ svg {
 
     /* ------------------------------ */
     /* Form module */
-    #styleSelection div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        height: 65%;
+    #styleSelection div { 
+        height: 40%;
         font-size: 1.2em;
     }
 
