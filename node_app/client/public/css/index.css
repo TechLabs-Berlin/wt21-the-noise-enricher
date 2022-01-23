@@ -26,11 +26,7 @@ a:hover {
     color: #89C6FF;
 }
 
-button.btn {
-    color: white;
-    background-color: #e7a50c;;
-    border: solid #e7a50c;;
-}
+
 
 button.btn:hover {
     color: white;
@@ -81,6 +77,10 @@ header {
     margin-right: 0.5em;
 }
 
+#logo h4 a {
+    color:#e7a50c;
+}
+
 h4 {
     margin: 0 1em;
 }
@@ -100,6 +100,8 @@ h4 {
     margin-top: 0.53em;
 }
 
+/*....................*/
+/*Body*/
 
 #callToAction {
     display: flex;
@@ -123,7 +125,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     color: white;
-    margin: 2em 0em;
+    margin-bottom: 2em;
 }
 
 #uploadFileInput {
@@ -134,8 +136,8 @@ h1 {
 }
 
 #inputGroup-sizing-default {
-    border-bottom-left-radius: 50px;
-    border-top-left-radius: 50px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
     border-bottom-right-radius: 0px;
     border-top-right-radius: 0px;
     width: 25%;
@@ -145,8 +147,8 @@ h1 {
 }
 
 #uploadFileInput .form-control {
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border: solid 1px white;
@@ -215,24 +217,32 @@ h1 {
     border: solid 2px #89C6FF;
 }
 
+.logoSVG{
+    width:50%;
+}
 
-#proText {
+#proText{
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin-top: 1em;
 }
 
 #proText a {
     color: #e7a50c;;
     font-weight: 200;
     font-size: 1.25em;
+    text-align: center;
 }
 
 #proText a:hover {
     color: #89C6FF;
 }
 
+
+#proText a span{
+    font-weight:bold;
+}
 
 /* ------------------------------- */
 /*  generate button */
@@ -241,8 +251,20 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2em 0em;
+    margin: 3.5em 0em;
 }
+
+.formGenerate button.btn {
+    color: black;
+    background-color: #e7a50c;
+    border: solid #e7a50c;
+    border-radius: 10px;
+}
+
+.formGenerate button.btn{
+    width: 200%;
+}
+
 
 /* ------------------------------- */
 /*  save button */
