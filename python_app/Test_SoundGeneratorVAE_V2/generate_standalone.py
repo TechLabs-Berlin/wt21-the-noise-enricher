@@ -17,7 +17,7 @@ import tensorflow as tf
 tf.compat.v1.disable_eager_execution()
 
 
-HOP_LENGTH = 256
+HOP_LENGTH = 259
 SPECTROGRAMS_PATH = "/home/christian/Documents/sound_classifier/vae_spectrograms"
 SAVE_DIR_ORIGINAL = "/home/christian/Documents/sound_classifier/vae/samples/original/"
 SAVE_DIR_GENERATED = "/home/christian/Documents/sound_classifier/vae/samples/generated/"
