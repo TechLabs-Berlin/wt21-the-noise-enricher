@@ -1,6 +1,6 @@
 <% layout('layouts/boilerplate.ejs') %>
 
-    <%- include("../partials/background_animation.ejs") %>
+    <%- include("partials/background_animation.ejs") %>
 
         <div class="canvas">
 
@@ -23,7 +23,7 @@
                     <div id="uploadFileInput">
                         <span class="input-group-text btn btn-primary" id="inputGroup-sizing-default">Choose a
                             file</span>
-                        <input type="text" name="audio" class="form-control" aria-label="Sizing example input"
+                        <input type="file" name="audio" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default" placeholder="No file choosen">
                     </div>
                     <br>
@@ -63,7 +63,7 @@
                         </section>
                         <section id="goProSection">
                             <p id="proText">
-                                <img class="logoSVG" src="../../content/logo.svg" alt="logo"><br>
+                                <img class="logoSVG" src="../content/logo.svg" alt="logo"><br>
                                 <a href="/generate/pro">Use our <span>Pro version</span> with more settings</a>
                             </p>
                         </section>
