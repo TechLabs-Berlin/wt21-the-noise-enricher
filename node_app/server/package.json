@@ -20,5 +20,6 @@
     "multer": "^1.4.4",
     "nodemon": "^2.0.15"
   },
+  "devDependencies": {},
   "description": ""
 }
