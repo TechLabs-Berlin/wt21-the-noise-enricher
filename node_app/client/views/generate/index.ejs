@@ -15,11 +15,11 @@
             <form action="/generate" id="generateTrack" method="POST" enctype="multipart/form-data">
                 <div id="uploadTrack">
                     <h5>Upload your track</h5>
+
+                    <div id="uploadFileInput">
+                        <input type="file" name="audio" class="form-control">
+                    </div>
                     <!--
-            <div id="uploadFileInput">
-                <input type="file" name="audio" class="form-control">
-            </div>
-            -->
                     <div id="uploadFileInput">
                         <span class="input-group-text btn btn-primary" id="inputGroup-sizing-default">Choose a
                             file</span>
@@ -28,62 +28,64 @@
                     </div>
                     <br>
                 </div>
-
-                <!-- 3 gray blocks -->
-                <div id="allParams">
-                    <section id="styleSection">
-                        <p>Choose a style</p>
-                        <div id="styleSelection">
-                            <div>
-                                <label for="rockRange" class="form-label">Rock</label>
-                                <input name="rockRange" type="range" class="form-range" min="0" max="6" id="rockRange">
+                -->
+                    <!-- 3 gray blocks -->
+                    <div id="allParams">
+                        <section id="styleSection">
+                            <p>Choose a style</p>
+                            <div id="styleSelection">
+                                <div>
+                                    <label for="rockRange" class="form-label">Rock</label>
+                                    <input name="rockRange" type="range" class="form-range" min="0" max="6"
+                                        id="rockRange">
+                                </div>
+                                <div>
+                                    <label for="tranceRange" class="form-label">Trance</label>
+                                    <input name="tranceRange" type="range" class="form-range" min="0" max="6"
+                                        id="tranceRange">
+                                </div>
+                                <div>
+                                    <label for="classicRange" class="form-label">Classic</label>
+                                    <input name="classicRange" type="range" class="form-range" min="0" max="6"
+                                        id="classicRange">
+                                </div>
                             </div>
-                            <div>
-                                <label for="tranceRange" class="form-label">Trance</label>
-                                <input name="tranceRange" type="range" class="form-range" min="0" max="6"
-                                    id="tranceRange">
+                        </section>
+                        <section id="noiseSection">
+                            <p>Add some noises</p>
+                            <div id="noiseBtns">
+                                <button type="button" class="btn btn-outline-info">Sea</button>
+                                <button type="button" class="btn btn-outline-info">Birds</button>
+                                <button type="button" class="btn btn-outline-info">Street</button>
+                                <button type="button" class="btn btn-outline-info">Storm</button>
+                                <button type="button" class="btn btn-outline-info">Street</button>
                             </div>
-                            <div>
-                                <label for="classicRange" class="form-label">Classic</label>
-                                <input name="classicRange" type="range" class="form-range" min="0" max="6"
-                                    id="classicRange">
-                            </div>
-                        </div>
-                    </section>
-                    <section id="noiseSection">
-                        <p>Add some noises</p>
-                        <div id="noiseBtns">
-                            <button type="button" class="btn btn-outline-info">Sea</button>
-                            <button type="button" class="btn btn-outline-info">Birds</button>
-                            <button type="button" class="btn btn-outline-info">Street</button>
-                            <button type="button" class="btn btn-outline-info">Storm</button>
-                            <button type="button" class="btn btn-outline-info">Street</button>
-                        </div>
-                    </section>
-                    <section id="goProSection">
-                        <p id="proText">
-                            <img class="logoSVG" src="../../content/logo.svg" alt="logo"><br>
-                            <a href="/generate/pro">Use our <span>Pro version</span> with more settings</a>
-                        </p>
-                    </section>
-                </div>
+                        </section>
+                        <section id="goProSection">
+                            <p id="proText">
+                                <img class="logoSVG" src="../../content/logo.svg" alt="logo"><br>
+                                <a href="/generate/pro">Use our <span>Pro version</span> with more settings</a>
+                            </p>
+                        </section>
+                    </div>
 
-                <!-- generate button -->
-                <div class="formGenerate">
-                    <button class="btn btn-info btn-lg" type="submit">Generate new track</button>
-                </div>
+                    <!-- generate button -->
+                    <div class="formGenerate">
+                        <button class="btn btn-info btn-lg" type="submit">Generate new track</button>
+                    </div>
 
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam fugit a tempora unde ea distinctio
-                    molestiae quis voluptatum voluptates debitis! Beatae amet commodi omnis minus dicta rerum. Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Nam fugit a tempora unde ea distinctio
-                    molestiae quis voluptatum voluptates debitis! Beatae amet commodi omnis minus dicta rerum.Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Nam fugit a tempora unde ea distinctio
-                    molestiae quis voluptatum voluptates debitis! Beatae amet commodi omnis minus dicta rerum. Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Nam fugit a tempora unde ea distinctio
-                    molestiae quis voluptatum voluptates debitis! Beatae amet commodi omnis minus dicta rerum. Itaque,
-                    amet tempore!
-                </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam fugit a tempora unde ea distinctio
+                        molestiae quis voluptatum voluptates debitis! Beatae amet commodi omnis minus dicta rerum. Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit. Nam fugit a tempora unde ea distinctio
+                        molestiae quis voluptatum voluptates debitis! Beatae amet commodi omnis minus dicta rerum.Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit. Nam fugit a tempora unde ea distinctio
+                        molestiae quis voluptatum voluptates debitis! Beatae amet commodi omnis minus dicta rerum. Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit. Nam fugit a tempora unde ea distinctio
+                        molestiae quis voluptatum voluptates debitis! Beatae amet commodi omnis minus dicta rerum.
+                        Itaque,
+                        amet tempore!
+                    </p>
 
 
             </form>
