@@ -154,7 +154,7 @@ h5 {
 #styleSection, #noiseSection, #goProSection {
     background-color: #111435;
     color: white;
-    height: 30vh;
+    height: 17em;
     width: 30vh;
     display: flex;
     flex-direction: column;
@@ -332,6 +332,11 @@ svg {
     .canvas {
         width: 70%;
     }
+
+    #styleSection, #noiseSection, #goProSection {
+        
+        width: 20vh;
+    }
 }
 
 @media (max-width: 900px) {
@@ -498,6 +503,10 @@ svg {
         font-size: 0.8em;
     }
 
+    #callToAction{
+        margin-top: 20em;
+    }
+
 
     h4 {
         font-size: 1.5em;
@@ -506,10 +515,14 @@ svg {
 
     }
 
+    #logo {
+        margin-top: 0em;
+    }
+
     #menu {
         display: none;
         position: absolute;
-        background-color: white;
+        background-color: #111435;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         padding: 12px 16px;
@@ -529,7 +542,7 @@ svg {
     }
 
     #about a, #logIn a, #gP a {
-        color: black;
+        color: rgb(255, 255, 255);
     }
 
     #about a:hover, #logIn a:hover, #logo a:hover, #gP a:hover {
