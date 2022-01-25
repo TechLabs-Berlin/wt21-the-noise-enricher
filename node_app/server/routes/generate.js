@@ -16,7 +16,7 @@ const upload = multer({
 });
 
 router.get('/', (req, res) => {
-    res.render('generate/index');
+    res.render('index');
 });
 
 router.get('/pro', (req, res) => {
