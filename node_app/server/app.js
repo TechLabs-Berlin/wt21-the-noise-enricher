@@ -17,7 +17,7 @@ app.use(morgan('dev'));
 
 
 app.get('/', (req, res) => {
-    res.render('generate');
+    res.render('index');
 });
 
 app.get('/about', (req, res) => {
