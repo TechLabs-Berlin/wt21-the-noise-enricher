@@ -4,9 +4,7 @@ import librosa
 import os
 import glob
 import torch
-import torch.nn as nn
 from pydub import AudioSegment
-from enricher_models import CNN, VAE
 
 class preprocessor:
     def __init__(self, filepath):
@@ -45,59 +43,44 @@ class preprocessor:
 
         return input_tensor
 
+
     def to_encoder(self):
-        vae = VAE.load('model')
-        
-        signal = librosa.load('temp_audio_files/file10.wav', sr=22050, duration=3, mono=True)[0]
-        stft = librosa.stft(signal, n_fft=512, hop_length=259)[:-1]
-        spectrogram = np.abs(stft)
-        log_spectrogram = librosa.amplitude_to_db(spectrogram)
+        # autoencoder needs numpy arrays with dimension [batchsize, 256, 256, 1]
+        input_array = np.empty((len(self.audio_chunks), 256, 256, 1))
+        minmax_values = []
 
-        min_val, max_val = np.min(log_spectrogram), np.max(log_spectrogram)
-        norm_spectrogram = (log_spectrogram - min_val) / (max_val - min_val)
+        # creating numpy arrays spectrograms from audio chunks
+        for i, chunk in enumerate(self.audio_chunks):
+            # signal processing to normalized log-transformed spectrogram
+            signal = librosa.load(chunk, sr=22050, duration=3, mono=True)[0]
+            stft = librosa.stft(signal, n_fft=512, hop_length=259)[:-1]
+            spectrogram = np.abs(stft)
+            log_spectrogram = librosa.amplitude_to_db(spectrogram)
+            min_val, max_val = np.min(log_spectrogram), np.max(log_spectrogram)
+            norm_spectrogram = (log_spectrogram - min_val) / (max_val - min_val)
 
-        generated_spectrogram, latent_representations = vae.reconstruct(norm_spectrogram)
+            # min max values for reconstruction later
+            minmax_values.append({'min': min_val, 'max': max_val})
+
+            input_array[i, :, :, 0] = norm_spectrogram
         
-        log_spectrogram = spectrogram[:, :, 0]
-        # apply denormalisation
-        denorm_log_spec = ((generated_spectrogram - generated_spectrogram.min()) / (generated_spectrogram.max()-generated_spectrogram.min()))
-        denorm_log_spec = denorm_log_spec * (max_val - min_val) + min_val
-        # log spectrogram -> spectrogram
-        spec = librosa.db_to_amplitude(denorm_log_spec)
-        # apply Griffin-Lim
-        signal = librosa.istft(spec, hop_length=259)
-        print(signal)
+        return input_array, minmax_values
+
 
     def _delete_audio_chunks(self):
         for file in self.audio_chunks:
             os.remove(file)
 
+
 if __name__=='__main__':
-    preprocess = preprocessor('/home/christian/Documents/sound_classifier/test_sounds/witchfucker.wav')
-    x = preprocess.to_classifier()
+    path_to_input_file = '/home/christian/Documents/sound_classifier/test_sounds/witchfucker.wav'
+    preprocess = preprocessor(path_to_input_file)
+    
+    c = preprocess.to_classifier()
+    print(c.shape)
+
+    s, v = preprocess.to_encoder()
+    print(s.shape, v)
+    print(s)
+
     preprocess._delete_audio_chunks()
-    
-    from enricher_models import CNN
-    import torch
-    import torch.nn as nn
-
-    model = CNN()
-    model.load_state_dict(torch.load('models/nn_classifier_statedict.pt', map_location='cpu'))
-
-    def get_genre(input_tensor):
-        # list of genres
-        genres = ['disco','metal','blues','jazz','country','hiphop','rock','classical','pop','reggae']
-
-        # run through model
-        with torch.no_grad():
-            result = model(input_tensor)
-
-        # postprocessing results
-        result = torch.mean(result, dim=0)
-        result = nn.Softmax(dim=0)(result)
-        result = {g:p.item()*100 for g, p in zip(genres, result)}
-
-        return result
-    
-    print(get_genre(x))
-
