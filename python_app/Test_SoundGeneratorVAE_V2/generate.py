@@ -9,7 +9,7 @@ from autoencoder import VAE
 from train import SPECTROGRAMS_PATH
 
 
-HOP_LENGTH = 256
+HOP_LENGTH = 259
 SAVE_DIR_ORIGINAL = "C:/Users/rapha/Documents/GIT/TechLabs/01_develop/samples/original/"
 SAVE_DIR_GENERATED = "C:/Users/rapha/Documents/GIT/TechLabs/01_develop/samples/generated/"
 MIN_MAX_VALUES_PATH = "C:/Users/rapha/Documents/GIT/TechLabs/01_develop/min_max_values.pkl"
