@@ -6,8 +6,8 @@ from autoencoder import VAE
 
 
 LEARNING_RATE = 0.0005
-BATCH_SIZE = 64
-EPOCHS = 150
+BATCH_SIZE = 2  #original 64
+EPOCHS = 10  #original 150
 
 SPECTROGRAMS_PATH = "C:/Users/rapha/Documents/GIT/TechLabs/01_develop/spectrograms/"
 
@@ -26,7 +26,7 @@ def load_fsdd(spectrograms_path):
 
 def train(x_train, learning_rate, batch_size, epochs):
     autoencoder = VAE(
-        input_shape=(256, 256, 1),
+        input_shape=(256, 256, 1), #original 256/64/1
         conv_filters=(512, 256, 128, 64, 32),
         conv_kernels=(3, 3, 3, 3, 3),
         conv_strides=(2, 2, 2, 2, (2, 1)),
