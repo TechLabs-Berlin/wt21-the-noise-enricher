@@ -129,24 +129,53 @@ h5 {
 }
 
 
+#inputOutput{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items:flex-end;
+    margin-bottom: 4em;
+}
+
+#uploadTrack h5{
+    margin-bottom: 0em;
+}
+
 #uploadTrack {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
-    margin-bottom: 2em;
+    margin-right: -1em;
 }
 
 #uploadFileInput {
     margin-top: 1em;
     display: flex;
-    width: 60%;
     border: none;
-    margin-bottom: 3em;
 }
 
 
+.formGenerate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.formGenerate button.btn {
+    color: black;
+    background-color: #e7a50c;
+    border: solid #e7a50c;
+    border-radius: 10px;
+    width: 150%;
+}
+
+.formGenerate button.btn {
+
+}
+
+/* ------------------------------- */
+/*  Parameters*/
 
 #allParams {
     display: flex;
@@ -165,6 +194,7 @@ h5 {
     margin: 0em 1em;
     padding: 1em;
     border-radius: 10px;
+    margin-bottom: 4em;
 }
 
 #styleSelection div {
@@ -240,26 +270,6 @@ h5 {
     font-weight: bold;
 }
 
-/* ------------------------------- */
-/*  generate button */
-
-.formGenerate {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3.5em 0em;
-}
-
-.formGenerate button.btn {
-    color: black;
-    background-color: #e7a50c;
-    border: solid #e7a50c;
-    border-radius: 10px;
-}
-
-.formGenerate button.btn {
-    width: 200%;
-}
 
 
 /* ------------------------------- */
