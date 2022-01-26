@@ -93,7 +93,7 @@ class VAE:
         self._save_parameters(save_folder)
         self._save_weights(save_folder)
 
-    def load_weights(self, weights_path):
+    def load_weights(self, weights_path='/home/christian/techlabs/wt21-the-noise-enricher/python_app/Test_SoundGeneratorVAE_V2/model/weights.h5'):
         self.model.load_weights(weights_path)
 
     def reconstruct(self, images):
@@ -102,12 +102,12 @@ class VAE:
         return reconstructed_images, latent_representations
 
     @classmethod
-    def load(cls, save_folder="models"):
-        parameters_path = 'models/parameters.pkl'
+    def load(cls, save_folder="Test_SoundGeneratorVAE_V2/models"):
+        parameters_path = '/home/christian/techlabs/wt21-the-noise-enricher/python_app/Test_SoundGeneratorVAE_V2/model/parameters.pkl'
         with open(parameters_path, "rb") as f:
             parameters = pickle.load(f)
         autoencoder = VAE(*parameters)
-        weights_path = 'models/weights.h5'
+        weights_path = '/home/christian/techlabs/wt21-the-noise-enricher/python_app/Test_SoundGeneratorVAE_V2/model/weights.h5'
         autoencoder.load_weights(weights_path)
         return autoencoder
 
