@@ -4,9 +4,10 @@ import numpy as np
 import soundfile as sf
 import librosa
 
-model = VAE.load('models')
+model = VAE.load('Test_SoundGeneratorVAE_V2/model')
 
 def create_sound(input_array, minmax_dict):
+    print(input_array.shape, minmax_dict)
     generated, latent = model.reconstruct(input_array)
 
     signals = []
@@ -17,7 +18,7 @@ def create_sound(input_array, minmax_dict):
         log_spec_norm = (log_spec - np.min(log_spec)) / (np.max(log_spec) - np.min(log_spec))
 
         # denormalize with original min max values
-        log_spec_denorm = log_spec_norm * (minmax_dict['max'] - minmax_dict['min']) + minmax_dict['min']
+        log_spec_denorm = log_spec_norm * (minmax['max'] - minmax['min']) + minmax['min']
 
         # create spectrogram
         spec = librosa.db_to_amplitude(log_spec_denorm)
