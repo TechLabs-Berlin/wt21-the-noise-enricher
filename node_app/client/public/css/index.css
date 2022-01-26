@@ -118,6 +118,11 @@ h4 {
     width: max-content;
 }
 
+#inputOutput div p {
+    color: #e7a50c;
+    line-height: 5%;
+}
+
 
 h1 {
     font-size: 3em;
@@ -129,15 +134,15 @@ h5 {
 }
 
 
-#inputOutput{
+#inputOutput {
     display: flex;
     justify-content: space-between;
     width: 80%;
-    align-items:flex-end;
+    align-items: flex-end;
     margin-bottom: 4em;
 }
 
-#uploadTrack h5{
+#uploadTrack h5 {
     margin-bottom: 0em;
 }
 
@@ -146,7 +151,7 @@ h5 {
     flex-direction: column;
     align-items: center;
     color: white;
-    margin-right: -1em;
+    margin-right: -2em;
 }
 
 #uploadFileInput {
@@ -170,9 +175,7 @@ h5 {
     width: 150%;
 }
 
-.formGenerate button.btn {
-
-}
+.formGenerate button.btn {}
 
 /* ------------------------------- */
 /*  Parameters*/
@@ -350,28 +353,65 @@ svg {
 
         width: 20vh;
     }
+
+    #inputOutput {
+        width: 60%;
+    }
+
+    #inputOutput div p {
+        display: none;
+    }
 }
 
-@media (max-width: 900px) {
-
-    .canvas {
+@media (max-width: 1200px) {
+    #inputOutput {
         width: 80%;
     }
 
-    /* ------------------------------ */
-    /*Background */
-    #background {
-        width: max-content;
-        background-position-y: 0;
-        position: absolute;
-        z-index: 1;
-        top: -10%;
-        left: 0;
-        width: 100%
+    #inputOutput {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
     }
 
-    /* ------------------------------ */
-    /* Intro */
+    #inputOutput div p {
+        display: none;
+    }
+
+    .formGenerate {
+        margin-top: 2em;
+    }
+
+    #uploadTrack {
+        
+        margin-right: 0em;
+    }
+    }
+
+    @media (max-width: 900px) {
+
+        .canvas {
+            width: 70%;
+        }
+
+
+
+        /* ------------------------------ */
+        /*Background */
+        #background {
+            width: max-content;
+            background-position-y: 0;
+            position: absolute;
+            z-index: 1;
+            top: -10%;
+            left: 0;
+            width: 100%
+        }
+
+        /* ------------------------------ */
+        /* Intro */
+
+   
 
     #callToAction {
         margin-top: 12em;
