@@ -2,20 +2,24 @@
 
 /* General */
 body {
-    background-color: #352754;
+
+    background: linear-gradient(#352754, #493294, #432666);
     font-family: "Homenaje";
     color: white;
-    width: 100%;
 }
+
+
+
 
 .canvas {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
     width: 40%;
-    position: relative;
     z-index: 2;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 a {
@@ -27,16 +31,24 @@ a:hover {
     color: #89C6FF;
 }
 
-button.btn {
-    color: white;
-    background-color: #e7a50c;;
-    border: solid #e7a50c;;
-}
+
 
 button.btn:hover {
     color: white;
     background-color: #89C6FF;
     border: solid #89C6FF;
+}
+
+.arrowDown img {
+    color: #89C6FF;
+    width: 30px;
+}
+
+
+#generateTrack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* ------------------------------- */
@@ -70,6 +82,10 @@ header {
     margin-right: 0.5em;
 }
 
+#logo h4 a {
+    color: #e7a50c;
+}
+
 h4 {
     margin: 0 1em;
 }
@@ -89,58 +105,47 @@ h4 {
     margin-top: 0.53em;
 }
 
+/*....................*/
+/*Body*/
 
-/* ------------------------------- */
-/* Call to action */
 #callToAction {
     display: flex;
     margin-bottom: 3em;
     color: white;
     flex-direction: column;
     align-items: center;
-    margin-top: 15em;
-    margin-bottom: 1em;
+    margin-top: 35vh;
+    width: max-content;
 }
+
 
 h1 {
     font-size: 3em;
+    text-align: center;
 }
 
-/* ------------------------------- */
-/* Form module */
+h5 {
+    text-align: center;
+}
+
+
 #uploadTrack {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
-    margin: 2em;
+    margin-bottom: 2em;
 }
 
 #uploadFileInput {
     margin-top: 1em;
     display: flex;
-    width: 70%;
+    width: 60%;
     border: none;
+    margin-bottom: 3em;
 }
 
-#inputGroup-sizing-default {
-    border-bottom-left-radius: 50px;
-    border-top-left-radius: 50px;
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
-    width: 25%;
-    background-color: #e7a50c;
-    color: black;
-    border: solid 1px #e7a50c;
-}
 
-#uploadFileInput .form-control {
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border: solid 1px white;
-}
 
 
 #allParams {
@@ -152,31 +157,33 @@ h1 {
 #styleSection, #noiseSection, #goProSection {
     background-color: #111435;
     color: white;
-    height: 15em;
-    width: 32%;
+    height: 17em;
+    width: 30vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0em 1em;
     padding: 1em;
-    margin: 2em 0em;
     border-radius: 10px;
 }
 
-#styleSelection {
-    font-size: 0.75em;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    height: 40%;
+#styleSelection div {
+    height: 33%;
+}
+
+#styleSelection div label {
+    margin-bottom: 0.15em;
 }
 
 
 .form-range::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    background: #e7a50c;;
+    background: #e7a50c;
+    ;
     cursor: pointer;
 }
+
 
 #noiseBtns {
     display: flex;
@@ -188,7 +195,8 @@ h1 {
 
 
 #noiseBtns button.btn {
-    color: #e7a50c;;
+    color: #e7a50c;
+    ;
     background-color: rgb(255, 255, 255);
     border: solid 1.5px #e7a50c;
     border-radius: 25px;
@@ -204,24 +212,33 @@ h1 {
     border: solid 2px #89C6FF;
 }
 
+.logoSVG {
+    width: 50%;
+}
 
 #proText {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin-top: 1em;
 }
 
 #proText a {
-    color: #e7a50c;;
+    color: #e7a50c;
+    ;
     font-weight: 200;
     font-size: 1.25em;
+    text-align: center;
 }
 
 #proText a:hover {
     color: #89C6FF;
 }
 
+
+#proText a span {
+    font-weight: bold;
+}
 
 /* ------------------------------- */
 /*  generate button */
@@ -230,8 +247,20 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2em 0em;
+    margin: 3.5em 0em;
 }
+
+.formGenerate button.btn {
+    color: black;
+    background-color: #e7a50c;
+    border: solid #e7a50c;
+    border-radius: 10px;
+}
+
+.formGenerate button.btn {
+    width: 200%;
+}
+
 
 /* ------------------------------- */
 /*  save button */
@@ -290,7 +319,8 @@ h1 {
 
 
 svg {
-    color: #e7a50c;;
+    color: #e7a50c;
+    ;
 }
 
 #downloadTraks svg:hover {
@@ -306,8 +336,9 @@ svg {
         width: 70%;
     }
 
-    h2 {
-        width: 100%;
+    #styleSection, #noiseSection, #goProSection {
+
+        width: 20vh;
     }
 }
 
@@ -330,6 +361,24 @@ svg {
     }
 
     /* ------------------------------ */
+    /* Intro */
+
+    #callToAction {
+        margin-top: 12em;
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 2em;
+
+    }
+
+    h5 {
+        font-size: 1.25em;
+    }
+
+
+    /* ------------------------------ */
     /* Form module */
     #allParams {
         display: flex;
@@ -350,12 +399,13 @@ svg {
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        height: 65%;
+        height: 40%;
         font-size: 1.2em;
     }
 
     .form-range {
         width: 80%;
+        margin-left: 2em;
     }
 
 
@@ -367,8 +417,8 @@ svg {
         width: 100%;
     }
 
-    #proText a {
-        margin-top: -1em;
+    #proText img {
+        width: 25%;
     }
 
     #noiseBtns {
@@ -379,7 +429,8 @@ svg {
     }
 
     #noiseBtns button.btn {
-        height: 50px;
+        width: 5em;
+        height: 3em;
         margin: 0px 3px;
     }
 
@@ -429,11 +480,7 @@ svg {
     /* ------------------------------ */
     /* Form module */
     #styleSelection div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        height: 65%;
+        height: 40%;
         font-size: 1.2em;
     }
 
@@ -451,23 +498,16 @@ svg {
     }
 
 
-    /* ------------------------------ */
-    /*Samples */
-    .threeBlocks #downloadTraks svg {
-        width: 25px;
-        margin: -2em 0em;
-    }
-
-    .threeBlocks #usageSample svg {
-        margin: -2em 0em;
-        width: 75px;
-    }
 }
 
 
 @media (max-width: 500px) {
     body {
         font-size: 0.8em;
+    }
+
+    #callToAction {
+        margin-top: 20em;
     }
 
 
@@ -478,10 +518,14 @@ svg {
 
     }
 
+    #logo {
+        margin-top: 0em;
+    }
+
     #menu {
         display: none;
         position: absolute;
-        background-color: white;
+        background-color: #111435;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
         padding: 12px 16px;
@@ -501,7 +545,7 @@ svg {
     }
 
     #about a, #logIn a, #gP a {
-        color: black;
+        color: rgb(255, 255, 255);
     }
 
     #about a:hover, #logIn a:hover, #logo a:hover, #gP a:hover {

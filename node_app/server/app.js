@@ -17,7 +17,11 @@ app.use(morgan('dev'));
 
 
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('index');
+});
+
+app.get('/about', (req, res) => {
+    res.render('generate/about');
 });
 
 app.use('/generate', generateRoutes);
