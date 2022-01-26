@@ -2,11 +2,14 @@
 
 /* General */
 body {
-    background-image: linear-gradient(#352754, #493294, #432666);
-    background-size: contain;
+
+    background: linear-gradient(#352754, #493294, #432666);
     font-family: "Homenaje";
     color: white;
 }
+
+
+
 
 .canvas {
     display: flex;
@@ -334,7 +337,7 @@ svg {
     }
 
     #styleSection, #noiseSection, #goProSection {
-        
+
         width: 20vh;
     }
 }
@@ -414,7 +417,7 @@ svg {
         width: 100%;
     }
 
-    #proText img{
+    #proText img {
         width: 25%;
     }
 
@@ -476,7 +479,7 @@ svg {
 
     /* ------------------------------ */
     /* Form module */
-    #styleSelection div { 
+    #styleSelection div {
         height: 40%;
         font-size: 1.2em;
     }
@@ -503,7 +506,7 @@ svg {
         font-size: 0.8em;
     }
 
-    #callToAction{
+    #callToAction {
         margin-top: 20em;
     }
 

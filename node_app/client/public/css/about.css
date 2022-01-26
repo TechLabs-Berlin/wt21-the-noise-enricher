@@ -1,3 +1,7 @@
+.canvas  {
+
+    height: 100vh;
+}
 
 #about2 {
     display: flex;
