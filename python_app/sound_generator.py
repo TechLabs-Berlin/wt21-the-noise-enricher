@@ -3,14 +3,14 @@ import numpy as np
 import soundfile as sf
 import librosa
 
-model = VAE.load('Test_SoundGeneratorVAE_V2/model')
-
-def create_sound(input_array, minmax_dict, path_to_save=None, unique_id='some_unique_id'):
+def create_sound(input_array, minmax_dict, path_to_save=None, unique_id='some_unique_id', genre='blues'):
     if not path_to_save:
         upload = "temp_audio_files/"
     else:
         upload = path_to_save
-    generated, latent = model.reconstruct(input_array)
+    
+    model = VAE.load('models', genre=genre)
+    generated, _ = model.reconstruct(input_array)
 
     signals = []
     for spec, minmax in zip(generated, minmax_dict):
@@ -28,9 +28,9 @@ def create_sound(input_array, minmax_dict, path_to_save=None, unique_id='some_un
         signal = librosa.istft(spec, hop_length=259)
         signals.append(signal)
 
-    for i, signal in enumerate(signals):
-        sf.write(f'{upload}reconstructed_{unique_id}_{i}.wav',
-                 signal, samplerate=22050)
+    # create one audio file
+    signals = [item for sublist in signals for item in sublist]
+    sf.write(f'{upload}reconstructed_{unique_id}.wav', signals, samplerate=22050)
 
 
 if __name__=='__main__':
@@ -40,4 +40,5 @@ if __name__=='__main__':
 
     input_arrays, minmax = preprocess.to_encoder()
 
-    create_sound(input_arrays, minmax)
+    create_sound(input_arrays, minmax, genre='metal')
+    preprocess._delete_audio_chunks()

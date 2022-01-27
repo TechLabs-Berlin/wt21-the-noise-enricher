@@ -58,7 +58,7 @@ module.exports.checkResultsStatus = async (req, res) => {
 
 module.exports.computeResults = async (req, res) => {
     if(audioFile.file && generationDone) {
-        const generated_file = '../../public/uploads/reconstructed_' + audioFile.file.filename + "_0.wav";
+        const generated_file = '../../public/uploads/reconstructed_' + audioFile.file.filename + ".wav";
 
         res.render('generate/results', {filepath: generated_file});
         generationDone = false;
