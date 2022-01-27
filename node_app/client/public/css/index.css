@@ -444,6 +444,10 @@ svg {
         margin: 1em 0em;
     }
 
+    #allParams{
+        margin-bottom: 2em;
+    }
+
     #styleSelection div {
         display: flex;
         flex-direction: row;
