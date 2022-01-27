@@ -34,26 +34,28 @@ router.post('/', upload.single('audio'), async (req, res) => {
 
 router.get('/spectrogram', async (req, res) => {
     if (audioFile.file) {
-        res.render('generate/spectrogram', {filepath: audioFile.file.filename});
-        // TODO: make link to results active after results are generated
-        // await new Promise(resolve => setTimeout(resolve, 1000));
+        // res.render('generate/spectrogram', {filepath: audioFile.file.filename});
+
+        await runPython.runNoiseEnricher(audioFile.file.path, audioFile.file.filename);
+
+        res.redirect(302, 'results');
     }
     else
         res.redirect(302, '/');
 });
 
 router.get('/results', async (req, res) => {
+    let generated_file = "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3"
     if(audioFile.file) {
+        generated_file = '../../public/uploads/reconstructed_' + audioFile.file.filename + "_0.wav";
         fs.unlink(path.join(__dirname, '../../client/public/uploads/' + audioFile.file.filename), (err) => {
             if (err) throw err;
         });
+    } else {
+        res.redirect(302, '/');
     }
 
     await runPython.drawPythonPlot();
-
-    // await new Promise(resolve => setTimeout(resolve, 3000));
-
-    const generated_file = "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3"
 
     if (generated_file) { // && python_response_code === 0
         res.render('generate/results', {
