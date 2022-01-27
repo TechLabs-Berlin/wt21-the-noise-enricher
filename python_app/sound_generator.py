@@ -3,14 +3,13 @@ import numpy as np
 import soundfile as sf
 import librosa
 
-model = VAE.load('models')
+model = VAE.load('Test_SoundGeneratorVAE_V2/model')
 
 def create_sound(input_array, minmax_dict, path_to_save=None, unique_id='some_unique_id'):
     if not path_to_save:
         upload = "temp_audio_files/"
     else:
         upload = path_to_save
-
     generated, latent = model.reconstruct(input_array)
 
     signals = []
