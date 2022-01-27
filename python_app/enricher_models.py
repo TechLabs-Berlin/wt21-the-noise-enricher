@@ -10,7 +10,11 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.losses import MeanSquaredError
 import numpy as np
 import tensorflow as tf
-import torch.nn as nn
+
+try:
+    import torch.nn as nn
+except:
+    pass
 
 
 tf.compat.v1.disable_eager_execution()

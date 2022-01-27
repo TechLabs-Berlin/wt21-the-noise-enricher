@@ -1,10 +1,13 @@
 import numpy as np
-import torchaudio
 import librosa
 import os
 import glob
-import torch
 from pydub import AudioSegment
+try:
+    import torchaudio
+    import torch
+except:
+    pass
 
 class preprocessor:
     def __init__(self, filepath, path_to_save=None, unique_id='some_unique_id'):

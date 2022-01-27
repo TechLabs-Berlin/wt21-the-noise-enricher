@@ -1,7 +1,4 @@
--f https://download.pytorch.org/whl/torch_stable.html
 tensorflow-cpu==2.7.0
-torch==1.10.0+cpu
-torchaudio==0.10.0+cpu
 librosa==0.8.1
 AudioSegment==0.23.0
 pydub==0.25.1
