@@ -107,12 +107,13 @@ class VAE:
         return reconstructed_images, latent_representations
 
     @classmethod
-    def load(cls, save_folder="models"):
-        parameters_path = Path(__file__).parent / 'Test_SoundGeneratorVAE_V2' / 'model' / 'parameters.pkl'
+    def load(cls, save_folder="models", genre='blues'):
+        parameters_path = Path(__file__).parent / 'models' / f'parameters_{genre}.pkl'
+        weights_path = Path(__file__).parent / 'models' / f'weights_{genre}.h5'
+
         with open(parameters_path, "rb") as f:
             parameters = pickle.load(f)
         autoencoder = VAE(*parameters)
-        weights_path = Path(__file__).parent / 'Test_SoundGeneratorVAE_V2' / 'model' / 'weights.h5'
         autoencoder.load_weights(str(weights_path))
         return autoencoder
 
