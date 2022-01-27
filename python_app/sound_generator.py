@@ -10,7 +10,7 @@ def create_sound(input_array, minmax_dict, path_to_save=None, unique_id='some_un
         upload = "temp_audio_files/"
     else:
         upload = path_to_save
-    generated, latent = model.reconstruct(input_array)
+    generated, _ = model.reconstruct(input_array)
 
     signals = []
     for spec, minmax in zip(generated, minmax_dict):
@@ -28,9 +28,9 @@ def create_sound(input_array, minmax_dict, path_to_save=None, unique_id='some_un
         signal = librosa.istft(spec, hop_length=259)
         signals.append(signal)
 
-    for i, signal in enumerate(signals):
-        sf.write(f'{upload}reconstructed_{unique_id}_{i}.wav',
-                 signal, samplerate=22050)
+    # create one audio file
+    signals = [item for sublist in signals for item in sublist]
+    sf.write(f'{upload}reconstructed_{unique_id}.wav', signals, samplerate=22050)
 
 
 if __name__=='__main__':
@@ -41,3 +41,4 @@ if __name__=='__main__':
     input_arrays, minmax = preprocess.to_encoder()
 
     create_sound(input_arrays, minmax)
+    preprocess._delete_audio_chunks()
