@@ -8,7 +8,8 @@ const catchAsync = require('../utils/catchAsync');
 
 
 const upload = multer({
-    dest: path.join(__dirname, '../../client/public/uploads/')
+    dest: path.join(__dirname, '../../client/public/uploads/'),
+    limits: { fileSize: 1000*1000*20 }
 });
 
 router.get('/', audioGenerate.index);
