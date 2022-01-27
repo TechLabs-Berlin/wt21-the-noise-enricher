@@ -1,2 +1,1 @@
-web: cd node_app/server && npm start
-web: node --optimize_for_size --max_old_space_size=460 --gc_interval=100 app.js
+web: node --optimize_for_size --max_old_space_size=460 --gc_interval=100 node_app/server/app.js
