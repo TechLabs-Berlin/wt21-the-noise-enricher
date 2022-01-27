@@ -96,6 +96,10 @@ h4 {
     font-size: medium;
 }
 
+#logo a{
+    color: #e7a50c;
+}
+
 #about a:hover, #logIn a:hover, #logo a:hover, #gP a:hover {
     color: #89C6FF;
 }
