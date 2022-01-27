@@ -17,6 +17,18 @@ const upload = multer({
 
 router.get('/', (req, res) => {
     res.render('index');
+
+    // clean upload folder
+   const directory = path.join(__dirname, '../../client/public/uploads/');
+    fs.readdir(directory, (err, files) => {
+        if (err) throw err;
+
+        for (const file of files) {
+            fs.unlink(path.join(directory, file), err => {
+                if (err) throw err;
+            });
+        }
+    });
 });
 
 router.get('/pro', (req, res) => {
@@ -26,7 +38,7 @@ router.get('/pro', (req, res) => {
 router.post('/', upload.single('audio'), async (req, res) => {
     if (req.file) {
         audioFile.file = req.file;
-        res.redirect(302, 'generate/spectrogram');
+        res.redirect(302, 'generate/results');
     }
     else
         res.redirect(302, '/');
@@ -34,35 +46,29 @@ router.post('/', upload.single('audio'), async (req, res) => {
 
 router.get('/spectrogram', async (req, res) => {
     if (audioFile.file) {
-        // res.render('generate/spectrogram', {filepath: audioFile.file.filename});
+        res.render('generate/spectrogram', {filepath: audioFile.file.filename});
 
-        await runPython.runNoiseEnricher(audioFile.file.path, audioFile.file.filename);
-
-        res.redirect(302, 'results');
     }
     else
         res.redirect(302, '/');
 });
 
 router.get('/results', async (req, res) => {
-    let generated_file = "http://jplayer.org/audio/mp3/RioMez-01-Sleep_together.mp3"
     if(audioFile.file) {
-        generated_file = '../../public/uploads/reconstructed_' + audioFile.file.filename + "_0.wav";
-        fs.unlink(path.join(__dirname, '../../client/public/uploads/' + audioFile.file.filename), (err) => {
-            if (err) throw err;
-        });
+        const code = await runPython.runNoiseEnricher(audioFile.file.path, audioFile.file.filename);
+
+        if (code !== 0) {
+            res.redirect(302, '/');
+        }
+
+        const generated_file = '../../public/uploads/reconstructed_' + audioFile.file.filename + "_0.wav";
+
+
+        res.render('generate/results', { filepath: generated_file});
     } else {
         res.redirect(302, '/');
     }
 
-    await runPython.drawPythonPlot();
-
-    if (generated_file) { // && python_response_code === 0
-        res.render('generate/results', {
-            image: '../../public/uploads/test.png',
-            filepath: generated_file,});
-    } else
-        res.redirect(302, '/');
 });
 
 module.exports = router;

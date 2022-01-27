@@ -31,21 +31,11 @@ module.exports.drawPythonPlot = async () => {
 }
 
 module.exports.runNoiseEnricher = async (filepath, filename) => {
-    let python_response_code = 2;
     const python = spawn(pythonPath, [
         path.join(__dirname,'../../../python_app/call_generate_audio.py'),
         filepath,
         path.join(__dirname, '../../client/public/uploads/'),
         filename]);
-
-    // collect data from script
-    // python.stdout.on('data', function (data) {
-    //     console.log(`Pipe data from python script ...${data}`);
-    // });
-    //
-    // python.stderr.on('data', function (data) {
-    //     console.log(`Pipe data from python script ...${data}`);
-    // });
 
     let error = "";
     for await (const chunk of python.stderr) {
@@ -53,18 +43,7 @@ module.exports.runNoiseEnricher = async (filepath, filename) => {
         error += chunk;
     }
 
-    // in close event we are sure that stream from child process is closed
-    // python.on('close', (code) => {
-    //     console.log(`child process close all stdio with code ${code}`);
-    //     return code;
-    // });
-
-    const exitCode = await new Promise( (resolve, reject) => {
+    return await new Promise((resolve, reject) => {
         python.on('close', resolve);
     });
-
-    if(exitCode) {
-        throw new Error( `subprocess error exit ${exitCode}, ${error}`);
-    }
-    return exitCode;
 }
