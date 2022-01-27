@@ -3,3 +3,8 @@ matplotlib==3.5.0
 numpy==1.21.4
 torchaudio==0.10.0+cpu
 torch==1.10.0+cpu
+librosa==0.8.1
+AudioSegment==0.23.0
+pydub==0.25.1
+tensorflow==2.7.0
+h5py==2.10.0
