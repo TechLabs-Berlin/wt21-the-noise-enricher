@@ -41,7 +41,7 @@ router.post('/', upload.single('audio'), async (req, res) => {
         res.redirect(302, 'generate/results');
     }
     else
-        res.redirect(302, '/');
+        res.redirect(302, 'generate');
 });
 
 router.get('/spectrogram', async (req, res) => {
@@ -50,7 +50,7 @@ router.get('/spectrogram', async (req, res) => {
 
     }
     else
-        res.redirect(302, '/');
+        res.redirect(302, 'generate');
 });
 
 router.get('/results', async (req, res) => {
@@ -58,7 +58,7 @@ router.get('/results', async (req, res) => {
         const code = await runPython.runNoiseEnricher(audioFile.file.path, audioFile.file.filename);
 
         if (code !== 0) {
-            res.redirect(302, '/');
+            res.redirect(302, 'generate');
         }
 
         const generated_file = '../../public/uploads/reconstructed_' + audioFile.file.filename + "_0.wav";
@@ -66,7 +66,7 @@ router.get('/results', async (req, res) => {
 
         res.render('generate/results', { filepath: generated_file});
     } else {
-        res.redirect(302, '/');
+        res.redirect(302, 'generate');
     }
 
 });
