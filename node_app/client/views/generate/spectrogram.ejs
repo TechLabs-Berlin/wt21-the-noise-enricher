@@ -20,13 +20,9 @@
 
     </div>
     <p>Results will appear in several seconds...</p>
-        <div id="showResults">
-            <a class="nav-link" href="/generate/results">View generated file</a>
+        <div >
+            <a id="showResults" class="nav-link" href="/generate/results" style="display: none;">View generated file</a>
         </div>
-
-
-
-
 </div>
 
 <script src="https://unpkg.com/wavesurfer.js"></script>
@@ -35,7 +31,7 @@
 <script>
     const wavesurfer = drawSpectrogram("../../public/uploads/<%= filepath %>");
 
-    const interval = 1000;  // 1000 = 1 second, 3000 = 3 seconds
+    const interval = 2000;  // 1000 = 1 second, 3000 = 3 seconds
     function doAjax() {
         $.ajax({
             type: 'POST',
@@ -43,10 +39,9 @@
             data: $(this).serialize(),
             dataType: 'json',
             success: function (data) {
-                const results = data;
                 // alert('Success!')
-                console.log('Success!');
-                if (results.status === 'done') {
+                if (data.status === 'done') {
+                    console.log('Success!');
                     $("#showResults").show();
                 } else {
                     setTimeout(doAjax, interval);
