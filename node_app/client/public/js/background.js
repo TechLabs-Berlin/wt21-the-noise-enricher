@@ -176,7 +176,7 @@ var MusicEqualizerBar = (function () {
 
     function drawMusicBars() {
         ctx.save();
-        ctx.clearRect(0, 0, containerWidth, containerHeight);
+        ctx.clearRect(0, 0, containerWidth*2, containerHeight);
         for (var i = 0; i < allBars.length; i++) {
             ctx.fillRect(allBars[i].left, allBars[i].top, size, allBars[i].height);
         }
@@ -189,7 +189,7 @@ var MusicEqualizerBar = (function () {
 
     function reloadGlobalVariables() {
 
-        containerWidth = parseInt(window.getComputedStyle(container).getPropertyValue('width'));
+        containerWidth = parseInt(window.getComputedStyle(container).getPropertyValue("width"));
         containerHeight = parseInt(window.getComputedStyle(container).getPropertyValue('height'));
 
     }
