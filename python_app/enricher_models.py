@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import pickle
 
 from tensorflow.keras import Model
@@ -9,34 +10,38 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.losses import MeanSquaredError
 import numpy as np
 import tensorflow as tf
-import torch.nn as nn
+
+try:
+    import torch.nn as nn
+except:
+    pass
 
 
 tf.compat.v1.disable_eager_execution()
 
 
-class CNN(nn.Module):
-    def __init__(self):
-        super(CNN, self).__init__()
-
-        self.cnn_layers = nn.Sequential(
-            nn.Conv2d(2 ,  16, kernel_size=7, stride=1), nn.Tanh(), nn.MaxPool2d(2),
-            nn.Conv2d(16,  32, kernel_size=5, stride=1), nn.Tanh(), nn.MaxPool2d(2),
-            nn.Conv2d(32,  64, kernel_size=6, stride=1), nn.Tanh(), nn.MaxPool2d(2),
-            nn.Conv2d(64, 128, kernel_size=5, stride=1), nn.Tanh(), nn.MaxPool2d(2),
-            nn.Flatten()
-        )
-
-        self.linear_layers = nn.Sequential(
-            nn.Linear(12*12*128, 2048),
-            nn.Linear(2048, 10)
-        )
-
-    def forward(self, x):
-        x = self.cnn_layers(x)
-        x = x.view(x.size(0), -1)
-        x = self.linear_layers(x)
-        return x
+# class CNN(nn.Module):
+#     def __init__(self):
+#         super(CNN, self).__init__()
+#
+#         self.cnn_layers = nn.Sequential(
+#             nn.Conv2d(2 ,  16, kernel_size=7, stride=1), nn.Tanh(), nn.MaxPool2d(2),
+#             nn.Conv2d(16,  32, kernel_size=5, stride=1), nn.Tanh(), nn.MaxPool2d(2),
+#             nn.Conv2d(32,  64, kernel_size=6, stride=1), nn.Tanh(), nn.MaxPool2d(2),
+#             nn.Conv2d(64, 128, kernel_size=5, stride=1), nn.Tanh(), nn.MaxPool2d(2),
+#             nn.Flatten()
+#         )
+#
+#         self.linear_layers = nn.Sequential(
+#             nn.Linear(12*12*128, 2048),
+#             nn.Linear(2048, 10)
+#         )
+#
+#     def forward(self, x):
+#         x = self.cnn_layers(x)
+#         x = x.view(x.size(0), -1)
+#         x = self.linear_layers(x)
+#         return x
         
 
 
@@ -93,22 +98,22 @@ class VAE:
         self._save_parameters(save_folder)
         self._save_weights(save_folder)
 
-    def load_weights(self, weights_path):
+    def load_weights(self, weights_path='/home/christian/techlabs/wt21-the-noise-enricher/python_app/Test_SoundGeneratorVAE_V2/model/weights.h5'):
         self.model.load_weights(weights_path)
 
     def reconstruct(self, images):
-        latent_representations = self.encoder.predict(images)
+        latent_representations = self.encoder.predict(images[:, :, :, :])
         reconstructed_images = self.decoder.predict(latent_representations)
         return reconstructed_images, latent_representations
 
     @classmethod
     def load(cls, save_folder="models"):
-        parameters_path = 'models/parameters.pkl'
+        parameters_path = Path(__file__).parent / 'Test_SoundGeneratorVAE_V2' / 'model' / 'parameters.pkl'
         with open(parameters_path, "rb") as f:
             parameters = pickle.load(f)
         autoencoder = VAE(*parameters)
-        weights_path = 'models/weights.h5'
-        autoencoder.load_weights(weights_path)
+        weights_path = Path(__file__).parent / 'Test_SoundGeneratorVAE_V2' / 'model' / 'weights.h5'
+        autoencoder.load_weights(str(weights_path))
         return autoencoder
 
     def _calculate_combined_loss(self, y_target, y_predicted):
