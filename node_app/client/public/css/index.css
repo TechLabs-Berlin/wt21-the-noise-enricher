@@ -77,6 +77,10 @@ header {
     height: 3em;
 }
 
+#main {
+    display: none;
+}
+
 #pngLogo {
     height: 1.25em;
     margin-right: 0.5em;
@@ -90,17 +94,17 @@ h4 {
     margin: 0 1em;
 }
 
-#about a, #logIn a, #gP a, #logo {
+#about a, #logIn a, #gP a, #logo, #main a {
     color: rgb(255, 255, 255);
     margin-top: 1em;
     font-size: medium;
 }
 
-#logo a{
+#logo a {
     color: #e7a50c;
 }
 
-#about a:hover, #logIn a:hover, #logo a:hover, #gP a:hover {
+#about a:hover, #logIn a:hover, #logo a:hover, #gP a:hover, #main a:hover {
     color: #89C6FF;
 }
 
@@ -387,35 +391,35 @@ svg {
     }
 
     #uploadTrack {
-        
+
         margin-right: 0em;
     }
+}
+
+@media (max-width: 900px) {
+
+    .canvas {
+        width: 70%;
     }
 
-    @media (max-width: 900px) {
-
-        .canvas {
-            width: 70%;
-        }
 
 
+    /* ------------------------------ */
+    /*Background */
+    #background {
+        width: max-content;
+        background-position-y: 0;
+        position: absolute;
+        z-index: 1;
+        top: -10%;
+        left: 0;
+        width: 100%
+    }
 
-        /* ------------------------------ */
-        /*Background */
-        #background {
-            width: max-content;
-            background-position-y: 0;
-            position: absolute;
-            z-index: 1;
-            top: -10%;
-            left: 0;
-            width: 100%
-        }
+    /* ------------------------------ */
+    /* Intro */
 
-        /* ------------------------------ */
-        /* Intro */
 
-   
 
     #callToAction {
         margin-top: 12em;
@@ -448,7 +452,7 @@ svg {
         margin: 1em 0em;
     }
 
-    #allParams{
+    #allParams {
         margin-bottom: 2em;
     }
 
@@ -590,6 +594,10 @@ svg {
         z-index: 1;
     }
 
+    #main {
+        display: inline;
+    }
+
     header {
         width: 100%;
         flex-direction: column;
@@ -599,7 +607,7 @@ svg {
     header:hover #menu {
         display: block;
         align-self: center;
-        margin-top: 4em;
+        margin-top: 6em;
     }
 
     #about a, #logIn a, #gP a {
