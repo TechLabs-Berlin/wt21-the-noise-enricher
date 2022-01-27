@@ -98,18 +98,17 @@ class VAE:
         self.model.load_weights(weights_path)
 
     def reconstruct(self, images):
-        latent_representations = self.encoder.predict(images[:, :, :64, :])
-        # latent_representations = self.encoder.predict(images[:, :, :, :])
+        latent_representations = self.encoder.predict(images[:, :, :, :])
         reconstructed_images = self.decoder.predict(latent_representations)
         return reconstructed_images, latent_representations
 
     @classmethod
     def load(cls, save_folder="models"):
-        parameters_path = Path(__file__).parent / 'Test_SoundGeneratorVAE_V2' / 'models' / 'parameters.pkl'
+        parameters_path = Path(__file__).parent / 'Test_SoundGeneratorVAE_V2' / 'model' / 'parameters.pkl'
         with open(parameters_path, "rb") as f:
             parameters = pickle.load(f)
         autoencoder = VAE(*parameters)
-        weights_path = Path(__file__).parent / 'Test_SoundGeneratorVAE_V2' / 'models' / 'weights.h5'
+        weights_path = Path(__file__).parent / 'Test_SoundGeneratorVAE_V2' / 'model' / 'weights.h5'
         autoencoder.load_weights(str(weights_path))
         return autoencoder
 
