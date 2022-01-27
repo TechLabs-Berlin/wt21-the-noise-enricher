@@ -18,7 +18,7 @@ router.get('/pro', (req, res) => {
     res.render('generate/generate_pro');
 });
 
-router.post('/', upload.single('audio'), audioGenerate.uploadForm);
+router.post('/', upload.single('audio'), audioGenerate.fileSizeLimitErrorHandler, audioGenerate.uploadForm);
 
 router.get('/spectrogram', audioGenerate.showSpectrogram);
 

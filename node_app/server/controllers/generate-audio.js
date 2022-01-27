@@ -5,6 +5,15 @@ const fs = require("fs");
 const audioFile = {};
 let generationDone = false;
 
+module.exports.fileSizeLimitErrorHandler = (err, req, res, next) => {
+    if (err) {
+        res.redirect(302, 'generate')
+    } else {
+        next()
+    }
+};
+
+
 module.exports.index = (req, res) => {
     res.render('index');
 
@@ -19,7 +28,7 @@ module.exports.index = (req, res) => {
             });
         }
     });
-}
+};
 
 
 module.exports.showSpectrogram = async (req, res) => {
