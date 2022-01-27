@@ -18,18 +18,47 @@
         </a> Play uploaded track
         </p>
 
-        <a class="nav-link" href="/generate/results">Download generated file</a>
     </div>
+    <p>Results will appear in several seconds...</p>
+        <div id="showResults">
+            <a class="nav-link" href="/generate/results">View generated file</a>
+        </div>
+
 
 
 
 </div>
-
 
 <script src="https://unpkg.com/wavesurfer.js"></script>
 <script src="https://unpkg.com/wavesurfer.js@5.2.0/dist/plugin/wavesurfer.spectrogram.min.js"></script>
 <script src="../../public/js/draw_spectrogram.js"></script>
 <script>
     const wavesurfer = drawSpectrogram("../../public/uploads/<%= filepath %>");
-</script>
 
+    const interval = 1000;  // 1000 = 1 second, 3000 = 3 seconds
+    function doAjax() {
+        $.ajax({
+            type: 'POST',
+            url: '/generate/check-results',
+            data: $(this).serialize(),
+            dataType: 'json',
+            success: function (data) {
+                const results = data;
+                // alert('Success!')
+                console.log('Success!');
+                if (results.status === 'done') {
+                    $("#showResults").show();
+                } else {
+                    setTimeout(doAjax, interval);
+                }
+            },
+            error: function (data) {
+                // Schedule the next
+                console.log('Fail!');
+                console.log(data);
+                setTimeout(doAjax, interval);
+            }
+        });
+    }
+    setTimeout(doAjax, interval);
+</script>
