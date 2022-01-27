@@ -1,3 +1,0 @@
-Trained with blues files
-Batchsize = 2
-Epochs = 20
