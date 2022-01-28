@@ -1,24 +1,29 @@
-
-#pro {
-    margin-top: 5em;
+#inputOutput{
+    margin-top: 14em;
 }
 
 
-#generateTrack{
+
+#inputOutput {
+    width: 100%;
+}
+
+#generateTrack {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#uploadTrack{
-    margin-bottom: -1em;
-    margin-top: 10em;
-    width: 100%;
+#styleSelection{
+    height: 72%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #sections {
-        display: flex;
-        flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 #allParams1, #allParams2 {
@@ -28,7 +33,7 @@
 }
 
 #allParams1 {
-    margin-top: 2em;
+    margin-top: -3em;
 }
 
 #noiseSection a:hover {
@@ -41,7 +46,7 @@
     color: #89C6FF;
 }
 
-#styleSection, #noiseSection,Section, #randomSection, #addSection, #placeholderSection {
+#styleSection, #noiseSection, Section, #randomSection, #addSection, #placeholderSection {
     background-color: #111435;
     color: white;
     height: 17em;
@@ -54,7 +59,7 @@
     border-radius: 10px;
 }
 
-#placeholderSection{
+#placeholderSection {
     background-color: transparent;
     box-shadow: none;
 }
@@ -62,11 +67,11 @@
 #addSection {
     background-color: #352754;
     border: dotted 4px#e7a50c;
-    color:#e7a50c;
+    color: #e7a50c;
     box-shadow: none;
 }
 
-#addText p, #randomText p{
+#addText p, #randomText p {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,7 +81,7 @@
 
 
 #styleSelection a {
-    color:#e7a50c;
+    color: #e7a50c;
     font-weight: 200;
     font-size: 15px;
     align-self: center;
@@ -84,14 +89,14 @@
 }
 
 #noiseSection a {
-    color:#e7a50c;
+    color: #e7a50c;
     font-weight: 200;
     font-size: 15px;
     align-self: center;
     margin-top: 5.1em;
 }
 
-#instrumentSection div{
+#instrumentSection div {
     margin-top: 0.5em;
 }
 
@@ -110,7 +115,7 @@
 }
 
 svg:hover {
-    fill:#89C6FF;
+    fill: #89C6FF;
 }
 
 #randomText, #addText, #placeholderText {
@@ -120,7 +125,24 @@ svg:hover {
     width: 80%;
 }
 
+@media (max-width: 1400px) {
+    #inputOutput {
+        width: 70%;
+    }
 
+    #inputOutput div p {
+        display: inline;
+    }
+    .canvas{
+        width: 70%;
+    }
+}
+
+@media (max-width: 1200px) {
+    #inputOutput div p {
+        display: none;
+    }
+}
 
 @media (max-width: 900px) {
 
@@ -145,7 +167,7 @@ svg:hover {
         margin: 1em 0em;
     }
 
-    #instrumentSection div{
+    #instrumentSection div {
         margin-top: 0.5em;
         display: flex;
         flex-direction: row;
@@ -155,7 +177,7 @@ svg:hover {
         margin-top: 0.85em;
     }
 
-   
+
 
 
     .iconInstrument {

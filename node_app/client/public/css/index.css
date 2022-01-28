@@ -77,6 +77,10 @@ header {
     height: 3em;
 }
 
+#main {
+    display: none;
+}
+
 #pngLogo {
     height: 1.25em;
     margin-right: 0.5em;
@@ -90,13 +94,17 @@ h4 {
     margin: 0 1em;
 }
 
-#about a, #logIn a, #gP a, #logo {
+#about a, #logIn a, #gP a, #logo, #main a {
     color: rgb(255, 255, 255);
     margin-top: 1em;
     font-size: medium;
 }
 
-#about a:hover, #logIn a:hover, #logo a:hover, #gP a:hover {
+#logo a {
+    color: #e7a50c;
+}
+
+#about a:hover, #logIn a:hover, #logo a:hover, #gP a:hover, #main a:hover {
     color: #89C6FF;
 }
 
@@ -118,6 +126,11 @@ h4 {
     width: max-content;
 }
 
+#inputOutput div p {
+    color: #e7a50c;
+    line-height: 5%;
+}
+
 
 h1 {
     font-size: 3em;
@@ -129,24 +142,51 @@ h5 {
 }
 
 
+#inputOutput {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: flex-end;
+    margin-bottom: 4em;
+}
+
+#uploadTrack h5 {
+    margin-bottom: 0em;
+}
+
 #uploadTrack {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
-    margin-bottom: 2em;
+    margin-right: -2em;
 }
 
 #uploadFileInput {
     margin-top: 1em;
     display: flex;
-    width: 60%;
     border: none;
-    margin-bottom: 3em;
+}
+
+
+.formGenerate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formGenerate button.btn {
+    color: black;
+    background-color: #e7a50c;
+    border: solid #e7a50c;
+    border-radius: 10px;
+    width: 150%;
 }
 
 
 
+/* ------------------------------- */
+/*  Parameters*/
 
 #allParams {
     display: flex;
@@ -165,6 +205,7 @@ h5 {
     margin: 0em 1em;
     padding: 1em;
     border-radius: 10px;
+    margin-bottom: 4em;
 }
 
 #styleSelection div {
@@ -240,26 +281,6 @@ h5 {
     font-weight: bold;
 }
 
-/* ------------------------------- */
-/*  generate button */
-
-.formGenerate {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 3.5em 0em;
-}
-
-.formGenerate button.btn {
-    color: black;
-    background-color: #e7a50c;
-    border: solid #e7a50c;
-    border-radius: 10px;
-}
-
-.formGenerate button.btn {
-    width: 200%;
-}
 
 
 /* ------------------------------- */
@@ -340,13 +361,48 @@ svg {
 
         width: 20vh;
     }
+
+    #inputOutput {
+        width: 60%;
+    }
+
+    #inputOutput div p {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    #inputOutput {
+        width: 80%;
+    }
+
+    #inputOutput {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    #inputOutput div p {
+        display: none;
+    }
+
+    .formGenerate {
+        margin-top: 2em;
+    }
+
+    #uploadTrack {
+
+        margin-right: 0em;
+    }
 }
 
 @media (max-width: 900px) {
 
     .canvas {
-        width: 80%;
+        width: 70%;
     }
+
+
 
     /* ------------------------------ */
     /*Background */
@@ -362,6 +418,8 @@ svg {
 
     /* ------------------------------ */
     /* Intro */
+
+
 
     #callToAction {
         margin-top: 12em;
@@ -392,6 +450,10 @@ svg {
         width: 100%;
         display: flex;
         margin: 1em 0em;
+    }
+
+    #allParams {
+        margin-bottom: 2em;
     }
 
     #styleSelection div {
@@ -532,6 +594,10 @@ svg {
         z-index: 1;
     }
 
+    #main {
+        display: inline;
+    }
+
     header {
         width: 100%;
         flex-direction: column;
@@ -541,7 +607,7 @@ svg {
     header:hover #menu {
         display: block;
         align-self: center;
-        margin-top: 4em;
+        margin-top: 6em;
     }
 
     #about a, #logIn a, #gP a {

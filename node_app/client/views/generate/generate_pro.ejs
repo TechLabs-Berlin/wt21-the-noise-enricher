@@ -13,13 +13,24 @@
 
 
         <form action="/generate" id="generateTrack" method="POST" enctype="multipart/form-data">
-            <div id="uploadTrack">
-                <h5>Upload your track</h5>
-                <div id="uploadFileInput">
-                    <input type="file" name="audio" class="form-control">
-                </div>
+            <div id="inputOutput">
+                <div id="uploadTrack">
+                    <h5>Upload your track</h5>
 
+                    <div id="uploadFileInput">
+                        <input type="file" name="audio" class="form-control">
+                    </div>
+                    <!-- generate button -->
+                </div>
+                <div>
+                    <p>&gt;&gt;&gt;&gt;&gt;</p>
+                </div>
+                <div class="formGenerate">
+                    <button class="btn btn-info btn-lg" type="submit" onclick="showAlert()">Generate new
+                        track</button>
+                </div>
             </div>
+
 
             <!-- 3 gray blocks -->
             <div id="sections">
@@ -136,11 +147,8 @@
             </div>
 
 
-            <div class="formGenerate">
-                <button class="btn btn-info btn-lg" type="submit">Generate new track</button>
-            </div>
-
         </form>
     </div>
 
 </div>
+<script src="../../public/js/toBeDefined.js"></script>
