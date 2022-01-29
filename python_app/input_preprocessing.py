@@ -1,13 +1,22 @@
 import numpy as np
-import torchaudio
 import librosa
 import os
 import glob
-import torch
 from pydub import AudioSegment
+try:
+    import torchaudio
+    import torch
+except:
+    pass
 
 class preprocessor:
-    def __init__(self, filepath):
+    def __init__(self, filepath, path_to_save=None, unique_id='some_unique_id'):
+        if not path_to_save:
+            upload = "temp_audio_files/"
+        else:
+            upload = path_to_save
+
+
         input_audio = AudioSegment.from_wav(filepath)
 
         # transformation to mono, downsampling
@@ -18,9 +27,10 @@ class preprocessor:
         n_chunks = len(input_audio)//3000
 
         for i in range(n_chunks-1):
-            input_audio[(i*3000): ((i+1)*3000)].export(f'temp_audio_files/file{i}.wav', format='wav')
+            input_audio[(i*3000): ((i+1)*3000)].export(
+                f'{upload}file_{unique_id}_{i}.wav', format='wav')
             
-        self.audio_chunks = glob.glob('temp_audio_files/*.wav')
+        self.audio_chunks = glob.glob(f'{upload}file_{unique_id}*.wav')
 
     def to_classifier(self):
         # classifier needs tensor size [2, 258, 258] with [0, :] real and [1, :] imaginary part of
