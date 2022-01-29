@@ -362,19 +362,23 @@ svg {
         width: 20vh;
     }
 
+    .formGenerate button.btn{
+        width: 120%;
+    }
+
     #inputOutput {
         width: 60%;
     }
 
-    #inputOutput div p {
-        display: none;
+    #uploadFileInput{
+        width: 80%;
     }
+
+
 }
 
 @media (max-width: 1200px) {
-    #inputOutput {
-        width: 80%;
-    }
+    
 
     #inputOutput {
         flex-direction: column;
@@ -382,9 +386,7 @@ svg {
         align-items: center;
     }
 
-    #inputOutput div p {
-        display: none;
-    }
+   
 
     .formGenerate {
         margin-top: 2em;
@@ -394,6 +396,10 @@ svg {
 
         margin-right: 0em;
     }
+
+    #inputOutput div p{
+        display: none;
+    }
 }
 
 @media (max-width: 900px) {
@@ -402,6 +408,7 @@ svg {
         width: 70%;
     }
 
+  
 
 
     /* ------------------------------ */
