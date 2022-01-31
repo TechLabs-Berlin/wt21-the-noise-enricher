@@ -35,7 +35,7 @@ module.exports.showSpectrogram = async (req, res) => {
     if (audioFile.file) {
         res.render('generate/spectrogram', {filepath: audioFile.file.filename});
 
-        const code = await runPython.runNoiseEnricher(audioFile.file.path, audioFile.file.filename);
+        const code = await new Promise(resolve => setTimeout(resolve, 6000));
 
         if (code === 0) {
             generationDone = true;
@@ -58,7 +58,7 @@ module.exports.checkResultsStatus = async (req, res) => {
 
 module.exports.computeResults = async (req, res) => {
     if(audioFile.file && generationDone) {
-        const generated_file = '../../public/uploads/reconstructed_' + audioFile.file.filename + ".wav";
+        const generated_file = "path_to_the_file_in_your_system.wav";
 
         res.render('generate/results', {filepath: generated_file});
         generationDone = false;
