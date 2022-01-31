@@ -30,20 +30,25 @@ module.exports.drawPythonPlot = async () => {
     });
 }
 
-module.exports.runNoiseEnricher = async (filepath, filename) => {
+module.exports.runNoiseEnricher = async (filepath, filename, dirname) => {
     const python = spawn(pythonPath, [
         path.join(__dirname,'../../../python_app/call_generate_audio.py'),
         filepath,
-        path.join(__dirname, '../../client/public/uploads/'),
+        path.join(__dirname, '../../client/public/uploads/', dirname, '/'),
         filename]);
 
     let error = "";
     for await (const chunk of python.stderr) {
-        console.error('stderr chunk: '+chunk);
+        // console.error('stderr chunk: '+chunk);
         error += chunk;
     }
 
-    return await new Promise((resolve, reject) => {
+    const code = await new Promise((resolve, reject) => {
         python.on('close', resolve);
     });
+
+    if (code !== 0) {
+        console.log(error);
+    }
+
 }
