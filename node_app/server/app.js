@@ -6,7 +6,17 @@ const generateRoutes = require('./routes/generate');
 const morgan = require('morgan');
 const path = require('path');
 
-// const session = require('express-session');
+const session = require('express-session');
+app.use(session({
+    secret: 'keyboard cat',
+    resave: true,
+    saveUninitialized: true,
+    cookie: {
+        sameSite: true,
+        secure: false,
+        expires: false
+    }
+}))
 
 app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
