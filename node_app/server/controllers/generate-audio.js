@@ -7,6 +7,7 @@ let nUsersStartedAudioGeneration = 0;
 
 module.exports.fileSizeLimitErrorHandler = (err, req, res, next) => {
     if (err) {
+        req.flash('error', 'File is too big! Try to upload a smaller file.');
         res.redirect(302, '/')
     } else {
         next()
