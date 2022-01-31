@@ -30,12 +30,14 @@ module.exports.drawPythonPlot = async () => {
     });
 }
 
-module.exports.runNoiseEnricher = async (filepath, filename, dirname) => {
+module.exports.runNoiseEnricher = async (filepath, filename, dirname, genre = 'blues') => {
     const python = spawn(pythonPath, [
         path.join(__dirname,'../../../python_app/call_generate_audio.py'),
         filepath,
         path.join(__dirname, '../../client/public/uploads/', dirname, '/'),
-        filename]);
+        filename,
+        genre
+    ]);
 
     let error = "";
     for await (const chunk of python.stderr) {

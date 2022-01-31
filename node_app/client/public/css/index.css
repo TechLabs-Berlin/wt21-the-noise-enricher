@@ -618,3 +618,9 @@ svg {
         color: #89C6FF;
     }
 }
+
+
+/* Hide radio buttons */
+[type='radio'] {
+    display: none;
+}
