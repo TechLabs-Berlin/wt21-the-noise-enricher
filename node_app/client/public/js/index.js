@@ -6,7 +6,7 @@ let button = document.getElementsByClassName("btn");
 
 let fileInput = document.getElementById("generateTrack");
 
-function showAlert() {
+function grayButton() {
     if (formControl.audio.value == ""){
         alert("you have to select an audio first!");
         button[0].type = "button";
@@ -15,3 +15,17 @@ function showAlert() {
         fileInput.submit();
     };
 }
+
+//---
+//---function grayButton() {
+
+    //---if (formControl.audio.value == "") {
+        //---button[0].type = "button";
+        //---button[0].disabled = "true";
+
+    //---} else {
+       //--- button[0].type = "submit";
+       //--- button[0].disabled = "false";
+   //--- }
+//---}
+
