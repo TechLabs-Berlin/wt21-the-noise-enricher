@@ -49,7 +49,8 @@ module.exports.showSpectrogram = async (req, res) => {
             res.render('generate/spectrogram', {filepath: `${req.session.workingDirName}/${req.session.audioFileName}`});
 
             await runPython.runNoiseEnricher(
-                req.session.audioFilePath, req.session.audioFileName, req.session.workingDirName);
+                req.session.audioFilePath, req.session.audioFileName, req.session.workingDirName,
+                req.session.style);
 
             req.session.generationDone = true;
             req.session.save();
@@ -86,6 +87,8 @@ module.exports.computeResults = async (req, res) => {
 module.exports.uploadForm = async (req, res) => {
     await createWorkingDir(req, res);
     if (req.file) {
+        const {style = 'blues'} = req.body
+        req.session.style = style;
         const newPath = path.join(req.session.workingDir, req.file.filename);
 
         fs.rename(req.file.path, newPath, function (err) {
