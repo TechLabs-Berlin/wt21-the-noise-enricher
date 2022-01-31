@@ -54,6 +54,7 @@ module.exports.computeResults = async (req, res) => {
 
         nUsersStartedAudioGeneration--;
         req.session.generationDone = false;
+        req.session.save();
     } else {
         res.redirect(302, '/');
     }
@@ -90,9 +91,7 @@ createWorkingDir = async (req, res) => {
     }
     fs.mkdirSync(req.session.workingDir);
 
-    req.session.save(function(err) {
-        // session saved
-    })
+    req.session.save();
 };
 
 
