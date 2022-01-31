@@ -23,7 +23,7 @@
                         <!-- generate button -->
                     </div>
                     <div>
-                        <p>&gt;&gt;&gt;&gt;</p>
+                        <p>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</p>
                     </div>
                     <div class="formGenerate">
                         <button class="btn btn-info btn-lg" type="submit" onclick="showAlert()">Generate new
@@ -32,47 +32,29 @@
                 </div>
 
 
-                <!--
-                    <div id="uploadFileInput">
-                        <span class="input-group-text btn btn-primary" id="inputGroup-sizing-default">Choose a
-                            file</span>
-                        <input type="file" name="audio" class="form-control" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-default" placeholder="No file choosen">
-                    </div>
-                    <br>
-                
-                -->
-                <!-- 3 gray blocks -->
+
+                <!-- 2 gray blocks -->
                 <div id="allParams">
                     <section id="styleSection">
-                        <p>Choose a style</p>
                         <div id="styleSelection">
                             <div>
-                                <label for="rockRange" class="form-label">Rock</label>
-                                <input name="rockRange" type="range" class="form-range" min="0" max="6" id="rockRange">
+                                <input type="radio" id="Blues" name="style" value="blues" checked>
+                                <label for="Blues">Blues</label>
                             </div>
+
                             <div>
-                                <label for="tranceRange" class="form-label">Trance</label>
-                                <input name="tranceRange" type="range" class="form-range" min="0" max="6"
-                                    id="tranceRange">
+                                <input type="radio" id="Hiphop" name="style" value="hiphop">
+                                <label for="Hiphop">Hiphop</label>
                             </div>
+
                             <div>
-                                <label for="classicRange" class="form-label">Classic</label>
-                                <input name="classicRange" type="range" class="form-range" min="0" max="6"
-                                    id="classicRange">
+                                <input type="radio" id="Metal" name="style" value="metal">
+                                <label for="Metal">Metal</label>
                             </div>
                         </div>
+                        <p>Choose a style</p>
                     </section>
-                    <section id="noiseSection">
-                        <p>Add some noises</p>
-                        <div id="noiseBtns">
-                            <button type="button" class="btn btn-outline-info">Sea</button>
-                            <button type="button" class="btn btn-outline-info">Birds</button>
-                            <button type="button" class="btn btn-outline-info">Street</button>
-                            <button type="button" class="btn btn-outline-info">Storm</button>
-                            <button type="button" class="btn btn-outline-info">Street</button>
-                        </div>
-                    </section>
+
                     <section id="goProSection">
                         <p id="proText">
                             <img class="logoSVG" src="../content/logo.svg" alt="logo"><br>
