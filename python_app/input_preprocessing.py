@@ -26,7 +26,7 @@ class preprocessor:
         # splitting into chunks of 3 seconds for processing in NN
         n_chunks = len(input_audio)//3000
 
-        for i in range(n_chunks-1):
+        for i in range(n_chunks):
             input_audio[(i*3000): ((i+1)*3000)].export(
                 f'{upload}file_{unique_id}_{i}.wav', format='wav')
             
