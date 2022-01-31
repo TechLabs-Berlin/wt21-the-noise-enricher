@@ -2,15 +2,37 @@ const runPython = require("./run-python");
 const utils = require("../utils/utils");
 const fs = require("fs");
 const path = require("path");
+const multer = require("multer");
 
 let nUsersStartedAudioGeneration = 0;
 
-module.exports.fileSizeLimitErrorHandler = (err, req, res, next) => {
-    if (err) {
+
+module.exports.upload = multer({
+    dest: path.join(__dirname, '../../client/public/uploads/'),
+    limits: { fileSize: 1000*1000*20 },
+    fileFilter: (req, file, cb) => {
+        const fileTypes = /wav/; // /jpg|png|gif/
+        const mimetype = fileTypes.test(file.mimetype);
+        const extname = fileTypes.test(path.extname(file.originalname));
+        if (mimetype && extname) {
+            return cb(null, true);
+        }
+        return cb(new Error('file is not allowed'));
+    }
+}).single('audio');
+
+module.exports.checkAudioFile = (err, req, res, next) => {
+    if (err instanceof multer.MulterError) {
         req.flash('error', 'File is too big! Try to upload a smaller file.');
         res.redirect(302, '/')
+    } else if (err.message === 'file is not allowed') {
+        req.flash('error', 'File is not a correct audio file! Try to upload a .wav file.');
+        res.redirect(302, '/');
+    } else if (err){
+        req.flash('error', 'Fail uploading failed!');
+        res.redirect(302, '/');
     } else {
-        next()
+        next();
     }
 };
 
