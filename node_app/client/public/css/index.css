@@ -126,6 +126,32 @@ h4 {
     width: max-content;
 }
 
+#callToAction h1 span {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid white
+}
+
+#callToAction h1 span .tooltiptext {
+    visibility: hidden;
+    font-size: medium;
+    border-bottom:none;
+    width: 20vw;
+    background-color:#111435;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    margin:auto;
+    z-index: 1;
+  }
+
+  #callToAction h1 span:hover .tooltiptext {
+    visibility: visible;
+  }
+
 #inputOutput div p {
     color: #e7a50c;
     line-height: 5%;
@@ -157,7 +183,7 @@ h5 {
     flex-direction: column;
     align-items: center;
     color: white;
-   
+
 }
 
 #uploadFileInput {
@@ -206,9 +232,9 @@ h5 {
     margin-bottom: 4em;
 }
 
-#styleSelection{
-    margin-top:0.5em;
-} 
+#styleSelection {
+    margin-top: 0.5em;
+}
 
 #styleSelection div label {
     border: 1px solid white;
@@ -241,7 +267,7 @@ input:focus+label {
     color: rgb(126, 118, 12);
 }
 
-#styleSection p{
+#styleSection p {
     margin-top: 0.5em;
     color: white;
     font-size: 1.25em;
@@ -333,7 +359,7 @@ input:focus+label {
         align-items: center;
     }
 
-    #proText a{
+    #proText a {
         margin-top: 0.5em;
     }
 
@@ -416,8 +442,8 @@ input:focus+label {
         margin-bottom: 2em;
     }
 
-    #styleSelection div label{
-       
+    #styleSelection div label {
+
         font-size: small;
     }
 
