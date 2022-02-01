@@ -1,3 +1,7 @@
+
+
+  /* ------------------------------ */
+
 #inputOutput {
     margin-top: 14em;
 }
@@ -41,7 +45,6 @@
 #noiseSection a:hover {
     color: #89C6FF;
 }
-
 
 
 #styleSelection a:hover, #noiseSection #noiseBtns a:hover {

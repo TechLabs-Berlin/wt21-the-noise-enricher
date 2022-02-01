@@ -1,0 +1,51 @@
+@import url('https://code.getmdl.io/1.1.3/material.indigo-pink.min.css');
+
+.file-upload {
+    margin: -3px;
+    border: 2px solid black;
+    box-shadow: none;
+
+}
+
+.file-upload img {
+    width: 20px;
+}
+
+
+.file-upload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+    font-size: 20px;
+    cursor: pointer;
+    height: 36px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#fileuploadurl {
+    border: 2px solid black;
+    font-size: 12px;
+    padding: 11px;
+    width: 250px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-left: -2px;
+}
+
+.file-upload:nth-child(1) {
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.mdl-button:nth-child(2) {
+    width:20px;
+}
+
+
+#newButton{
+    display: flex;
+}

@@ -190,7 +190,36 @@ h5 {
     margin-top: 0.5em;
     display: flex;
     border: none;
+  
 }
+
+#uploadFileInput input{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#uploadFileInput label{
+    background-color: #eeeeee;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 2em;
+}
+#uploadFileInput label img{
+    margin-top: 7px;
+    margin-left: 5px;
+}
+
+#uploadFileInput label img{
+    width: 20px;
+}
+
+#uploadFileInput label:hover{
+    background-color: rgb(221, 221, 221);
+}
+
+
 
 
 .formGenerate {
@@ -222,7 +251,7 @@ h5 {
     background-color: #111435;
     color: white;
     height: 17em;
-    width: 50vh;
+    width: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
