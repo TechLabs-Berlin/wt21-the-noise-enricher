@@ -218,7 +218,7 @@ h5 {
 }
 
 
-#styleSection, #goProSection {
+#1, #goProSection {
     background-color: #111435;
     color: white;
     height: 17em;
@@ -232,11 +232,11 @@ h5 {
     margin-bottom: 4em;
 }
 
-#styleSelection {
+#styleSelection1 {
     margin-top: 0.5em;
 }
 
-#styleSelection div label {
+#styleSelection1 div label {
     border: 1px solid white;
     text-align: center;
     border-radius: 0.5em;
@@ -245,7 +245,7 @@ h5 {
     margin: 0.5em;
 }
 
-#styleSelection input[type="radio"] {
+#styleSelection1 input[type="radio"] {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -255,7 +255,7 @@ h5 {
     width: 1px;
 }
 
-#styleSelection input:checked+label {
+#styleSelection1 input:checked+label {
     background: #e7a50c;
     color: black;
     box-shadow: none;
@@ -267,7 +267,7 @@ input:focus+label {
     color: rgb(126, 118, 12);
 }
 
-#styleSection p {
+#styleSection1 p {
     margin-top: 0.5em;
     color: white;
     font-size: 1.25em;
@@ -339,7 +339,7 @@ input:focus+label {
         width: 70%;
     }
 
-    #styleSection, #goProSection {
+    #styleSection1, #goProSection {
 
         width: 30vh;
     }
@@ -430,7 +430,7 @@ input:focus+label {
         justify-content: space-between;
     }
 
-    #styleSection, #goProSection {
+    #styleSection1, #goProSection {
 
         height: 14em;
         width: 100%;
@@ -442,14 +442,9 @@ input:focus+label {
         margin-bottom: 2em;
     }
 
-    #styleSelection div label {
+    #styleSelection1 div label {
 
         font-size: small;
-    }
-
-    .form-range {
-        width: 80%;
-        margin-left: 2em;
     }
 
 
@@ -479,7 +474,7 @@ input:focus+label {
 
     /* ------------------------------ */
     /* Form module */
-    #styleSelection div {
+    #styleSelection1 div {
         height: 40%;
         font-size: 1.2em;
     }
