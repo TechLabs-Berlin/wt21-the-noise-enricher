@@ -2,11 +2,16 @@
 
     <%- include("partials/background_animation.ejs") %>
 
-        <div class="canvas">
+        <div class="canvas" 
 
             <!-- Call to action -->
             <div id="callToAction">
-                <h1>Generate your own track with Neutral Networks</h1>
+                <h1>Generate your own track with <span>Neural Networks<span class="tooltiptext">A neural network is a
+                            series of “steps” that endeavors to recognize relationships in a set of data through a
+                            process that mimics the way the human brain operates. In this sense, neural networks refer
+                            to systems of neurons, either organic or artificial in nature.
+                        </span></span></h1>
+
                 <h5>This is a Noise Enricher, a neural net that generates music, including rudimentary singing, as raw
                     audio </h5>
             </div>
@@ -16,63 +21,53 @@
                 <div id="inputOutput">
                     <div id="uploadTrack">
                         <h5>Upload your track</h5>
-
+                        <!--
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile04">
+                            <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                          </div>
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">Button</button>
+                          </div>
+                          -->
                         <div id="uploadFileInput">
-                            <input type="file" name="audio" class="form-control">
+                            <input type="file" name="audio" class="form-control" id="form-control">
                         </div>
-                        <!-- generate button -->
+
+
                     </div>
                     <div>
-                        <p>&gt;&gt;&gt;&gt;&gt;</p>
+                        <p>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</p>
                     </div>
                     <div class="formGenerate">
-                        <button class="btn btn-info btn-lg" type="submit" onclick="showAlert()">Generate new
-                            track</button>
+                        <button class="btn btn-info btn-lg" type="submit" onclick="grayButton()">Generate new track</button>
                     </div>
                 </div>
 
 
-                <!--
-                    <div id="uploadFileInput">
-                        <span class="input-group-text btn btn-primary" id="inputGroup-sizing-default">Choose a
-                            file</span>
-                        <input type="file" name="audio" class="form-control" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-default" placeholder="No file choosen">
-                    </div>
-                    <br>
-                
-                -->
-                <!-- 3 gray blocks -->
+
+                <!-- 2 gray blocks -->
                 <div id="allParams">
-                    <section id="styleSection">
+                    <section id="styleSection1">
+                        <div id="styleSelection1">
+                            <div>
+                                <input type="radio" id="Blues" name="style" value="blues" checked>
+                                <label for="Blues">Blues</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="Hiphop" name="style" value="hiphop">
+                                <label for="Hiphop">Hiphop</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="Metal" name="style" value="metal">
+                                <label for="Metal">Metal</label>
+                            </div>
+                        </div>
                         <p>Choose a style</p>
-                        <div id="styleSelection">
-                            <div>
-                                <label for="rockRange" class="form-label">Rock</label>
-                                <input name="rockRange" type="range" class="form-range" min="0" max="6" id="rockRange">
-                            </div>
-                            <div>
-                                <label for="tranceRange" class="form-label">Trance</label>
-                                <input name="tranceRange" type="range" class="form-range" min="0" max="6"
-                                    id="tranceRange">
-                            </div>
-                            <div>
-                                <label for="classicRange" class="form-label">Classic</label>
-                                <input name="classicRange" type="range" class="form-range" min="0" max="6"
-                                    id="classicRange">
-                            </div>
-                        </div>
                     </section>
-                    <section id="noiseSection">
-                        <p>Add some noises</p>
-                        <div id="noiseBtns">
-                            <button type="button" class="btn btn-outline-info">Sea</button>
-                            <button type="button" class="btn btn-outline-info">Birds</button>
-                            <button type="button" class="btn btn-outline-info">Street</button>
-                            <button type="button" class="btn btn-outline-info">Storm</button>
-                            <button type="button" class="btn btn-outline-info">Street</button>
-                        </div>
-                    </section>
+
                     <section id="goProSection">
                         <p id="proText">
                             <img class="logoSVG" src="../content/logo.svg" alt="logo"><br>

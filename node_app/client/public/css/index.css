@@ -122,8 +122,34 @@ h4 {
     color: white;
     flex-direction: column;
     align-items: center;
-    margin-top: 35vh;
+    margin-top: 25vh;
     width: max-content;
+}
+
+#callToAction h1 span {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid white
+}
+
+#callToAction h1 span .tooltiptext {
+    visibility: hidden;
+    font-size: medium;
+    border-bottom: none;
+    width: 20vw;
+    background-color: #111435;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+
+    /* Position the tooltip */
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+}
+
+#callToAction h1 span:hover .tooltiptext {
+    visibility: visible;
 }
 
 #inputOutput div p {
@@ -144,26 +170,24 @@ h5 {
 
 #inputOutput {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    width: 80%;
     align-items: flex-end;
+    width: 80%;
     margin-bottom: 4em;
 }
 
-#uploadTrack h5 {
-    margin-bottom: 0em;
-}
 
 #uploadTrack {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
-    margin-right: -2em;
+
 }
 
 #uploadFileInput {
-    margin-top: 1em;
+    margin-top: 0.5em;
     display: flex;
     border: none;
 }
@@ -180,7 +204,7 @@ h5 {
     background-color: #e7a50c;
     border: solid #e7a50c;
     border-radius: 10px;
-    width: 150%;
+    width: 100%;
 }
 
 
@@ -194,11 +218,11 @@ h5 {
 }
 
 
-#styleSection, #noiseSection, #goProSection {
+#styleSection1, #goProSection {
     background-color: #111435;
     color: white;
     height: 17em;
-    width: 30vh;
+    width: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -208,50 +232,48 @@ h5 {
     margin-bottom: 4em;
 }
 
-#styleSelection div {
-    height: 33%;
+#styleSelection1 {
+    margin-top: 0.5em;
 }
 
-#styleSelection div label {
-    margin-bottom: 0.15em;
+#styleSelection1 div label {
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    width: 8em;
+    margin: 0.5em;
 }
 
+#styleSelection1 input[type="radio"] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
 
-.form-range::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
+#styleSelection1 input:checked+label {
     background: #e7a50c;
-    ;
-    cursor: pointer;
+    color: black;
+    box-shadow: none;
 }
 
-
-#noiseBtns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-    height: 40%;
+input:hover+label,
+input:focus+label {
+    background: #f0d38e;
+    color: rgb(126, 118, 12);
 }
 
-
-#noiseBtns button.btn {
-    color: #e7a50c;
-    ;
-    background-color: rgb(255, 255, 255);
-    border: solid 1.5px #e7a50c;
-    border-radius: 25px;
-    margin: 0.15em 0em;
-    width: 60%;
-    height: 30%;
-    line-height: 10px;
-    font-size: 80%;
+#styleSection1 p {
+    margin-top: 0.5em;
+    color: white;
+    font-size: 1.25em;
+    text-align: center;
 }
 
-#noiseBtns button.btn:hover {
-    color: #89C6FF;
-    border: solid 2px #89C6FF;
-}
 
 .logoSVG {
     width: 50%;
@@ -266,7 +288,6 @@ h5 {
 
 #proText a {
     color: #e7a50c;
-    ;
     font-weight: 200;
     font-size: 1.25em;
     text-align: center;
@@ -305,74 +326,30 @@ h5 {
 }
 
 
-/* ------------------------------ */
-/* samples */
-
-.interTitle {
-    margin: 1em 0em;
-}
-
-#waveform {
-    margin: 2em 0em;
-}
-
-#Samples {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.threeBlocks #usageSample, .threeBlocks #downloadTraks {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin: 2em 0em;
-}
-
-.threeBlocks #downloadTraks p {
-    margin: 0em 2em;
-}
-
-.threeBlocks #usageSample div {
-    margin: 0em 2em;
-}
-
-
-svg {
-    color: #e7a50c;
-    ;
-}
-
-#downloadTraks svg:hover {
-    color: #89C6FF;
-}
 
 
 /* ------------------------------ */
 /* MediaQuery */
 
-@media (max-width: 1400px) {
+
+
+@media (max-width: 1200px) {
+
     .canvas {
         width: 70%;
     }
 
-    #styleSection, #noiseSection, #goProSection {
+    #styleSection1, #goProSection {
 
-        width: 20vh;
+        width: 30vh;
     }
 
-    #inputOutput {
-        width: 60%;
+    .formGenerate button.btn {
+        width: 120%;
     }
 
-    #inputOutput div p {
-        display: none;
-    }
-}
 
-@media (max-width: 1200px) {
-    #inputOutput {
+    #uploadFileInput {
         width: 80%;
     }
 
@@ -382,8 +359,12 @@ svg {
         align-items: center;
     }
 
-    #inputOutput div p {
-        display: none;
+    #proText a {
+        margin-top: 0.5em;
+    }
+
+    .logoSVG {
+        margin-top: 0.5em;
     }
 
     .formGenerate {
@@ -394,6 +375,10 @@ svg {
 
         margin-right: 0em;
     }
+
+    #inputOutput div p {
+        display: none;
+    }
 }
 
 @media (max-width: 900px) {
@@ -401,6 +386,7 @@ svg {
     .canvas {
         width: 70%;
     }
+
 
 
 
@@ -444,9 +430,9 @@ svg {
         justify-content: space-between;
     }
 
-    #styleSection, #noiseSection, #goProSection {
+    #styleSection1, #goProSection {
 
-        height: 12em;
+        height: 14em;
         width: 100%;
         display: flex;
         margin: 1em 0em;
@@ -456,13 +442,9 @@ svg {
         margin-bottom: 2em;
     }
 
-    #styleSelection div {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        height: 40%;
-        font-size: 1.2em;
+    #styleSelection1 div label {
+
+        font-size: small;
     }
 
     .form-range {
@@ -483,49 +465,6 @@ svg {
         width: 25%;
     }
 
-    #noiseBtns {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 1em;
-    }
-
-    #noiseBtns button.btn {
-        width: 5em;
-        height: 3em;
-        margin: 0px 3px;
-    }
-
-
-    /* ------------------------------ */
-    /* samples */
-    #waveform {
-        margin: 2em;
-        width: 97%;
-    }
-
-    .threeBlocks {
-        width: 90%;
-    }
-
-    .threeBlocks #downloadTraks svg {
-        width: 35px;
-    }
-
-    .threeBlocks #usageSample svg {
-        margin-top: -2em;
-        width: 95px;
-    }
-
-    .threeBlocks #downloadTraks p {
-        margin: 0em 1em;
-    }
-
-    .threeBlocks #usageSample div {
-        margin: 0em 1em;
-    }
-
-
 }
 
 
@@ -538,28 +477,18 @@ svg {
         font-size: 1.25em;
     }
 
-
     /* ------------------------------ */
     /* Form module */
-    #styleSelection div {
-        height: 40%;
+    #styleSelection1 div {
+        height: 30%;
         font-size: 1.2em;
     }
 
-    .form-range {
-        width: 70%;
+    #styleSelection1 div label {
+        height: 2em;
+        margin-bottom: 0.1em;
+        line-height: 10px;
     }
-
-    #noiseBtns button.btn {
-        line-height: 5px;
-    }
-
-    #noiseBtns button.btn {
-        height: 30px;
-        margin: 0px 3px;
-    }
-
-
 }
 
 
