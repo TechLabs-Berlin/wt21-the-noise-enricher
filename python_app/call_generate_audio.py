@@ -8,6 +8,6 @@ from sound_generator import create_sound
 preprocess = preprocessor(sys.argv[1], sys.argv[2], sys.argv[3])
 
 input_arrays, minmax = preprocess.to_encoder()
-create_sound(input_arrays, minmax, sys.argv[2], sys.argv[3])
+create_sound(input_arrays, minmax, sys.argv[2], sys.argv[3], sys.argv[4])
 
 print('Done!')

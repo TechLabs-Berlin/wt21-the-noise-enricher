@@ -1,6 +1,5 @@
 .canvas  {
-
-    height: 100vh;
+    height: 120vh;
 }
 
 #about2 {
@@ -8,113 +7,10 @@
     flex-direction: column;
 }
 #about2 h2 {
-    margin-top: 5em;
+    margin-top: 4em;
     margin-bottom: 0.5em;
 
     font-size: 3em;
     width: 100%;
 }
 
-/* ------------------------------- */
-/*  explanation text */
-
-.esplanation {
-    margin-top: 2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-/* ------------------------------ */
-/* samples */
-
-.interTitle {
-    margin: 1em 0em;
-}
-
-#waveform {
-    margin: 2em 0em;
-}
-
-#Samples {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.threeBlocks #usageSample, .threeBlocks #downloadTraks {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin: 2em 0em;
-}
-
-.threeBlocks #downloadTraks p {
-    margin: 0em 2em;
-}
-
-.threeBlocks #usageSample div {
-    margin: 0em 2em;
-}
-
-
-
-
-svg {
-    color: #e7a50c;
-    ;
-}
-
-#downloadTraks svg:hover {
-    color: #89C6FF;
-}
-
-
-@media (max-width: 900px) {
-     /* ------------------------------ */
-    /* samples */
-
-    #waveform {
-        margin: 2em;
-        width: 97%;
-    }
-
-    .threeBlocks {
-        width: 90%;
-    }
-
-    .threeBlocks #downloadTraks svg {
-        width: 35px;
-    }
-
-    .threeBlocks #usageSample svg {
-        margin-top: -2em;
-        width: 95px;
-    }
-
-    .threeBlocks #downloadTraks p {
-        margin: 0em 1em;
-    }
-
-    .threeBlocks #usageSample div {
-        margin: 0em 1em;
-    }
-
-}
-
-@media (max-width: 700px) {
-    
-    /* ------------------------------ */
-    /*Samples */
-    .threeBlocks #downloadTraks svg {
-        width: 25px;
-        margin: -2em 0em;
-    }
-
-    .threeBlocks #usageSample svg {
-        margin: -2em 0em;
-        width: 75px;
-    }
-}
