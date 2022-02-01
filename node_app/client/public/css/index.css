@@ -135,22 +135,22 @@ h4 {
 #callToAction h1 span .tooltiptext {
     visibility: hidden;
     font-size: medium;
-    border-bottom:none;
+    border-bottom: none;
     width: 20vw;
-    background-color:#111435;
+    background-color: #111435;
     color: #fff;
     border-radius: 6px;
     padding: 10px;
-  
+
     /* Position the tooltip */
     position: absolute;
-    margin:auto;
+    margin: auto;
     z-index: 1;
-  }
+}
 
-  #callToAction h1 span:hover .tooltiptext {
+#callToAction h1 span:hover .tooltiptext {
     visibility: visible;
-  }
+}
 
 #inputOutput div p {
     color: #e7a50c;
@@ -218,7 +218,7 @@ h5 {
 }
 
 
-#1, #goProSection {
+#styleSection1, #goProSection {
     background-color: #111435;
     color: white;
     height: 17em;
@@ -447,6 +447,11 @@ input:focus+label {
         font-size: small;
     }
 
+    .form-range {
+        width: 80%;
+        margin-left: 2em;
+    }
+
 
     #uploadTrack {
         flex-direction: column;
@@ -475,11 +480,15 @@ input:focus+label {
     /* ------------------------------ */
     /* Form module */
     #styleSelection1 div {
-        height: 40%;
+        height: 30%;
         font-size: 1.2em;
     }
 
-
+    #styleSelection1 div label {
+        height: 2em;
+        margin-bottom: 0.1em;
+        line-height: 10px;
+    }
 }
 
 
