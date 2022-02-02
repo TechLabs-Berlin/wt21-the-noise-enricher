@@ -16,7 +16,5 @@ router.get('/spectrogram', audioGenerate.showSpectrogram);
 
 router.post('/check-results', audioGenerate.checkResultsStatus);
 
-router.get('/results', audioGenerate.computeResults);
-
 module.exports = router;
 
