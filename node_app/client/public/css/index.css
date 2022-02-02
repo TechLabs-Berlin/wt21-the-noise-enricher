@@ -231,11 +231,10 @@ h5 {
 #uploadFileInput label img{
     margin-top: 12px;
     margin-left: 5px;
-}
-
-#uploadFileInput label img{
     width: 20px;
 }
+
+
 
 #uploadFileInput label:hover{
     background-color: #f0d38e;
@@ -565,6 +564,9 @@ input:focus+label {
         margin-bottom: 0.1em;
         line-height: 10px;
     }
+    #uploadFileInput label img{
+        margin-right: 4px;
+    }
 }
 
 
@@ -621,5 +623,9 @@ input:focus+label {
 
     #about a:hover, #logIn a:hover, #logo a:hover, #gP a:hover {
         color: #89C6FF;
+    }
+
+    #uploadFileInput label img{
+        margin-left: 2px;
     }
 }

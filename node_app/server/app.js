@@ -42,13 +42,22 @@ app.get('/about', (req, res) => {
     res.render('generate/about');
 });
 
+app.get('/generate/spectrogram', (req, res) => {
+    res.render('generate/spectrogram');
+});
+app.get('/generate/results', (req, res) => {
+    res.render('generate/results');
+});
+
 app.use('/generate', generateRoutes);
+
+
 
 app.use((err, req, res, next) => {
     const { statusCode = 500 } = err;
     if (!err.message) err.message = 'Oh No, Something Went Wrong!'
     res.status(statusCode).render('error', { err })
-})
+});
 
 
 const port = process.env.PORT || 3030;

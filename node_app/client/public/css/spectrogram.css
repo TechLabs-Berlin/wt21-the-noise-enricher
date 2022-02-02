@@ -2,3 +2,39 @@
 
     height: 100vh;
 }
+
+h2{
+    margin-top: 5em;
+}
+
+
+.spectrogram{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 30%;
+    margin-bottom:10em;
+    margin-top: 3em;
+}
+
+#incomingWaveform {
+    background-color: black;
+    width: 100%;
+    height: 80%;
+    margin: 2em 0em;
+    border-radius: 25px;
+}
+
+#waveform {
+    background-color: white;
+    width: 100%;
+    height: 80%;
+    margin: 2em 0em;
+    border-radius: 25px;
+}
+
+section img{
+    width: 5em;
+    margin: 0em 5em;
+    margin-top: 8em;
+}
