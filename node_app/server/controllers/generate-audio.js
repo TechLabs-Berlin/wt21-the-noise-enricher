@@ -68,13 +68,13 @@ module.exports.checkResultsStatus = async (req, res) => {
         try {
             req.session.generatedAudioFilePath = path.join(
                 req.session.workingDir, 'reconstructed_' + req.session.audioFileName) + ".wav";
+
+            req.session.generationDone = false;
+            req.session.save();
             res.send({
                 status: 'done',
                 filepath: `${req.session.workingDirName}/reconstructed_${req.session.audioFileName}.wav`
             });
-
-            req.session.generationDone = false;
-            req.session.save();
         } catch (err) {
             console.error(err);
             res.redirect(302, '/');
