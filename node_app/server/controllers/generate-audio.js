@@ -70,6 +70,7 @@ module.exports.checkResultsStatus = async (req, res) => {
                 req.session.workingDir, 'reconstructed_' + req.session.audioFileName) + ".wav";
 
             req.session.generationDone = false;
+            nUsersStartedAudioGeneration--;
             req.session.save();
             res.send({
                 status: 'done',
