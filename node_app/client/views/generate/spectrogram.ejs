@@ -3,8 +3,10 @@
     <%- include("../partials/background_animation.ejs") %>
 
         <div class="canvas">
-
-            <h2>Results will appear in 5 to 30 seconds</h2>
+            <div id="results">
+                <button>View your results</button>
+                <h2>Results will appear in 5 to 30 seconds...</h2>
+            </div>
 
             <div class="spectrogram">
                 <section id="spectrogram-input">
@@ -20,10 +22,12 @@
                     <h5>Output sound file spectrogram</h5>
                     <div id="resultWaveform"></div>
                     <div id="resultsSpectrogram"></div>
-                    <p><audio src="../../public/uploads/someaudio.wav" type="audio/wav" id="outputAudio" controls loop></audio> </p>
-                    <p>Results will appear in several seconds...</p>
+                    <p><audio src="../../public/uploads/someaudio.wav" type="audio/wav" id="outputAudio" controls
+                            loop></audio> </p>
+
                 </section>
             </div>
+
         </div>
 
         <script src="https://unpkg.com/wavesurfer.js"></script>
