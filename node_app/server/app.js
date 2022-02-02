@@ -33,20 +33,12 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/../client')));
 app.use(morgan('dev'));
 
-
 app.get('/', (req, res) => {
     res.render('index');
 });
 
 app.get('/about', (req, res) => {
     res.render('generate/about');
-});
-
-app.get('/generate/spectrogram', (req, res) => {
-    res.render('generate/spectrogram');
-});
-app.get('/generate/results', (req, res) => {
-    res.render('generate/results');
 });
 
 app.use('/generate', generateRoutes);

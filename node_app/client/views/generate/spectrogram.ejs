@@ -3,27 +3,33 @@
     <%- include("../partials/background_animation.ejs") %>
 
         <div class="canvas">
+
             <div id="results">
                 <button>View your results</button>
-                <h2>Results will appear in 5 to 30 seconds...</h2>
+                <h2 id="waitingTitle">Results will appear in 5 to 30 seconds...</h2>
             </div>
+
+
 
             <div class="spectrogram">
                 <section id="spectrogram-input">
                     <h5>Your input sound file spectrogram</h5>
                     <div id="incomingWaveform"></div>
                     <div id="incomingSpectrogram"></div>
-                    <p><audio src="../../public/uploads/someaudio.wav" type="audio/wav" controls loop></audio> </p>
+                    <p><audio src="../../public/uploads/<%= filepath %>" type="audio/wav" controls loop></audio> </p>
                 </section>
                 <section id="spectrogram-loading">
                     <img src="../../content/loading.gif" alt="loading wheel">
                 </section>
-                <section id="spectrogram-output">
+                <section id="spectrogram-output" style="display: none;">
                     <h5>Output sound file spectrogram</h5>
                     <div id="resultWaveform"></div>
                     <div id="resultsSpectrogram"></div>
+
                     <p><audio src="../../public/uploads/someaudio.wav" type="audio/wav" id="outputAudio" controls
                             loop></audio> </p>
+
+                    <p id="waitingText">Results will appear in several seconds...</p>
 
                 </section>
             </div>
@@ -34,8 +40,8 @@
         <script src="https://unpkg.com/wavesurfer.js@5.2.0/dist/plugin/wavesurfer.spectrogram.min.js"></script>
         <script src="../../public/js/draw_spectrogram.js"></script>
         <script>
-            const wavesurfer = drawInputSpectrogram("../../public/uploads/someaudio.wav");
-            const resultWavesurfer = drawOutputSpectrogram("../../public/uploads/someaudio.wav");
+            const wavesurfer = drawInputSpectrogram("../../public/uploads/<%= filepath %>");
+
 
             const interval = 2000;  // 1000 = 1 second, 3000 = 3 seconds
             function doAjax() {
@@ -48,7 +54,12 @@
                         // alert('Success!')
                         if (data.status === 'done') {
                             console.log('Success!');
-                            $("#showResults").show();
+                            $("#spectrogram-output").show();
+                            $("#outputAudio").attr("src", "../../public/uploads/" + data.filepath);
+                            const resultWavesurfer = drawOutputSpectrogram("../../public/uploads/" + data.filepath);
+                            $("#spectrogram-loading").hide();
+                            $("#waitingText").hide();
+                            $("#waitingTitle").hide();
                         } else {
                             setTimeout(doAjax, interval);
                         }
