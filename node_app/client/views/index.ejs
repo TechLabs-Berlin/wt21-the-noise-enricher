@@ -30,15 +30,16 @@
                             <button class="btn btn-outline-secondary" type="button">Button</button>
                           </div>
                         -->
-
-
                         
                     <div id="uploadFileInput">
                         <label type="button" name="rec" class="rec" for="uploadFile"><img src="../../content/free-microphone-icon-342-thumb.png"></label>
                         <input type="file" name="audio" class="form-control" id="uploadFile">
                     </div>
 
-                        
+                    <br>
+                    <a id="record" onclick="startRecording(this);" src="../content/free-microphone-icon-342-thumb.png"> Record</a>
+                    <a id="download-sound" onclick="stopRecording(this);" src="../content/free-microphone-icon-342-thumb.png"> Stop recording</a>
+
                     </div>
                     <div>
                         <p>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</p>
@@ -102,3 +103,6 @@
 
         </div>
         <script src="../public/js/index.js"></script>
+        <script src="../public/js/audio_recording/main.js"></script>
+        <script src="../public/js/audio_recording/recorder.js"></script>
+        <script src="../public/js/audio_recording/recorderWorker.js"></script>
