@@ -18,4 +18,10 @@
 a{
     font-size: large;
     color: #e7a50c;
+
+}
+
+p img {
+    width: 1em;
+    margin-left: 1em;
 }
