@@ -32,20 +32,32 @@
                         -->
                         
                     <div id="uploadFileInput">
+                        <label type="button" name="upload" class="upload" for="uploadFile">Choose file</label>
                         <label type="button" name="rec" class="rec" for="uploadFile"><img src="../../content/free-microphone-icon-342-thumb.png"></label>
                         <input type="file" name="audio" class="form-control" id="uploadFile">
+                        <span id="file-name">No file choosen</span>
                     </div>
-
+                        <!--
+                        <script>
+                            let inputFile= document.getElementById("uploadFile");
+                            let fileNameField = document.getElementById("file-name");
+                            inputFile.addEventListener("change",function(event){
+                                let uploadedFileName = event.target.files[0].name;
+                                fileNameField.textContent = uploadedFileName;
+                            })
+                        </script>
+                    </div>
+                      
                     <br>
                     <a id="record" onclick="startRecording(this);" src="../content/free-microphone-icon-342-thumb.png"> Record</a>
                     <a id="download-sound" onclick="stopRecording(this);" src="../content/free-microphone-icon-342-thumb.png"> Stop recording</a>
-
+                    -->
                     </div>
                     <div>
                         <p>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</p>
                     </div>
                     <div class="formGenerate">
-                        <button class="btn btn-info btn-lg" type="submit" onclick="grayButton()">Generate new track</button>
+                        <button class="btn btn-info btn-lg" type="submit" onclick="noFileChoosen()">Generate new track</button>
                     </div>
                 </div>
 

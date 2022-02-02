@@ -1,13 +1,13 @@
 const btn = document.getElementById('btn');
 
-let formControl = document.getElementsByClassName("form-control");
+let formControl = document.getElementById("file-name");
 
 let button = document.getElementsByClassName("btn");
 
 let fileInput = document.getElementById("generateTrack");
 
-function grayButton() {
-    if (formControl.audio.value == ""){
+function noFileChoosen() {
+    if (formControl.textContent == "No file choosen") {
         alert("you have to select an audio first!");
         button[0].type = "button";
 
@@ -15,6 +15,13 @@ function grayButton() {
         fileInput.submit();
     };
 }
+
+let inputFile = document.getElementById("uploadFile");
+let fileNameField = document.getElementById("file-name");
+inputFile.addEventListener("change", function (event) {
+    let uploadedFileName = event.target.files[0].name;
+    fileNameField.textContent = uploadedFileName;
+})
 
 //---
 //---function grayButton() {
