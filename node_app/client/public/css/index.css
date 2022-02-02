@@ -19,6 +19,7 @@ body {
     z-index: 2;
     margin-left: auto;
     margin-right: auto;
+    height: 106vh;
 
 }
 
@@ -170,11 +171,11 @@ h5 {
 
 #inputOutput {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
     width: 80%;
     margin-bottom: 4em;
+    margin-top: 2em;
 }
 
 
@@ -190,6 +191,54 @@ h5 {
     margin-top: 0.5em;
     display: flex;
     border: none;
+  
+}
+
+
+.rec{
+    width: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #e7a50c;
+    border: 1px solid black;
+}
+
+.upload{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 5em;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #e7a50c;
+    color: black;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid black;
+}
+
+#file-name{
+    background-color: white;
+    color: rgb(74, 74, 74);
+    width: 200px;
+    height: 42px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    line-height: 40px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#uploadFileInput label img{
+    margin-top: 12px;
+    margin-left: 5px;
+}
+
+#uploadFileInput label img{
+    width: 20px;
+}
+
+#uploadFileInput label:hover{
+    background-color: #f0d38e;
 }
 
 
@@ -207,6 +256,32 @@ h5 {
     width: 100%;
 }
 
+#uploadFile{
+    display:none;
+}
+
+
+#uploadFileInput .upload .tooltiptext {
+    visibility: hidden;
+    font-size: medium;
+    border-bottom: none;
+    width: 5vw;
+    background-color: #111435;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+
+    /* Position the tooltip */
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+}
+
+#uploadFileInput .upload:hover .tooltiptext {
+    visibility: visible;
+}
+
+
 
 
 /* ------------------------------- */
@@ -222,7 +297,7 @@ h5 {
     background-color: #111435;
     color: white;
     height: 17em;
-    width: 50vh;
+    width: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -258,6 +333,7 @@ h5 {
 #styleSelection1 input:checked+label {
     background: #e7a50c;
     color: black;
+    border: none;
     box-shadow: none;
 }
 

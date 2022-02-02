@@ -2,9 +2,7 @@
 
     <%- include("partials/background_animation.ejs") %>
 
-        <div class="canvas" 
-
-            <!-- Call to action -->
+        <div class="canvas" <!-- Call to action -->
             <div id="callToAction">
                 <h1>Generate your own track with <span>Neural Networks<span class="tooltiptext">A neural network is a
                             series of “steps” that endeavors to recognize relationships in a set of data through a
@@ -21,27 +19,27 @@
                 <div id="inputOutput">
                     <div id="uploadTrack">
                         <h5>Upload your track</h5>
-                        <!--
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="inputGroupFile04">
-                            <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
-                          </div>
-                          <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button">Button</button>
-                          </div>
-                          -->
+
                         <div id="uploadFileInput">
-                            <input type="file" name="audio" class="form-control" id="form-control">
+                            <label type="button" name="upload" class="upload" for="uploadFile">Choose file<span class="tooltiptext">.wav file only</span></label>
+                            <label type="button" name="rec" class="rec" for="uploadFile"><img
+                                    src="../../content/free-microphone-icon-342-thumb.png"></label>
+                            <input type="file" name="audio" class="form-control" id="uploadFile">
+                            <span id="file-name">No file choosen</span>
                         </div>
+                        <!--
+                        <script>
+                            let inputFile= document.getElementById("uploadFile");
+                            let fileNameField = document.getElementById("file-name");
+                            inputFile.addEventListener("change",function(event){
+                                let uploadedFileName = event.target.files[0].name;
+                                fileNameField.textContent = uploadedFileName;
+                            })
+                        </script>
+                        -->
 
+                    </div>
 
-                    </div>
-                    <div>
-                        <p>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</p>
-                    </div>
-                    <div class="formGenerate">
-                        <button class="btn btn-info btn-lg" type="submit" onclick="grayButton()">Generate new track</button>
-                    </div>
                 </div>
 
 
@@ -76,23 +74,17 @@
                     </section>
                 </div>
 
-
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam fugit a tempora unde ea distinctio
-                    molestiae quis voluptatum voluptates debitis! Beatae amet commodi omnis minus dicta rerum. Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Nam fugit a tempora unde ea distinctio
-                    molestiae quis voluptatum voluptates debitis! Beatae amet commodi omnis minus dicta rerum.Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Nam fugit a tempora unde ea distinctio
-                    molestiae quis voluptatum voluptates debitis! Beatae amet commodi omnis minus dicta rerum. Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Nam fugit a tempora unde ea distinctio
-                    molestiae quis voluptatum voluptates debitis! Beatae amet commodi omnis minus dicta rerum.
-                    Itaque,
-                    amet tempore!
-                </p>
+                <!-- button -->
+                <div class="formGenerate">
+                    <button class="btn btn-info btn-lg" type="submit" onclick="noFileChoosen()">Generate new
+                        track</button>
+                </div>
 
 
             </form>
 
         </div>
         <script src="../public/js/index.js"></script>
+        <script src="../public/js/audio_recording/main.js"></script>
+        <script src="../public/js/audio_recording/recorder.js"></script>
+        <script src="../public/js/audio_recording/recorderWorker.js"></script>
