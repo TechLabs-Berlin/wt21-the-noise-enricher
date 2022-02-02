@@ -7,26 +7,22 @@
             <h2>Results will appear in 5 to 30 seconds</h2>
 
             <div class="spectrogram">
-                <section id="sec1">
+                <section id="spectrogram-input">
                     <h5>Your input sound file spectrogram</h5>
                     <div id="incomingWaveform"></div>
-                    <p><audio src="../../public/uploads/someaudio.wav" type="audio/wav" controls loop class="audio"></audio> </p>
+                    <div id="incomingSpectrogram"></div>
+                    <p><audio src="../../public/uploads/someaudio.wav" type="audio/wav" controls loop></audio> </p>
                 </section>
-                <section >
+                <section id="spectrogram-loading">
                     <img src="../../content/loading.gif" alt="loading wheel">
                 </section>
-                <section id="sec2">
+                <section id="spectrogram-output">
                     <h5>Output sound file spectrogram</h5>
-                    <div id="waveform"></div>
-                    <p><audio src="../../public/uploads/someaudio.wav" type="audio/wav" controls loop class="audio"></audio> </p>
+                    <div id="resultWaveform"></div>
+                    <div id="resultsSpectrogram"></div>
+                    <p><audio src="../../public/uploads/someaudio.wav" type="audio/wav" id="outputAudio" controls loop></audio> </p>
+                    <p>Results will appear in several seconds...</p>
                 </section>
-            </div>
-
-
-            <p>Results will appear in several seconds...</p>
-            <div>
-                <a id="showResults" class="nav-link" href="/generate/results" style="display: none;">View generated
-                    file</a>
             </div>
         </div>
 
@@ -34,7 +30,8 @@
         <script src="https://unpkg.com/wavesurfer.js@5.2.0/dist/plugin/wavesurfer.spectrogram.min.js"></script>
         <script src="../../public/js/draw_spectrogram.js"></script>
         <script>
-            const wavesurfer = drawSpectrogram("../../public/uploads/someaudio.wav");
+            const wavesurfer = drawInputSpectrogram("../../public/uploads/someaudio.wav");
+            const resultWavesurfer = drawOutputSpectrogram("../../public/uploads/someaudio.wav");
 
             const interval = 2000;  // 1000 = 1 second, 3000 = 3 seconds
             function doAjax() {

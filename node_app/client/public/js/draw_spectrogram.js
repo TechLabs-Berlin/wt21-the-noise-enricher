@@ -1,11 +1,28 @@
-const drawSpectrogram = function (filePath){
+const drawInputSpectrogram = function (filePath){
     const wavesurfer = WaveSurfer.create({
-        container: "#waveform",
+        container: "#incomingWaveform",
         waveColor: 'violet',
         progressColor: 'purple',
         plugins: [
             WaveSurfer.spectrogram.create({
-                container: "#waveform"
+                container: "#incomingWaveform"
+            })
+        ]
+    });
+
+    wavesurfer.load(filePath);
+    return wavesurfer;
+}
+
+
+const drawOutputSpectrogram = function (filePath){
+    const wavesurfer = WaveSurfer.create({
+        container: "#resultWaveform",
+        waveColor: 'violet',
+        progressColor: 'purple',
+        plugins: [
+            WaveSurfer.spectrogram.create({
+                container: "#resultWaveform"
             })
         ]
     });
