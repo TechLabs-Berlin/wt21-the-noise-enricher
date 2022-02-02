@@ -2,17 +2,28 @@
 
   /* ------------------------------ */
 
-#inputOutput {
+#inputOutput1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 80%;
+    margin-bottom: 4em;
     margin-top: 14em;
+    width: 100%;
+}
+
+
+#inputOutput1 div p {
+    color: #e7a50c;
+    line-height: 5%;
 }
 
 .canvas{
     height: 130vh;
 }
 
-#inputOutput {
-    width: 100%;
-}
+
 
 #generateTrack {
     display: flex;
@@ -197,8 +208,14 @@ svg:hover {
 }
 
 @media (max-width: 1200px) {
-    #inputOutput div p {
+    #inputOutput1 div p {
         display: none;
+    }
+
+    #inputOutput1 {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
     }
 }
 

@@ -1,157 +1,160 @@
 <% layout('layouts/boilerplate.ejs') %>
 
-<!-- move to the boilerplate-->
-<link rel="stylesheet" href="../../public/css/PRO.css">
+    <!-- move to the boilerplate-->
+    <link rel="stylesheet" href="../../public/css/PRO.css">
 
-<%- include("../partials/background_animation.ejs") %>
+    <%- include("../partials/background_animation.ejs") %>
 
-<div class="canvas">
-
-
-    <div id="pro">
-        <!-- Call to action -->
+        <div class="canvas">
 
 
-        <form action="/generate" id="generateTrack" method="POST" enctype="multipart/form-data">
-            <div id="inputOutput">
-                <div id="uploadTrack">
-                    <h5>Upload your track</h5>
-
-                    <div id="uploadFileInput">
-                        <label type="button" name="rec" class="rec" for="uploadFile"><img src="../../content/free-microphone-icon-342-thumb.png"></label>
-                        <input type="file" name="audio" class="form-control" id="uploadFile" >
-                    </div>
-                    <!-- generate button -->
-                </div>
-                <div>
-                    <p>&gt;&gt;&gt;&gt;&gt;</p>
-                </div>
-                <div class="formGenerate">
-                    <button class="btn btn-info btn-lg" type="submit" onclick="showAlert()">Generate new
-                        track</button>
-                </div>
-            </div>
+            <div id="pro">
+                <!-- Call to action -->
 
 
-            <!-- 3 gray blocks -->
-            <div id="sections">
-                <div id="allParams1">
-                    <section id="styleSection">
-                        <p>Choose a style</p>
-                        <div id="styleSelection">
-                            <div>
-                                <label for="rockRange" class="form-label">Rock</label>
-                                <input name="rockRange" type="range" class="form-range" min="0" max="6"
-                                       id="rockRange">
+                <form action="/generate" id="generateTrack" method="POST" enctype="multipart/form-data">
+                    <div id="inputOutput1">
+                        <div id="uploadTrack">
+                            <h5>Upload your track</h5>
+
+                            <div id="uploadFileInput">
+                                <label type="button" name="upload" class="upload" for="uploadFile">Choose file<span
+                                        class="tooltiptext">.wav file only</span></label>
+                                <label type="button" name="rec" class="rec" for="uploadFile"><img
+                                        src="../../content/free-microphone-icon-342-thumb.png"></label>
+                                <input type="file" name="audio" class="form-control" id="uploadFile">
+                                <span id="file-name">No file choosen</span>
                             </div>
-                            <div>
-                                <label for="tranceRange" class="form-label">Trance</label>
-                                <input name="tranceRange" type="range" class="form-range" min="0" max="6"
-                                       id="tranceRange">
-                            </div>
-                            <div>
-                                <label for="classicRange" class="form-label">Classic</label>
-                                <input name="classicRange" type="range" class="form-range" min="0" max="6"
-                                       id="classicRange">
-                            </div>
-                            <a href="">add style</a>
                         </div>
-                    </section>
-                    <section id="noiseSection">
-                        <p>Choose noises</p>
-                        <div id="noiseBtns">
-                            <button type="button" class="btn btn-outline-info">Sea</button>
-                            <button type="button" class="btn btn-outline-info">Birds</button>
-                            <button type="button" class="btn btn-outline-info">Street</button>
-                            <button type="button" class="btn btn-outline-info">Storm</button>
-                            <button type="button" class="btn btn-outline-info">Street</button>
-                        </div>
-                        <a href="">add noises</a>
-                    </section>
-                    <section id="instrumentSection">
-                        <p>Choose an instrument</p>
                         <div>
-                            <div id="instrumentSelection">
-                                <div class="collectionInst">
-                                    <a href=""><img class="iconInstrument" src="../../public/content/noun-guitar-135543.svg"
-                                                    alt="guitar"></a>
-                                    <a href=""><img class="iconInstrument" src="../../public/content/noun-harp-135545.svg"
-                                                    alt="harp"></a>
-                                    <a href=""> <img class="iconInstrument" src="../../public/content/noun-drum-135575.svg"
-                                                     alt="drum">
-                                    </a>
+                            <p>&gt;&gt;&gt;&gt;&gt;</p>
+                        </div>
+                        <div class="formGenerate">
+                            <button class="btn btn-info btn-lg" type="submit" onclick="showAlert()">Generate new
+                                track</button>
+                        </div>
+                    </div>
+
+
+                    <!-- 3 gray blocks -->
+                    <div id="sections">
+                        <div id="allParams1">
+                            <section id="styleSection">
+                                <p>Choose a style</p>
+                                <div id="styleSelection">
+                                    <div>
+                                        <label for="rockRange" class="form-label">Rock</label>
+                                        <input name="rockRange" type="range" class="form-range" min="0" max="6"
+                                            id="rockRange">
+                                    </div>
+                                    <div>
+                                        <label for="tranceRange" class="form-label">Trance</label>
+                                        <input name="tranceRange" type="range" class="form-range" min="0" max="6"
+                                            id="tranceRange">
+                                    </div>
+                                    <div>
+                                        <label for="classicRange" class="form-label">Classic</label>
+                                        <input name="classicRange" type="range" class="form-range" min="0" max="6"
+                                            id="classicRange">
+                                    </div>
+                                    <a href="">add style</a>
+                                </div>
+                            </section>
+                            <section id="noiseSection">
+                                <p>Choose noises</p>
+                                <div id="noiseBtns">
+                                    <button type="button" class="btn btn-outline-info">Sea</button>
+                                    <button type="button" class="btn btn-outline-info">Birds</button>
+                                    <button type="button" class="btn btn-outline-info">Street</button>
+                                    <button type="button" class="btn btn-outline-info">Storm</button>
+                                    <button type="button" class="btn btn-outline-info">Street</button>
+                                </div>
+                                <a href="">add noises</a>
+                            </section>
+                            <section id="instrumentSection">
+                                <p>Choose an instrument</p>
+                                <div>
+                                    <div id="instrumentSelection">
+                                        <div class="collectionInst">
+                                            <a href=""><img class="iconInstrument"
+                                                    src="../../public/content/noun-guitar-135543.svg" alt="guitar"></a>
+                                            <a href=""><img class="iconInstrument"
+                                                    src="../../public/content/noun-harp-135545.svg" alt="harp"></a>
+                                            <a href=""> <img class="iconInstrument"
+                                                    src="../../public/content/noun-drum-135575.svg" alt="drum">
+                                            </a>
+                                        </div>
+
+                                        <div class="collectionInst">
+                                            <a href=""><img class="iconInstrument"
+                                                    src="../../public/content/noun-piano-135571.svg" alt="piano">
+                                            </a>
+                                            <a href=""> <img class="iconInstrument"
+                                                    src="../../public/content/noun-tuba-135555.svg" alt="tuba"></a>
+                                            <a href=""> <img class="iconInstrument"
+                                                    src="../../public/content/noun-guitar-135543.svg" alt="guitar"> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div id="allParams2">
+                            <section id="randomSection">
+                                <div id="randomText">
+                                    <p>
+                                        Go random
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <a href="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"
+                                                fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z" />
+                                                <path
+                                                    d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z" />
+                                            </svg>
+                                        </a>
+                                    </p>
+                                </div>
+                            </section>
+                            <section id="addSection">
+                                <div id="addText">
+                                    <p>
+                                        Add section
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <a href="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"
+                                                fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                <path
+                                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                            </svg>
+                                        </a>
+                                    </p>
+                                </div>
+                            </section>
+                            <section id="placeholderSection">
+                                <div id="placeholderText">
+                                    <p>
+
+                                    </p>
                                 </div>
 
-                                <div class="collectionInst">
-                                    <a href=""><img class="iconInstrument" src="../../public/content/noun-piano-135571.svg"
-                                                    alt="piano">
-                                    </a>
-                                    <a href=""> <img class="iconInstrument" src="../../public/content/noun-tuba-135555.svg"
-                                                     alt="tuba"></a>
-                                    <a href=""> <img class="iconInstrument" src="../../public/content/noun-guitar-135543.svg"
-                                                     alt="guitar"> </a>
-                                </div>
-                            </div>
+                            </section>
                         </div>
-                    </section>
-                </div>
-                <div id="allParams2">
-                    <section id="randomSection">
-                        <div id="randomText">
-                            <p>
-                                Go random
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <a href="">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"
-                                         fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                              d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path
-                                                d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
-                                </a>
-                            </p>
-                        </div>
-                    </section>
-                    <section id="addSection">
-                        <div id="addText">
-                            <p>
-                                Add section
-                                <br>
-                                <br>
-                                <br>
-                                <br>
-                                <a href="">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"
-                                         fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                                        <path
-                                                d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                        <path
-                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                                    </svg>
-                                </a>
-                            </p>
-                        </div>
-                    </section>
-                    <section id="placeholderSection">
-                        <div id="placeholderText">
-                            <p>
+                    </div>
 
-                            </p>
-                        </div>
 
-                    </section>
-                </div>
+                </form>
             </div>
 
-
-        </form>
-    </div>
-    
-</div>
+        </div>
 
 
-<!--<script src="../../public/js/toBeDefined.js"></script>-->
+        <!--<script src="../../public/js/toBeDefined.js"></script>-->
