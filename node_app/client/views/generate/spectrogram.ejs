@@ -13,7 +13,7 @@
                     <h5>Your input sound file spectrogram</h5>
                     <div id="incomingWaveform"><span id="incomingSpectrogram"></span></div> 
                       
-                    <p><audio src="../../public/uploads/piano_16000_mono.wav" type="audio/wav" controls loop></audio> </p>
+                    <p><audio src="../../public/uploads/<%= filepath %>" type="audio/wav" controls loop></audio> </p>
                 </section>
                 <section id="spectrogram-loading">
                     <img src="../../content/loading.gif" alt="loading wheel">
@@ -21,7 +21,7 @@
                 <section id="spectrogram-output">
                     <h5>Output sound file spectrogram</h5>
                     <div id="resultWaveform"><span id="resultSpectrogram"></span></div>
-                    <p><audio src="../../public/uploads/someaudio.wav" type="audio/wav" id="outputAudio" controls loop></audio> </p>
+                    <p><audio type="audio/wav" id="outputAudio" controls loop></audio> </p>
 
                 </section>
             </div>
@@ -57,7 +57,7 @@
                             console.log('Success!');
                             $("#spectrogram-output").show();
                             $("#outputAudio").attr("src", "../../public/uploads/" + data.filepath);
-                            const wavesurfer = drawSpectrogram("../../public/uploads/piano_16000_mono.wav");
+                            const resultWavesurfer = drawOutputSpectrogram("../../public/uploads/" + data.filepath);
                             $("#spectrogram-loading").hide();
                             $("#waitingText").hide();
                             $("#waitingTitle").hide();
