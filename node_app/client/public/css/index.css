@@ -219,7 +219,7 @@ h5 {
 #file-name{
     background-color: white;
     color: rgb(74, 74, 74);
-    width: 200px;
+    width: 300px;
     height: 42px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -566,6 +566,10 @@ input:focus+label {
     }
     #uploadFileInput label img{
         margin-right: 4px;
+    }
+
+    #file-name{
+        width: 200px;
     }
 }
 
