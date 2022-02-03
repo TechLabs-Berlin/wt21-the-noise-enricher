@@ -33,10 +33,17 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '/../client')));
 app.use(morgan('dev'));
 
-
 app.get('/', (req, res) => {
     res.render('index');
 });
+
+// To test
+// app.get('/generate/spectrogram', (req, res) => {
+//     res.render('generate/spectrogram', {filepath: "piano_16000_mono.wav"});
+// });
+// app.get('/generate/results', (req, res) => {
+//     res.render('generate/results', {filepath: "piano_16000_mono.wav"});
+// });
 
 app.get('/about', (req, res) => {
     res.render('generate/about');
@@ -44,11 +51,12 @@ app.get('/about', (req, res) => {
 
 app.use('/generate', generateRoutes);
 
+
 app.use((err, req, res, next) => {
     const { statusCode = 500 } = err;
     if (!err.message) err.message = 'Oh No, Something Went Wrong!'
     res.status(statusCode).render('error', { err })
-})
+});
 
 
 const port = process.env.PORT || 3030;

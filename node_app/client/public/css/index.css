@@ -19,7 +19,7 @@ body {
     z-index: 2;
     margin-left: auto;
     margin-right: auto;
-    height: 106vh;
+    height: 130vh;
 
 }
 
@@ -219,7 +219,7 @@ h5 {
 #file-name{
     background-color: white;
     color: rgb(74, 74, 74);
-    width: 200px;
+    width: 300px;
     height: 42px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -231,11 +231,10 @@ h5 {
 #uploadFileInput label img{
     margin-top: 12px;
     margin-left: 5px;
-}
-
-#uploadFileInput label img{
     width: 20px;
 }
+
+
 
 #uploadFileInput label:hover{
     background-color: #f0d38e;
@@ -265,7 +264,7 @@ h5 {
     visibility: hidden;
     font-size: medium;
     border-bottom: none;
-    width: 5vw;
+    width: 10vw;
     background-color: #111435;
     color: #fff;
     border-radius: 6px;
@@ -565,6 +564,13 @@ input:focus+label {
         margin-bottom: 0.1em;
         line-height: 10px;
     }
+    #uploadFileInput label img{
+        margin-right: 4px;
+    }
+
+    #file-name{
+        width: 200px;
+    }
 }
 
 
@@ -621,5 +627,9 @@ input:focus+label {
 
     #about a:hover, #logIn a:hover, #logo a:hover, #gP a:hover {
         color: #89C6FF;
+    }
+
+    #uploadFileInput label img{
+        margin-left: 2px;
     }
 }

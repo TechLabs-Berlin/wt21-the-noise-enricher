@@ -65,23 +65,22 @@ module.exports.showSpectrogram = async (req, res) => {
 
 module.exports.checkResultsStatus = async (req, res) => {
     if (req.session.audioFilePath && req.session.generationDone) {
-        res.send({status: 'done'});
+        try {
+            req.session.generatedAudioFilePath = path.join(
+                req.session.workingDir, 'reconstructed_' + req.session.audioFileName) + ".wav";
+
+            req.session.generationDone = false;
+            nUsersStartedAudioGeneration--;
+            req.session.save();
+            res.send({
+                status: 'done',
+                filepath: `${req.session.workingDirName}/reconstructed_${req.session.audioFileName}.wav`
+            });
+        } catch (err) {
+            console.error(err);
+            res.redirect(302, '/');
+        }
     } else res.send({status: 'not_done'});
-};
-
-module.exports.computeResults = async (req, res) => {
-    if (req.session.audioFilePath && req.session.generationDone) {
-        req.session.generatedAudioFilePath = path.join(
-            req.session.workingDir, 'reconstructed_' + req.session.audioFileName) + ".wav";
-
-        res.render('generate/results', {filepath: `${req.session.workingDirName}/reconstructed_${req.session.audioFileName}.wav`});
-
-        nUsersStartedAudioGeneration--;
-        req.session.generationDone = false;
-        req.session.save();
-    } else {
-        res.redirect(302, '/');
-    }
 };
 
 module.exports.uploadForm = async (req, res) => {
