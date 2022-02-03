@@ -28,11 +28,12 @@
     background-color: black;
     width: 100%;
     background-size: contain;
-    height: 80%;
+    height: 128px;
     margin: 2em 0em;
     border-radius: 25px;
     box-sizing: content-box;
     z-index: 0;
+    padding: 2em 0 2em 0;
 }
 
 
@@ -40,15 +41,16 @@
     background-color: white;
     width: 100%;
     background-size: contain;
-    height: 80%;
+    height: 128px;
     margin: 2em 0em;
     border-radius: 25px;
     box-sizing: content-box;
+    padding: 2em 0 2em 0;
 }
 
 #incomingSpectrogram, #resultSpectrogram{
-    width: 150%;
-    height: 80%;
+    width: 100%;
+    height: 128px;
     margin: 2em 0em;
     border-radius: 25px;
     visibility: hidden;
@@ -71,6 +73,8 @@
 
 #spectrogram-loading{
     margin-top: 8.5em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 a{
@@ -177,4 +181,10 @@ span img {
     #thx{
         width: 45%;
     }
+}
+
+
+audio {
+    position: relative;
+    z-index: 5;
 }

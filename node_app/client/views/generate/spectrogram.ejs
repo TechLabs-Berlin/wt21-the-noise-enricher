@@ -16,13 +16,12 @@
                     <p><audio src="../../public/uploads/<%= filepath %>" type="audio/wav" controls loop></audio> </p>
                 </section>
                 <section id="spectrogram-loading">
-                    <img src="../../content/loading.gif" alt="loading wheel">
+                    <img id="spectrogram-loading-gif" src="../../content/loading.gif" alt="loading wheel">
                 </section>
                 <section id="spectrogram-output">
                     <h5>Output sound file spectrogram</h5>
                     <div id="resultWaveform"><span id="resultSpectrogram"></span></div>
                     <p><audio type="audio/wav" id="outputAudio" controls loop></audio> </p>
-
                 </section>
             </div>
 
@@ -32,7 +31,7 @@
                 <span><img src="../../content/thumb-up.png"><img src="../../content/thumb-down.png"></span>
               
             </div>
-            <a href="../index.ejs">Generate a new track here</a>
+            <a href="/">Generate a new track here</a>
       
 
         </div>
@@ -58,7 +57,7 @@
                             $("#spectrogram-output").show();
                             $("#outputAudio").attr("src", "../../public/uploads/" + data.filepath);
                             const resultWavesurfer = drawOutputSpectrogram("../../public/uploads/" + data.filepath);
-                            $("#spectrogram-loading").hide();
+                            $("#spectrogram-loading-gif").hide();
                             $("#waitingText").hide();
                             $("#waitingTitle").hide();
                         } else {
