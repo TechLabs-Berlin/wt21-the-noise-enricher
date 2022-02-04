@@ -1,7 +1,7 @@
 /* ------------------------------ */
 /*general*/
 .canvas{
-    height: 130vh;
+    height: 160%;
 }
 
 /* ------------------------------ */
@@ -17,6 +17,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.formGenerate button.btn{
+    margin-bottom: 0em;
 }
 
 
@@ -50,6 +54,7 @@
 #sections {
     display: flex;
     flex-direction: column;
+    margin-bottom: 5em;
 }
 
 #allParams1, #allParams2 {

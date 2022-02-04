@@ -18,7 +18,7 @@ body {
     z-index: 2;
     margin-left: auto;
     margin-right: auto;
-    height: 115vh;
+    height: 130%;
 }
 
 button.btn:hover {
@@ -372,6 +372,7 @@ input:focus+label {
     border: solid #e7a50c;
     border-radius: 10px;
     width: 100%;
+    margin-bottom: 5em;
 }
 
 

@@ -1,5 +1,5 @@
 .canvas  {
-    height: 102vh;
+    height: 120%;
 }
 
 
@@ -99,6 +99,10 @@ span img {
     font-size: large;
 }
 
+
+#thx .spam{
+    margin-bottom: 4em;
+}
 
 
 
