@@ -1,7 +1,27 @@
+/* ------------------------------ */
+/*general*/
+.canvas{
+    height: 130vh;
+}
+
+/* ------------------------------ */
+/*intro*/
+#intro{
+    margin-top: 9em;
+    margin-bottom: 2em;
+}
+
+/* ------------------------------ */
+/*upload bar*/
+#generateTrack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
-  /* ------------------------------ */
-
+/* ------------------------------ */
+/*dark blocks*/
 #inputOutput1 {
     display: flex;
     flex-direction: row;
@@ -9,7 +29,6 @@
     align-items: flex-end;
     width: 80%;
     margin-bottom: 4em;
-    margin-top: 14em;
     width: 100%;
 }
 
@@ -19,17 +38,7 @@
     line-height: 5%;
 }
 
-.canvas{
-    height: 130vh;
-}
 
-
-
-#generateTrack {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 #styleSelection {
     height: 72%;
@@ -88,7 +97,6 @@
     -webkit-appearance: none;
     appearance: none;
     background: #e7a50c;
-    ;
     cursor: pointer;
 }
 
@@ -125,8 +133,6 @@
 }
 
 
-
-
 #placeholderSection {
     background-color: transparent;
     box-shadow: none;
@@ -144,8 +150,6 @@
     flex-direction: column;
     align-items: center;
 }
-
-
 
 
 #styleSelection a {
@@ -193,6 +197,9 @@ svg:hover {
     width: 80%;
 }
 
+/* ------------------------------ *//* ------------------------------ *//* ------------------------------ */
+/* MediaQuery */
+
 @media (max-width: 1400px) {
     #inputOutput {
         width: 70%;
@@ -221,9 +228,6 @@ svg:hover {
 
 @media (max-width: 900px) {
 
-
-    /* ------------------------------ */
-    /* Form module */
     #allParams1 {
         display: flex;
         flex-direction: column;
