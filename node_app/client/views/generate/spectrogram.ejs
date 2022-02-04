@@ -55,10 +55,14 @@
                         if (data.status === 'done') {
                             console.log('Success!');
                             $("#spectrogram-output").show();
+                            //
+                            //to test
+                            //$("#outputAudio").attr("src", "../../public/uploads/piano_16000_mono.wav");
+                            //const wavesurfer = drawSpectrogram("../../public/uploads/piano_16000_mono.wav");
+                            //
                             $("#outputAudio").attr("src", "../../public/uploads/" + data.filepath);
                             const resultWavesurfer = drawOutputSpectrogram("../../public/uploads/" + data.filepath);
                             $("#spectrogram-loading-gif").hide();
-                            $("#waitingText").hide();
                             $("#waitingTitle").hide();
                         } else {
                             setTimeout(doAjax, interval);
