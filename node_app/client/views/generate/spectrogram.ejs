@@ -40,40 +40,4 @@
         <script src="../../public/js/draw_spectrogram.js"></script>
         <script>
             const wavesurfer = drawInputSpectrogram("../../public/uploads/<%= filepath %>");
-
-
-            const interval = 2000;  // 1000 = 1 second, 3000 = 3 seconds
-            function doAjax() {
-                $.ajax({
-                    type: 'POST',
-                    url: '/generate/check-results',
-                    data: $(this).serialize(),
-                    dataType: 'json',
-                    success: function (data) {
-                        // alert('Success!')
-                        if (data.status === 'done') {
-                            console.log('Success!');
-                            $("#spectrogram-output").show();
-                            //
-                            //to test
-                            //$("#outputAudio").attr("src", "../../public/uploads/piano_16000_mono.wav");
-                            //const wavesurfer = drawSpectrogram("../../public/uploads/piano_16000_mono.wav");
-                            //
-                            $("#outputAudio").attr("src", "../../public/uploads/" + data.filepath);
-                            const resultWavesurfer = drawOutputSpectrogram("../../public/uploads/" + data.filepath);
-                            $("#spectrogram-loading-gif").hide();
-                            $("#waitingTitle").hide();
-                        } else {
-                            setTimeout(doAjax, interval);
-                        }
-                    },
-                    error: function (data) {
-                        // Schedule the next
-                        console.log('Fail!');
-                        console.log(data);
-                        setTimeout(doAjax, interval);
-                    }
-                });
-            }
-            setTimeout(doAjax, interval);
         </script>
