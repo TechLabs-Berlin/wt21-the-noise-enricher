@@ -22,17 +22,3 @@ inputFile.addEventListener("change", function (event) {
     let uploadedFileName = event.target.files[0].name;
     fileNameField.textContent = uploadedFileName;
 })
-
-//---
-//---function grayButton() {
-
-    //---if (formControl.audio.value == "") {
-        //---button[0].type = "button";
-        //---button[0].disabled = "true";
-
-    //---} else {
-       //--- button[0].type = "submit";
-       //--- button[0].disabled = "false";
-   //--- }
-//---}
-

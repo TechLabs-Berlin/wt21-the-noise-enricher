@@ -5,34 +5,34 @@
         <div class="canvas">
 
             <div id="results">
-                <button>View your results</button>
                 <h2 id="waitingTitle">Results will appear in 5 to 30 seconds...</h2>
             </div>
-
-
 
             <div class="spectrogram">
                 <section id="spectrogram-input">
                     <h5>Your input sound file spectrogram</h5>
-                    <div id="incomingWaveform"></div>
-                    <div id="incomingSpectrogram"></div>
+                    <div id="incomingWaveform"><span id="incomingSpectrogram"></span></div> 
+                      
                     <p><audio src="../../public/uploads/<%= filepath %>" type="audio/wav" controls loop></audio> </p>
                 </section>
                 <section id="spectrogram-loading">
-                    <img src="../../content/loading.gif" alt="loading wheel">
+                    <img id="spectrogram-loading-gif" src="../../content/loading.gif" alt="loading wheel">
                 </section>
-                <section id="spectrogram-output" style="display: none;">
+                <section id="spectrogram-output">
                     <h5>Output sound file spectrogram</h5>
-                    <div id="resultWaveform"></div>
-                    <div id="resultsSpectrogram"></div>
-
-                    <p><audio src="../../public/uploads/someaudio.wav" type="audio/wav" id="outputAudio" controls
-                            loop></audio> </p>
-
-                    <p id="waitingText">Results will appear in several seconds...</p>
-
+                    <div id="resultWaveform"><span id="resultSpectrogram"></span></div>
+                    <p><audio type="audio/wav" id="outputAudio" controls loop></audio> </p>
                 </section>
             </div>
+
+            <h2 id="thankyou">Thank you for using the noise enricher!</h2>
+            <div id="thx">
+                <p>How did it go? </p>
+                <span><img src="../../content/thumb-up.png"><img src="../../content/thumb-down.png"></span>
+              
+            </div>
+            <a href="/">Generate a new track here</a>
+      
 
         </div>
 
@@ -57,7 +57,7 @@
                             $("#spectrogram-output").show();
                             $("#outputAudio").attr("src", "../../public/uploads/" + data.filepath);
                             const resultWavesurfer = drawOutputSpectrogram("../../public/uploads/" + data.filepath);
-                            $("#spectrogram-loading").hide();
+                            $("#spectrogram-loading-gif").hide();
                             $("#waitingText").hide();
                             $("#waitingTitle").hide();
                         } else {

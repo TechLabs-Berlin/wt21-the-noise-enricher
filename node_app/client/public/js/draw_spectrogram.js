@@ -5,7 +5,8 @@ const drawInputSpectrogram = function (filePath){
         progressColor: 'purple',
         plugins: [
             WaveSurfer.spectrogram.create({
-                container: "#incomingWaveform"
+                container: "#incomingSpectrogram",
+                labels: false
             })
         ]
     });
@@ -22,7 +23,8 @@ const drawOutputSpectrogram = function (filePath){
         progressColor: 'purple',
         plugins: [
             WaveSurfer.spectrogram.create({
-                container: "#resultWaveform"
+                container: "#resultSpectrogram",
+                labels: false
             })
         ]
     });

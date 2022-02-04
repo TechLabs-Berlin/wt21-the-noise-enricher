@@ -2,7 +2,10 @@
 
     <%- include("partials/background_animation.ejs") %>
 
-        <div class="canvas" <!-- Call to action -->
+
+        <div class="canvas">
+
+            <!-- Intro -->
             <div id="callToAction">
                 <h1>Generate your own track with <span>Neural Networks<span class="tooltiptext">A neural network is a
                             series of “steps” that endeavors to recognize relationships in a set of data through a
@@ -14,8 +17,9 @@
                     audio </h5>
             </div>
 
-            <!-- Form module -->
+            
             <form action="/generate" id="generateTrack" method="POST" enctype="multipart/form-data">
+                <!-- Upload bar -->
                 <div id="inputOutput">
                     <div id="uploadTrack">
                         <h5>Upload your track</h5>
@@ -27,24 +31,12 @@
                             <input type="file" name="audio" class="form-control" id="uploadFile">
                             <span id="file-name">No file choosen</span>
                         </div>
-                        <!--
-                        <script>
-                            let inputFile= document.getElementById("uploadFile");
-                            let fileNameField = document.getElementById("file-name");
-                            inputFile.addEventListener("change",function(event){
-                                let uploadedFileName = event.target.files[0].name;
-                                fileNameField.textContent = uploadedFileName;
-                            })
-                        </script>
-                        -->
-
                     </div>
-
                 </div>
 
 
 
-                <!-- 2 gray blocks -->
+                <!-- 2 dark blocks -->
                 <div id="allParams">
                     <section id="styleSection1">
                         <div id="styleSelection1">
@@ -79,8 +71,6 @@
                     <button class="btn btn-info btn-lg" type="submit" onclick="noFileChoosen()">Generate new
                         track</button>
                 </div>
-
-
             </form>
 
         </div>
