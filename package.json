@@ -11,15 +11,15 @@
   "name": "app.js",
   "description": "### It's the opposite of noise cancellation!",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/giannamoth/wt21-the-noise-enricher.git"
+    "url": "git+https://github.com/TechLabs-Berlin/wt21-the-noise-enricher.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/giannamoth/wt21-the-noise-enricher/issues"
+    "url": "https://github.com/TechLabs-Berlin/wt21-the-noise-enricher/issues"
   },
-  "homepage": "https://github.com/giannamoth/wt21-the-noise-enricher#readme"
+  "homepage": "https://github.com/TechLabs-Berlin/wt21-the-noise-enricher#readme"
 }
