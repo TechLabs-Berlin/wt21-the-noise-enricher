@@ -37,16 +37,17 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-//
-// To test
-//app.get('/generate/spectrogram', (req, res) => {
-//    res.render('generate/spectrogram', { filepath: "piano_16000_mono.wav" });
-//});
-//
+
 app.get('/about', (req, res) => {
     res.render('generate/about');
 });
 
+//
+// To test
+//app.get('/generate/spectrogram', (req, res) => {
+//res.render('generate/spectrogram', { filepath: "someaudio.wav" });
+//});
+//
 
 app.use('/generate', generateRoutes);
 

@@ -1,10 +1,8 @@
-.canvas  {
+.canvas {
     height: 120%;
 }
 
-
-
-#results{
+#results {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -14,13 +12,11 @@
 }
 
 
-
-.spectrogram{
+.spectrogram {
     display: flex;
     justify-content: space-around;
-    width: 100%;
     height: 30%;
-    margin-bottom:10em;
+    margin-bottom: 5em;
     margin-top: 5em;
 }
 
@@ -36,7 +32,6 @@
     padding: 2em 0 2em 0;
 }
 
-
 #resultWaveform {
     background-color: white;
     width: 100%;
@@ -48,7 +43,7 @@
     padding: 2em 0 2em 0;
 }
 
-#incomingSpectrogram, #resultSpectrogram{
+#incomingSpectrogram, #resultSpectrogram {
     width: 100%;
     height: 128px;
     margin: 2em 0em;
@@ -59,33 +54,31 @@
     margin-top: 0em;
 }
 
-#incomingWaveform:hover #incomingSpectrogram, #resultWaveform:hover #resultSpectrogram{
+#incomingWaveform:hover #incomingSpectrogram, #resultWaveform:hover #resultSpectrogram {
     visibility: visible;
 }
 
 
-
-
-#spectrogram-loading img{
+#spectrogram-loading img {
     width: 4em;
     margin: 0em 5em;
 }
 
-#spectrogram-loading{
+#spectrogram-loading {
     margin-top: 8.5em;
     margin-left: 1em;
     margin-right: 1em;
 }
 
-a{
-    font-size: large;
-    color: #e7a50c;
-
+#spectrogram-loading-gif2 {
+    opacity: 0%;
 }
 
-span img {
+
+span svg {
     width: 1em;
-    margin-left: 1em;
+    margin-left: 0.5em;
+    fill: black;
 }
 
 #thx {
@@ -97,98 +90,61 @@ span img {
 
 #thx p {
     font-size: large;
+    margin-right: -2em;
 }
 
-
-#thx .spam{
+#back2Main {
     margin-bottom: 4em;
 }
 
+a {
+    font-size: large;
+    color: #e7a50c;
+}
+/* ------------------------------ */
+/* placeholder vote*/
 
-
-@media (max-width: 1200px) {
-
-    #incomingWaveform, #resultWaveform{
-        width: 100%;
-        height: 80%
-    }
-    #spectrogram-loading img{
-        width: 3em;
-        margin: 0em 2em;
-        margin-top: 7em;
-    }
-
-    .audio{
-        width: 15em;
-    }
-
-    
-
-    h2:nth-child(1){
-        margin-top: 0em;
-    }
+span svg:hover {
+    fill: #e7a50c;
 }
 
-@media (max-width: 900px) {
+/* ------------------------------ *//* ------------------------------ *//* ------------------------------ */
+/* MediaQuery */
 
-    .canvas  {
-        height: 150vh;
-    }
-
-    #spectrogram-loading{
-        margin-top: 0em;
-    }
+@media (max-width: 1100px) {
 
     #results{
         margin-top: 8em;
-        margin-bottom: 8em;
     }
 
-    #spectrogram-input, #spectrogram-output{
-        display: flex;
+    .spectrogram {
         flex-direction: column;
         align-items: center;
-        height: 80%;
+        margin-top: 3em;
     }
 
-    .spectrogram{
-        flex-direction: column;
+    #spectrogram-loading {
+        margin-bottom: 2em;
+        margin-top: 3em;
         align-items: center;
     }
-    #spectrogram-loading img{
-        width: 2em;
-        margin: 2em 0em;
+
+    #spectrogram-loading img {
+        width: 3em;
     }
 
-    #incomingWaveform, #resultWaveform{
-        width: 100%;
-        height: 400px;
+    #spectrogram-loading-gif{
+        position:absolute;
     }
 
-
-    #thankyou{
-        margin-top: 2em;
-    }
-
-    #thx{
-        width: 33%;
-    }
-
-    span img {
-        margin-top: 0.5em;
-        width: 1em;
+    #thx p {
+        font-size: large;
+        margin-right: -1em;
     }
 }
 
-
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
     #thx{
         width: 45%;
     }
-}
-
-
-audio {
-    position: relative;
-    z-index: 5;
 }
