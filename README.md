@@ -13,6 +13,27 @@
 - [WD files](node_app)
 
 
+## Steps to run the prototype locally
+
+### Node.js
+
+First, you need to download and install [Node.js](https://nodejs.org/en/download/) on your computer. Next clone the
+repository and run the following commands in the terminal:
+
+```bash
+
+cd node_app/server/
+npm install
+nodemon app.js
+
+```
+
+Then you should be able to open the application in your web browser: `http://127.0.0.1:3030/`
+
+> :warning: **Note**: run `npm install` command from the [node_app/server/](node_app/server/) directory.
+
+### Python
+
 ## HEROKU deployment
 
 For this project, it was decided for the sake of simplicity and convenience to keep AI-related processing in the same
