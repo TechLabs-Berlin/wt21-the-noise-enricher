@@ -121,3 +121,41 @@ git push heroku develop:main
 Here is how the successful build and deployment looks like from the Heroku CLI:
 
 ![buildpacks screenshot](docs/build_heroku.png)
+
+## Dependencies
+
+### Node.js
+- [Express](https://www.npmjs.com/package/express)
+- [Embedded JavaScript templates](https://www.npmjs.com/package/ejs)
+- [Multer](https://www.npmjs.com/package/multer)
+- [nodemon](https://www.npmjs.com/package/nodemon)
+- [connect-flash](https://www.npmjs.com/package/connect-flash)
+- [ejs-mate](https://www.npmjs.com/package/ejs-mate)
+
+
+### JavaScript/CSS
+- [wavesurfer.js](https://github.com/katspaugh/wavesurfer.js)
+- [Bootstrap](https://getbootstrap.com/)
+- [JQuery](https://jquery.com/)
+
+### Python
+- [Pytorch](https://pytorch.org/)
+- [SoundFile](https://pypi.org/project/SoundFile/)
+- [TensorFlow](https://www.tensorflow.org/)
+- [Librosa](https://librosa.github.io/)
+
+## Authors
+
+UX
+- Yulia
+- Marc
+
+WD
+- Gianna
+- Valerii
+
+AI
+- Christian
+- Raphael
+- Seungcheon
+
