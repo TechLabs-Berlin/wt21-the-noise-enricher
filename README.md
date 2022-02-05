@@ -1,8 +1,17 @@
-## The Noise Enricher
+<div align="center">
 
+# The Noise Enricher
 ### It's the opposite of noise cancellation!
+![preview](docs/demo.gif)
 
-#
+</div>
+
+## Repository structure
+
+- [UX materials and links](ux)
+- [AI scripts](python_app)
+- [WD files](node_app)
+
 
 ## HEROKU deployment
 
