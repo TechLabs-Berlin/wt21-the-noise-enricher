@@ -1,7 +1,9 @@
 <div align="center">
 
 # The Noise Enricher
+
 ### It's the opposite of noise cancellation!
+
 ![preview](docs/demo.gif)
 
 </div>
@@ -12,27 +14,47 @@
 - [AI scripts](python_app)
 - [WD files](node_app)
 
-
 ## Steps to run the prototype locally
+
+To run the web application locally you need to do two main steps:
+
+- Install Node.js and npm packages to run the web application
+- Install python and python packages to run audio generation
 
 ### Node.js
 
 First, you need to download and install [Node.js](https://nodejs.org/en/download/) on your computer. Next clone the
-repository and run the following commands in the terminal:
+repository:
 
 ```bash
+git clone https://github.com/vagechirkov/wt21-the-noise-enricher.git
+```
 
+Lastly, run the following commands in the terminal:
+
+```bash
 cd node_app/server/
 npm install
 nodemon app.js
-
 ```
 
 Then you should be able to open the application in your web browser: `http://127.0.0.1:3030/`
 
 > :warning: **Note**: run `npm install` command from the [node_app/server/](node_app/server/) directory.
 
+The next step is to install python and python packages. This is necessary to run the audio generation process.
+
 ### Python
+
+One way to manage python packages is to use Anaconda. You can download it
+here: [Anaconda](https://www.anaconda.com/download/). After installing it, you can install the required python packages
+from the [`requirements.txt`](requirements.txt) file using `pip`. Here are the commands to type in the terminal:
+
+```bash
+conda create -n noise-enricher python=3.8
+conda activate noise-enricher
+pip install -r requirements.txt
+```
 
 ## HEROKU deployment
 
