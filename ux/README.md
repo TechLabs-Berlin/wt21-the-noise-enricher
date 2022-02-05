@@ -17,3 +17,7 @@ https://www.notion.so/9cc5b78299164bb4827f55a0047e2e3a?v=3d296c99161c4e129adeaa9
 ## Site Map
 
 https://whimsical.com/site-map-RwYpC84rVCx72NgiwSfpFa
+
+## Figma 
+
+https://www.figma.com/files/project/46666997/Team-project?fuid=835637202521257504
