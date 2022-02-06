@@ -1,0 +1,6 @@
+tensorflow-cpu==2.7.0
+librosa==0.8.1
+AudioSegment==0.23.0
+pydub==0.25.1
+h5py==2.10.0
+pysoundfile==0.9.0

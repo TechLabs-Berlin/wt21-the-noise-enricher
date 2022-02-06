@@ -1,0 +1,624 @@
+/*@import "bootstrap/scss/variables";*/
+
+/* General */
+body {
+
+    background: linear-gradient(#352754, #493294, #432666);
+    font-family: "Homenaje";
+    color: white;
+}
+
+
+
+.canvas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    height: 130%;
+}
+
+button.btn:hover {
+    color: white;
+    background-color: #89C6FF;
+    border: solid #89C6FF;
+}
+
+.arrowDown img {
+    color: #89C6FF;
+    width: 30px;
+}
+
+
+/* ------------------------------- */
+/*Background */
+#background {
+    width: max-content;
+    background-position-y: 0;
+    position: absolute;
+    z-index: 1;
+    top: -35%;
+    left: 0;
+    width: max-content;
+}
+
+
+/* ------------------------------- */
+/* menu */
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 3;
+    margin: 0em;
+    width: 100%;
+    background-color: #111435;
+    height: 3em;
+}
+
+#main {
+    display: none;
+}
+
+#pngLogo {
+    height: 1.25em;
+    margin-right: 0.5em;
+}
+
+#logo h4 a {
+    color: #e7a50c;
+}
+
+h4 {
+    margin: 0 1em;
+}
+
+#about a, #logIn a, #gP a, #logo, #main a {
+    color: rgb(255, 255, 255);
+    margin-top: 1em;
+    font-size: medium;
+}
+
+#logo a {
+    color: #e7a50c;
+}
+
+#about a:hover, #logIn a:hover, #logo a:hover, #gP a:hover, #main a:hover {
+    color: #89C6FF;
+}
+
+#menu {
+    display: flex;
+    margin-top: 0.53em;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:hover {
+    color: #89C6FF;
+}
+
+/*....................*/
+/*Body*/
+
+/*Intro*/
+
+#callToAction {
+    display: flex;
+    margin-bottom: 3em;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25vh;
+    width: max-content;
+}
+
+#callToAction h1 span {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid white
+}
+
+#callToAction h1 span .tooltiptext {
+    visibility: hidden;
+    font-size: medium;
+    border-bottom: none;
+    width: 20vw;
+    background-color: #111435;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+
+    /* Position the tooltip */
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+}
+
+#callToAction h1 span:hover .tooltiptext {
+    visibility: visible;
+}
+
+#inputOutput div p {
+    color: #e7a50c;
+    line-height: 5%;
+}
+
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+}
+
+/*Generate Track*/
+
+#generateTrack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inputOutput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-bottom: 4em;
+    margin-top: 2em;
+}
+
+/*Upload bar*/
+
+#uploadTrack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#uploadFileInput {
+    margin-top: 0.5em;
+    display: flex;
+    border: none;
+}
+
+.rec{
+    width: 2em;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #e7a50c;
+    border: 1px solid black;
+}
+
+.upload{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 5em;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #e7a50c;
+    color: black;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid black;
+}
+
+#file-name{
+    background-color: white;
+    color: rgb(74, 74, 74);
+    width: 300px;
+    height: 42px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    line-height: 40px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#uploadFileInput label img{
+    margin-top: 12px;
+    margin-left: 5px;
+    width: 20px;
+}
+
+
+#uploadFileInput label:hover{
+    background-color: #f0d38e;
+}
+
+#uploadFile{
+    display:none;
+}
+
+#uploadFileInput .upload .tooltiptext {
+    visibility: hidden;
+    font-size: medium;
+    border-bottom: none;
+    width: 10vw;
+    background-color: #111435;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+
+    /* Position the tooltip */
+    position: absolute;
+    margin: auto;
+    z-index: 1;
+}
+
+#uploadFileInput .upload:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+
+/* ------------------------------- */
+/*  2 Dark boxes */
+
+#allParams {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#styleSection1, #goProSection {
+    background-color: #111435;
+    color: white;
+    height: 17em;
+    width: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0em 1em;
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 4em;
+}
+
+#styleSelection1 {
+    margin-top: 0.5em;
+}
+
+#styleSelection1 div label {
+    border: 1px solid white;
+    text-align: center;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    width: 8em;
+    margin: 0.5em;
+}
+
+#styleSelection1 input[type="radio"] {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+#styleSelection1 input:checked+label {
+    background: #e7a50c;
+    color: black;
+    border: none;
+    box-shadow: none;
+}
+
+input:hover+label,
+input:focus+label {
+    background: #f0d38e;
+    color: rgb(126, 118, 12);
+}
+
+#styleSection1 p {
+    margin-top: 0.5em;
+    color: white;
+    font-size: 1.25em;
+    text-align: center;
+}
+
+
+.logoSVG {
+    width: 50%;
+}
+
+#proText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+#proText a {
+    color: #e7a50c;
+    font-weight: 200;
+    font-size: 1.25em;
+    text-align: center;
+}
+
+#proText a:hover {
+    color: #89C6FF;
+}
+
+
+#proText a span {
+    font-weight: bold;
+}
+
+
+
+/* ------------------------------- */
+/* Button */
+.formGenerate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formGenerate button.btn {
+    color: black;
+    background-color: #e7a50c;
+    border: solid #e7a50c;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 5em;
+}
+
+
+
+
+/* ------------------------------ *//* ------------------------------ *//* ------------------------------ */
+/* MediaQuery */
+
+
+
+@media (max-width: 1200px) {
+
+    /* ------------------------------ */
+    /*Main */
+    .canvas {
+        width: 70%;
+    }
+
+    /* ------------------------------ */
+    /* upload bar */
+    #uploadFileInput {
+        width: 80%;
+    }
+
+    #inputOutput {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    #uploadTrack {
+        margin-right: 0em;
+    }
+
+    /* ------------------------------ */
+    /* 2 dark Block */
+    #styleSection1, #goProSection {
+        width: 30vh;
+    }
+
+
+    #proText a {
+        margin-top: 0.5em;
+    }
+
+    .logoSVG {
+        margin-top: 0.5em;
+    }
+
+    #inputOutput div p {
+        display: none;
+    }
+
+    /* ------------------------------- */
+    /* Button */
+    .formGenerate {
+        margin-top: 2em;
+    }
+
+    .formGenerate button.btn {
+        width: 120%;
+    }
+}
+
+@media (max-width: 900px) {
+
+    /* ------------------------------ */
+    /*Main */
+    .canvas {
+        width: 70%;
+    }
+
+
+    /* ------------------------------ */
+    /*Background */
+    #background {
+        width: max-content;
+        background-position-y: 0;
+        position: absolute;
+        z-index: 1;
+        top: -10%;
+        left: 0;
+        width: 100%
+    }
+
+    /* ------------------------------ */
+    /* Intro */
+
+
+    #callToAction {
+        margin-top: 12em;
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h5 {
+        font-size: 1.25em;
+    }
+
+    /* ------------------------------ */
+    /* Upload bar */
+    #uploadTrack {
+        flex-direction: column;
+    }
+
+    #uploadFileInput {
+        width: 100%;
+    }
+
+
+    /* ------------------------------ */
+    /* 2 dark boxes */
+    #allParams {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #styleSection1, #goProSection {
+
+        height: 14em;
+        width: 100%;
+        display: flex;
+        margin: 1em 0em;
+    }
+
+    #allParams {
+        margin-bottom: 2em;
+    }
+
+    #styleSelection1 div label {
+
+        font-size: small;
+    }
+
+
+    #proText img {
+        width: 25%;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    /* ------------------------------ */
+    /* Main*/
+    body {
+        font-size: 0.85em;
+    }
+
+    h4 {
+        font-size: 1.25em;
+    }
+
+    /* ------------------------------ */
+    /* upload bar */
+    #uploadFileInput label img{
+        margin-right: 4px;
+    }
+
+    #file-name{
+        width: 200px;
+    }
+
+    /* ------------------------------ */
+    /* 3 gray blocks*/
+    #styleSelection1 div {
+        height: 30%;
+        font-size: 1.2em;
+    }
+
+    #styleSelection1 div label {
+        height: 2em;
+        margin-bottom: 0.1em;
+        line-height: 10px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    /* ------------------------------ */
+    /* main*/
+    body {
+        font-size: 0.8em;
+    }
+
+    /* ------------------------------ */
+    /* menu*/
+    #logo {
+        margin-top: 0em;
+    }
+
+    #menu {
+        display: none;
+        position: absolute;
+        background-color: #111435;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+
+    #main {
+        display: inline;
+    }
+
+    header {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    header:hover #menu {
+        display: block;
+        align-self: center;
+        margin-top: 6em;
+    }
+
+    #about a, #logIn a, #gP a {
+        color: rgb(255, 255, 255);
+    }
+
+    #about a:hover, #logIn a:hover, #logo a:hover, #gP a:hover {
+        color: #89C6FF;
+    }
+
+    /* ------------------------------ */
+    /* intro*/
+    #callToAction {
+        margin-top: 20em;
+    }
+
+
+    h4 {
+        font-size: 1.5em;
+        align-self: center;
+        margin-top: 0.3em;
+    }
+    
+    /* ------------------------------ */
+    /* upload bar*/
+    #uploadFileInput label img{
+        margin-left: 2px;
+    }
+}

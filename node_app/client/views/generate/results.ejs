@@ -1,0 +1,23 @@
+<% layout('layouts/boilerplate.ejs') %>
+    <link rel="stylesheet" href="../../public/css/results.css">
+    <%- include("../partials/background_animation.ejs") %>
+
+        <div class="canvas">
+
+
+
+            <div id="Samples">
+                <h2>Listen now to your new Track!</h2>
+                <div id="waveform"></div>
+                <p><audio src="../../public/uploads/someaudio.wav" type="audio/wav" controls loop class="audio"></audio>
+                    <!--        <p> <button class="btn btn-primary"> Download generated track </button></p>-->
+            </div>
+            <h2>Thank you for using the noise enricher!</h2>
+            <div id="thx">
+                <p>How did it go? </p>
+                <span><img src="../../content/thumb-up.png"><img src="../../content/thumb-down.png"></span>
+                <a href="../index.ejs">Generate a new track here</a>
+            </div>
+            
+
+        </div>

@@ -1,0 +1,77 @@
+<% layout('layouts/boilerplate.ejs') %>
+
+    <%- include("partials/background_animation.ejs") %>
+
+
+        <div class="canvas">
+
+            <!-- Intro -->
+            <div id="callToAction">
+                <h1>Generate your own track with <span>Neural Networks<span class="tooltiptext">A neural network is a
+                            series of “steps” that endeavors to recognize relationships in a set of data through a
+                            process that mimics the way the human brain operates. In this sense, neural networks refer
+                            to systems of neurons, either organic or artificial in nature.
+                        </span></span></h1>
+
+                <h5>This is a Noise Enricher, a neural net that generates music, including rudimentary singing, as raw
+                    audio </h5>
+            </div>
+
+            
+            <form action="/generate" id="generateTrack" method="POST" enctype="multipart/form-data">
+                <!-- Upload bar -->
+                <div id="inputOutput">
+                    <div id="uploadTrack">
+                        <h5>Upload your track</h5>
+
+                        <div id="uploadFileInput">
+                            <label type="button" name="upload" class="upload" for="uploadFile">Choose file<span class="tooltiptext">.wav file only</span></label>
+                            <label type="button" name="rec" class="rec" for="uploadFile"><img
+                                    src="../../content/free-microphone-icon-342-thumb.png"></label>
+                            <input type="file" name="audio" class="form-control" id="uploadFile">
+                            <span id="file-name">No file choosen</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- 2 dark blocks -->
+                <div id="allParams">
+                    <section id="styleSection1">
+                        <div id="styleSelection1">
+                            <div>
+                                <input type="radio" id="Blues" name="style" value="blues" checked>
+                                <label for="Blues">Blues</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="Hiphop" name="style" value="hiphop">
+                                <label for="Hiphop">Hiphop</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="Metal" name="style" value="metal">
+                                <label for="Metal">Metal</label>
+                            </div>
+                        </div>
+                        <p>Choose a style</p>
+                    </section>
+
+                    <section id="goProSection">
+                        <p id="proText">
+                            <img class="logoSVG" src="../content/logo.svg" alt="logo"><br>
+                            <a href="/generate/pro">Use our <span>Pro version</span> with more settings</a>
+                        </p>
+                    </section>
+                </div>
+
+                <!-- button -->
+                <div class="formGenerate">
+                    <button class="btn btn-info btn-lg" type="submit" onclick="noFileChoosen()">Generate new
+                        track</button>
+                </div>
+            </form>
+
+        </div>
+        <script src="../public/js/index.js"></script>
