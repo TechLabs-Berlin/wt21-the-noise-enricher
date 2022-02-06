@@ -152,7 +152,7 @@ UX
 
 WD
 - Gianna
-- Valerii
+- [Valerii](https://github.com/vagechirkov)
 
 AI
 - Christian
