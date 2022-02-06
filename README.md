@@ -155,7 +155,7 @@ WD
 - [Valerii](https://github.com/vagechirkov)
 
 AI
-- Christian
+- [Christian](https://www.linkedin.com/in/christian-eismann-a9a01719a)
 - Raphael
 - Seungcheon
 
