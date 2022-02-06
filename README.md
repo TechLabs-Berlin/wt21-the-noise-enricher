@@ -151,7 +151,7 @@ UX
 - [Marc](https://github.com/marcospozzo/)
 
 WD
-- Gianna
+- [Gianna](https://github.com/giannamoth)
 - [Valerii](https://github.com/vagechirkov)
 
 AI
