@@ -1,0 +1,43 @@
+
+@startuml
+left to right direction
+'skinparam linetype polyline
+skinparam dpi 300
+
+node "Backend" {
+    interface "Embedded\nJavascript\nTemplates" as EJS
+    folder "uploads/session ID" {
+    interface "Uploaded Audio File and Params" as AF
+    interface "Generated Audio File" as GAF
+    }
+
+    interface "Generation\nparams" as GP
+
+    [AI Backend] <<Component>>
+    [JS Backend] <<Component>>
+
+    [JS Backend] -down- GP
+    [AI Backend] --( GP
+    GAF -- [AI Backend]
+    AF -- [JS Backend]
+    EJS -- [JS Backend]
+}
+
+node "Frontend" {
+interface "Audio trace and\nspectrogram" as ATS
+
+[wavesurfer.js] <<Component>>
+[bootstrap] <<Component>>
+[JQuery] <<Component>>
+[wavesurfer.js] ..> AF
+[wavesurfer.js] ..> GAF
+ATS -- [wavesurfer.js]
+[JQuery] ..> [JS Backend]
+[wavesurfer.js] ..> EJS
+[bootstrap] ..> EJS
+[JQuery] ..> EJS
+}
+
+
+
+@enduml
