@@ -147,15 +147,14 @@ Here is how the successful build and deployment looks like from the Heroku CLI:
 ## Authors
 
 UX
-- Yulia
-- Marc
+- Yulia ([GitHub](https://github.com/vasenina), [LinkedIn](https://www.linkedin.com/in/yulia-vasenina))
+- [Marc](https://github.com/marcospozzo/)
 
 WD
-- Gianna
-- Valerii
+- Gianna ([GitHub](https://github.com/giannamoth), [LinkedIn](https://www.linkedin.com/in/gianna-moscoso-thompson-7a1677a3/))
+- [Valerii](https://github.com/vagechirkov)
 
 AI
-- Christian
-- Raphael
+- [Christian](https://www.linkedin.com/in/christian-eismann-a9a01719a)
+- [Raphael](https://github.com/RoitRapha)
 - Seungcheon
-
