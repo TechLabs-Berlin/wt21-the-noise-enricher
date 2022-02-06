@@ -2,7 +2,7 @@
 
 # The Noise Enricher
 
-### It's the opposite of noise cancellation!
+### It's the opposite of noise cancellation! Read more in our [Blog Post](https://github.com/TechLabs-Berlin/wt21-the-noise-enricher/wiki/Blog-Post).
 
 ![preview](docs/demo.gif)
 
