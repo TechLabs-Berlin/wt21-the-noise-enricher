@@ -156,5 +156,5 @@ WD
 
 AI
 - [Christian](https://www.linkedin.com/in/christian-eismann-a9a01719a)
-- [Raphael](https://github.com/RoitRapha)
+- Raphael ([GitHub](https://github.com/RoitRapha), [LinkedIn](https://www.linkedin.com/in/raphael-wallsberger-0698a01b9/))
 - Seungcheon
