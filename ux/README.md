@@ -23,6 +23,10 @@ https://www.notion.so/Design-References-d0191a92ce9a4140b00ab575a4ec02a9
 
 https://www.figma.com/file/8Arn59Lunn70GfxnaTyJQf/Design?node-id=0%3A1
 
-## Site Map
+## User flow through application
+
+https://www.figma.com/proto/8Arn59Lunn70GfxnaTyJQf/Design?node-id=270%3A283&viewport=241%2C48%2C0.55&scaling=min-zoom&page-id=270%3A282&starting-point-node-id=270%3A283
+
+## Original Site Map
 
 https://whimsical.com/site-map-RwYpC84rVCx72NgiwSfpFa
