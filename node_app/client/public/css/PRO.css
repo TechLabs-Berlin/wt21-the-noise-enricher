@@ -1,12 +1,29 @@
-#inputOutput{
+
+
+  /* ------------------------------ */
+
+#inputOutput1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 80%;
+    margin-bottom: 4em;
     margin-top: 14em;
-}
-
-
-
-#inputOutput {
     width: 100%;
 }
+
+
+#inputOutput1 div p {
+    color: #e7a50c;
+    line-height: 5%;
+}
+
+.canvas{
+    height: 130vh;
+}
+
+
 
 #generateTrack {
     display: flex;
@@ -14,7 +31,7 @@
     align-items: center;
 }
 
-#styleSelection{
+#styleSelection {
     height: 72%;
     display: flex;
     flex-direction: column;
@@ -41,7 +58,6 @@
 }
 
 
-
 #styleSelection a:hover, #noiseSection #noiseBtns a:hover {
     color: #89C6FF;
 }
@@ -58,6 +74,58 @@
     margin: 3em 0em;
     border-radius: 10px;
 }
+
+#styleSelection div {
+    height: 33%;
+}
+
+#styleSelection div label {
+    margin-bottom: 0.15em;
+}
+
+
+.form-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #e7a50c;
+    ;
+    cursor: pointer;
+}
+
+
+#noiseBtns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 40%;
+}
+
+
+#noiseBtns button.btn {
+    color: #e7a50c;
+    ;
+    background-color: rgb(255, 255, 255);
+    border: solid 1.5px #e7a50c;
+    border-radius: 25px;
+    margin: 0.15em 0em;
+    width: 60%;
+    height: 30%;
+    line-height: 10px;
+    font-size: 80%;
+}
+
+#noiseBtns button.btn:hover {
+    color: #89C6FF;
+    border: solid 2px #89C6FF;
+}
+
+.logoSVG {
+    width: 50%;
+}
+
+
+
 
 #placeholderSection {
     background-color: transparent;
@@ -133,14 +201,21 @@ svg:hover {
     #inputOutput div p {
         display: inline;
     }
-    .canvas{
+
+    .canvas {
         width: 70%;
     }
 }
 
 @media (max-width: 1200px) {
-    #inputOutput div p {
+    #inputOutput1 div p {
         display: none;
+    }
+
+    #inputOutput1 {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
     }
 }
 
@@ -177,12 +252,49 @@ svg:hover {
         margin-top: 0.85em;
     }
 
+    #styleSelection div{
+        display: flex;
+        flex-direction: row;
+        width:140%;     
+    }
 
+    #noiseBtns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1em;
+    }
+
+    #noiseBtns button.btn {
+        width: 5em;
+        height: 3em;
+        margin: 0px 3px;
+    }
 
 
     .iconInstrument {
         width: 70%;
     }
 
+    .form-range {
+        margin-left: 3em;
+    }
 
+
+}
+
+@media (max-width: 700px) {
+
+    .form-range {
+        width: 70%;
+    }
+
+    #noiseBtns button.btn {
+        line-height: 5px;
+    }
+
+    #noiseBtns button.btn {
+        height: 30px;
+        margin: 0px 3px;
+    }
 }

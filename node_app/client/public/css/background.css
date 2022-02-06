@@ -8,8 +8,8 @@
     margin: 0;
   }
   .widget-container {
-    width: 150%;
-    height: 30%;
+    width: 100%;
+    height: 20%;
     position: absolute;
     top: 0px;
     left: 0px;

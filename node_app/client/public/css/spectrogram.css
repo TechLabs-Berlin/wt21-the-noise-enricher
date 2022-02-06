@@ -1,4 +1,190 @@
 .canvas  {
+    height: 102vh;
+}
 
-    height: 100vh;
+
+
+#results{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 5em;
+    width: 100%;
+    height: 10%;
+}
+
+
+
+.spectrogram{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 30%;
+    margin-bottom:10em;
+    margin-top: 5em;
+}
+
+#incomingWaveform {
+    background-color: black;
+    width: 100%;
+    background-size: contain;
+    height: 128px;
+    margin: 2em 0em;
+    border-radius: 25px;
+    box-sizing: content-box;
+    z-index: 0;
+    padding: 2em 0 2em 0;
+}
+
+
+#resultWaveform {
+    background-color: white;
+    width: 100%;
+    background-size: contain;
+    height: 128px;
+    margin: 2em 0em;
+    border-radius: 25px;
+    box-sizing: content-box;
+    padding: 2em 0 2em 0;
+}
+
+#incomingSpectrogram, #resultSpectrogram{
+    width: 100%;
+    height: 128px;
+    margin: 2em 0em;
+    border-radius: 25px;
+    visibility: hidden;
+    position: absolute;
+    z-index: 3;
+    margin-top: 0em;
+}
+
+#incomingWaveform:hover #incomingSpectrogram, #resultWaveform:hover #resultSpectrogram{
+    visibility: visible;
+}
+
+
+
+
+#spectrogram-loading img{
+    width: 4em;
+    margin: 0em 5em;
+}
+
+#spectrogram-loading{
+    margin-top: 8.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+a{
+    font-size: large;
+    color: #e7a50c;
+
+}
+
+span img {
+    width: 1em;
+    margin-left: 1em;
+}
+
+#thx {
+    margin: 1em;
+    display: flex;
+    justify-content: space-around;
+    width: 33%
+}
+
+#thx p {
+    font-size: large;
+}
+
+
+
+
+@media (max-width: 1200px) {
+
+    #incomingWaveform, #resultWaveform{
+        width: 100%;
+        height: 80%
+    }
+    #spectrogram-loading img{
+        width: 3em;
+        margin: 0em 2em;
+        margin-top: 7em;
+    }
+
+    .audio{
+        width: 15em;
+    }
+
+    
+
+    h2:nth-child(1){
+        margin-top: 0em;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .canvas  {
+        height: 150vh;
+    }
+
+    #spectrogram-loading{
+        margin-top: 0em;
+    }
+
+    #results{
+        margin-top: 8em;
+        margin-bottom: 8em;
+    }
+
+    #spectrogram-input, #spectrogram-output{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 80%;
+    }
+
+    .spectrogram{
+        flex-direction: column;
+        align-items: center;
+    }
+    #spectrogram-loading img{
+        width: 2em;
+        margin: 2em 0em;
+    }
+
+    #incomingWaveform, #resultWaveform{
+        width: 100%;
+        height: 400px;
+    }
+
+
+    #thankyou{
+        margin-top: 2em;
+    }
+
+    #thx{
+        width: 33%;
+    }
+
+    span img {
+        margin-top: 0.5em;
+        width: 1em;
+    }
+}
+
+
+@media (max-width: 900px) {
+    #thx{
+        width: 45%;
+    }
+}
+
+
+audio {
+    position: relative;
+    z-index: 5;
 }
