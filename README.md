@@ -148,7 +148,7 @@ Here is how the successful build and deployment looks like from the Heroku CLI:
 
 UX
 - Yulia
-- Marc
+- [Marc](https://github.com/marcospozzo/)
 
 WD
 - Gianna
@@ -156,6 +156,6 @@ WD
 
 AI
 - [Christian](https://www.linkedin.com/in/christian-eismann-a9a01719a)
-- Raphael
+- [Raphael](https://www.linkedin.com/in/raphael-wallsberger-0698a01b9/)
 - Seungcheon
 
