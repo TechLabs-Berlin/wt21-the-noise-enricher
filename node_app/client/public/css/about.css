@@ -1,5 +1,5 @@
 .canvas  {
-    height: 120vh;
+    height: 120%;
 }
 
 #about2 {
@@ -14,3 +14,8 @@
     width: 100%;
 }
 
+p{
+    letter-spacing: 1px;
+    margin-bottom: 4em;
+    margin-top: 3em;
+}

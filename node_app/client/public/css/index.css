@@ -10,7 +10,6 @@ body {
 
 
 
-
 .canvas {
     display: flex;
     flex-direction: column;
@@ -19,20 +18,8 @@ body {
     z-index: 2;
     margin-left: auto;
     margin-right: auto;
-    height: 130vh;
-
+    height: 130%;
 }
-
-a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-a:hover {
-    color: #89C6FF;
-}
-
-
 
 button.btn:hover {
     color: white;
@@ -45,12 +32,6 @@ button.btn:hover {
     width: 30px;
 }
 
-
-#generateTrack {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 /* ------------------------------- */
 /*Background */
@@ -114,8 +95,19 @@ h4 {
     margin-top: 0.53em;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+a:hover {
+    color: #89C6FF;
+}
+
 /*....................*/
 /*Body*/
+
+/*Intro*/
 
 #callToAction {
     display: flex;
@@ -168,6 +160,13 @@ h5 {
     text-align: center;
 }
 
+/*Generate Track*/
+
+#generateTrack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 #inputOutput {
     display: flex;
@@ -178,22 +177,20 @@ h5 {
     margin-top: 2em;
 }
 
+/*Upload bar*/
 
 #uploadTrack {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
-
 }
 
 #uploadFileInput {
     margin-top: 0.5em;
     display: flex;
     border: none;
-  
 }
-
 
 .rec{
     width: 2em;
@@ -235,30 +232,13 @@ h5 {
 }
 
 
-
 #uploadFileInput label:hover{
     background-color: #f0d38e;
-}
-
-
-.formGenerate {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.formGenerate button.btn {
-    color: black;
-    background-color: #e7a50c;
-    border: solid #e7a50c;
-    border-radius: 10px;
-    width: 100%;
 }
 
 #uploadFile{
     display:none;
 }
-
 
 #uploadFileInput .upload .tooltiptext {
     visibility: hidden;
@@ -282,9 +262,8 @@ h5 {
 
 
 
-
 /* ------------------------------- */
-/*  Parameters*/
+/*  2 Dark boxes */
 
 #allParams {
     display: flex;
@@ -380,50 +359,40 @@ input:focus+label {
 
 
 /* ------------------------------- */
-/*  save button */
-
-#saveFile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2em 0em;
-}
-
-
-/* ------------------------------- */
-/*  explanation text */
-
-.esplanation {
-    margin-top: 2em;
+/* Button */
+.formGenerate {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.formGenerate button.btn {
+    color: black;
+    background-color: #e7a50c;
+    border: solid #e7a50c;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 5em;
+}
 
 
 
-/* ------------------------------ */
+
+/* ------------------------------ *//* ------------------------------ *//* ------------------------------ */
 /* MediaQuery */
 
 
 
 @media (max-width: 1200px) {
 
+    /* ------------------------------ */
+    /*Main */
     .canvas {
         width: 70%;
     }
 
-    #styleSection1, #goProSection {
-
-        width: 30vh;
-    }
-
-    .formGenerate button.btn {
-        width: 120%;
-    }
-
-
+    /* ------------------------------ */
+    /* upload bar */
     #uploadFileInput {
         width: 80%;
     }
@@ -434,6 +403,17 @@ input:focus+label {
         align-items: center;
     }
 
+    #uploadTrack {
+        margin-right: 0em;
+    }
+
+    /* ------------------------------ */
+    /* 2 dark Block */
+    #styleSection1, #goProSection {
+        width: 30vh;
+    }
+
+
     #proText a {
         margin-top: 0.5em;
     }
@@ -442,27 +422,28 @@ input:focus+label {
         margin-top: 0.5em;
     }
 
+    #inputOutput div p {
+        display: none;
+    }
+
+    /* ------------------------------- */
+    /* Button */
     .formGenerate {
         margin-top: 2em;
     }
 
-    #uploadTrack {
-
-        margin-right: 0em;
-    }
-
-    #inputOutput div p {
-        display: none;
+    .formGenerate button.btn {
+        width: 120%;
     }
 }
 
 @media (max-width: 900px) {
 
+    /* ------------------------------ */
+    /*Main */
     .canvas {
         width: 70%;
     }
-
-
 
 
     /* ------------------------------ */
@@ -481,7 +462,6 @@ input:focus+label {
     /* Intro */
 
 
-
     #callToAction {
         margin-top: 12em;
         width: 80%;
@@ -489,16 +469,25 @@ input:focus+label {
 
     h1 {
         font-size: 2em;
-
     }
 
     h5 {
         font-size: 1.25em;
     }
 
+    /* ------------------------------ */
+    /* Upload bar */
+    #uploadTrack {
+        flex-direction: column;
+    }
+
+    #uploadFileInput {
+        width: 100%;
+    }
+
 
     /* ------------------------------ */
-    /* Form module */
+    /* 2 dark boxes */
     #allParams {
         display: flex;
         flex-direction: column;
@@ -522,19 +511,6 @@ input:focus+label {
         font-size: small;
     }
 
-    .form-range {
-        width: 80%;
-        margin-left: 2em;
-    }
-
-
-    #uploadTrack {
-        flex-direction: column;
-    }
-
-    #uploadFileInput {
-        width: 100%;
-    }
 
     #proText img {
         width: 25%;
@@ -544,6 +520,9 @@ input:focus+label {
 
 
 @media (max-width: 700px) {
+
+    /* ------------------------------ */
+    /* Main*/
     body {
         font-size: 0.85em;
     }
@@ -553,7 +532,17 @@ input:focus+label {
     }
 
     /* ------------------------------ */
-    /* Form module */
+    /* upload bar */
+    #uploadFileInput label img{
+        margin-right: 4px;
+    }
+
+    #file-name{
+        width: 200px;
+    }
+
+    /* ------------------------------ */
+    /* 3 gray blocks*/
     #styleSelection1 div {
         height: 30%;
         font-size: 1.2em;
@@ -564,33 +553,18 @@ input:focus+label {
         margin-bottom: 0.1em;
         line-height: 10px;
     }
-    #uploadFileInput label img{
-        margin-right: 4px;
-    }
-
-    #file-name{
-        width: 200px;
-    }
 }
 
 
 @media (max-width: 500px) {
+    /* ------------------------------ */
+    /* main*/
     body {
         font-size: 0.8em;
     }
 
-    #callToAction {
-        margin-top: 20em;
-    }
-
-
-    h4 {
-        font-size: 1.5em;
-        align-self: center;
-        margin-top: 0.3em;
-
-    }
-
+    /* ------------------------------ */
+    /* menu*/
     #logo {
         margin-top: 0em;
     }
@@ -629,6 +603,21 @@ input:focus+label {
         color: #89C6FF;
     }
 
+    /* ------------------------------ */
+    /* intro*/
+    #callToAction {
+        margin-top: 20em;
+    }
+
+
+    h4 {
+        font-size: 1.5em;
+        align-self: center;
+        margin-top: 0.3em;
+    }
+    
+    /* ------------------------------ */
+    /* upload bar*/
     #uploadFileInput label img{
         margin-left: 2px;
     }

@@ -1,7 +1,31 @@
+/* ------------------------------ */
+/*general*/
+.canvas{
+    height: 160%;
+}
+
+/* ------------------------------ */
+/*intro*/
+#intro{
+    margin-top: 9em;
+    margin-bottom: 2em;
+}
+
+/* ------------------------------ */
+/*upload bar*/
+#generateTrack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formGenerate button.btn{
+    margin-bottom: 0em;
+}
 
 
-  /* ------------------------------ */
-
+/* ------------------------------ */
+/*dark blocks*/
 #inputOutput1 {
     display: flex;
     flex-direction: row;
@@ -9,7 +33,6 @@
     align-items: flex-end;
     width: 80%;
     margin-bottom: 4em;
-    margin-top: 14em;
     width: 100%;
 }
 
@@ -19,17 +42,7 @@
     line-height: 5%;
 }
 
-.canvas{
-    height: 130vh;
-}
 
-
-
-#generateTrack {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 #styleSelection {
     height: 72%;
@@ -41,6 +54,7 @@
 #sections {
     display: flex;
     flex-direction: column;
+    margin-bottom: 5em;
 }
 
 #allParams1, #allParams2 {
@@ -88,7 +102,6 @@
     -webkit-appearance: none;
     appearance: none;
     background: #e7a50c;
-    ;
     cursor: pointer;
 }
 
@@ -125,8 +138,6 @@
 }
 
 
-
-
 #placeholderSection {
     background-color: transparent;
     box-shadow: none;
@@ -144,8 +155,6 @@
     flex-direction: column;
     align-items: center;
 }
-
-
 
 
 #styleSelection a {
@@ -193,6 +202,9 @@ svg:hover {
     width: 80%;
 }
 
+/* ------------------------------ *//* ------------------------------ *//* ------------------------------ */
+/* MediaQuery */
+
 @media (max-width: 1400px) {
     #inputOutput {
         width: 70%;
@@ -221,9 +233,6 @@ svg:hover {
 
 @media (max-width: 900px) {
 
-
-    /* ------------------------------ */
-    /* Form module */
     #allParams1 {
         display: flex;
         flex-direction: column;
